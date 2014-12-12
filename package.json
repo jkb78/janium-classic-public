@@ -1,0 +1,30 @@
+{
+  "name": "Janium-Public",
+  "version": "0.1.0",
+  "description": "Create public folder structure of Janium products",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkb78/janium-public.git"
+  },
+  "keywords": [
+    "Janium",
+    "less",
+    "css",
+    "FontAwesome",
+    "jQuery",
+    "plugins",
+    "Bootstrap",
+    "HTML",
+    "Javascript"
+  ],
+  "author": "Desarrollo Janium",
+  "license": "https://github.com/jkb78/janium-public/blob/master/LICENSE",
+  "bugs": {
+    "url": "https://github.com/jkb78/janium-public/issues"
+  },
+  "homepage": "https://github.com/jkb78/janium-public"
+}
