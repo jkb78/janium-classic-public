@@ -1,0 +1,371 @@
+// Icons Style
+// -------------------------
+
+.ztree li span.button.chk {width:13px; height:13px; margin:0 3px 0 0; cursor: auto}
+.ztree li span.button.chk.checkbox_false_full {background-position:0 0}
+.ztree li span.button.chk.checkbox_false_full_focus {background-position:0 -14px}
+.ztree li span.button.chk.checkbox_false_part {background-position:0 -28px}
+.ztree li span.button.chk.checkbox_false_part_focus {background-position:0 -42px}
+.ztree li span.button.chk.checkbox_false_disable {background-position:0 -56px}
+.ztree li span.button.chk.checkbox_true_full {background-position:-14px 0}
+.ztree li span.button.chk.checkbox_true_full_focus {background-position:-14px -14px}
+.ztree li span.button.chk.checkbox_true_part {background-position:-14px -28px}
+.ztree li span.button.chk.checkbox_true_part_focus {background-position:-14px -42px}
+.ztree li span.button.chk.checkbox_true_disable {background-position:-14px -56px}
+.ztree li span.button.chk.radio_false_full {background-position:-28px 0}
+.ztree li span.button.chk.radio_false_full_focus {background-position:-28px -14px}
+.ztree li span.button.chk.radio_false_part {background-position:-28px -28px}
+.ztree li span.button.chk.radio_false_part_focus {background-position:-28px -42px}
+.ztree li span.button.chk.radio_false_disable {background-position:-28px -56px}
+.ztree li span.button.chk.radio_true_full {background-position:-42px 0}
+.ztree li span.button.chk.radio_true_full_focus {background-position:-42px -14px}
+.ztree li span.button.chk.radio_true_part {background-position:-42px -28px}
+.ztree li span.button.chk.radio_true_part_focus {background-position:-42px -42px}
+.ztree li span.button.chk.radio_true_disable {background-position:-42px -56px}
+
+// *** Tree Icons *** //
+.root_open:before       { content: @minus-square; }
+.root_close:before      { content: @plus-square; }
+.roots_open:before      { content: @minus-square; }
+.roots_close:before     { content: @plus-square; }
+.center_open:before     { content: @minus-square; }
+.center_close:before    { content: @plus-square; }
+.bottom_open:before     { content: @minus-square; }
+.bottom_close:before    { content: @plus-square; }
+.noline_open:before     { content: @minus-square; }
+.noline_close:before    { content: @plus-square; }
+
+.ico_open:before        { content: @folder-open; margin-right: 2px; }
+.ico_close:before       { content: @folder-close; margin-right: 2px; }
+.ico_docu:before        { content: @docu-file; margin-right: 2px; }
+.edit:before            { content: @edit-node; margin-right: 2px; }
+.remove:before          { content: @remove-node; margin-right: 2px; }
+
+
+// *** Lines from Root, dont show *** /
+//.roots_docu:before { background-position:-56px 0}
+//.center_docu:before { background-position:-56px -18px}
+//.bottom_docu:before { background-position:-56px -36px}
+
+
+// *** File Type Icons *** //
+.androidapp_ico_docu:before,
+.@{flaticon-css-prefix}-androidapp-color:before {
+    content: @androidapp;
+    color: @androidapp-color;
+}
+.approach_ico_docu:before,
+.@{flaticon-css-prefix}-approach-color:before {
+    content: @approach;
+    color: @approach-color;
+}
+.audio_ico_docu:before,
+.@{flaticon-css-prefix}-audio-color:before {
+    content: @audio;
+    color: @audio-color;
+}
+.music_ico_docu:before,
+.@{flaticon-css-prefix}-music-color:before {
+    content: @music;
+    color: @music-color;
+}
+.cd_ico_docu:before,
+.@{flaticon-css-prefix}-cd-color:before {
+    content: @cd;
+    color: @cd-color;
+}
+.code_ico_docu:before,
+.@{flaticon-css-prefix}-code-color:before {
+    content: @code;
+    color: @code-color;
+}
+.compressed_ico_docu:before,
+.@{flaticon-css-prefix}-compressed-color:before {
+    content: @compressed;
+    color: @compressed-color;
+}
+.compressed_ico_docu:before {
+    font-size: 12px;
+}
+.csv_ico_docu:before,
+.@{flaticon-css-prefix}-csv-color:before {
+    content: @csv;
+    color: @csv-color;
+}
+.dat_ico_docu:before,
+.@{flaticon-css-prefix}-dat-color:before {
+    content: @dat;
+    color: @dat-color;
+}
+.database_ico_docu:before,
+.@{flaticon-css-prefix}-database-color:before {
+    content: @database;
+    color: @database-color;
+}
+.dvd_ico_docu:before,
+.@{flaticon-css-prefix}-dvd-color:before {
+    content: @dvd;
+    color: @dvd-color;
+}
+.email_ico_docu:before,
+.@{flaticon-css-prefix}-email-color:before {
+    content: @email;
+    color: @email-color;
+}
+.excel_ico_docu:before,
+.@{flaticon-css-prefix}-excel-color:before {
+    content: @excel;
+    color: @excel-color;
+}
+.flash_ico_docu:before,
+.@{flaticon-css-prefix}-flash-color:before {
+    content: @flash;
+    color: @flash-color;
+}
+.folder_ico_docu:before,
+.@{flaticon-css-prefix}-folder-color:before {
+    content: @folder;
+    color: @folder-color;
+}
+.iosapp_ico_docu:before,
+.@{flaticon-css-prefix}-iosapp-color:before {
+    content: @iosapp;
+    color: @iosapp-color;
+}
+.iso_ico_docu:before,
+.@{flaticon-css-prefix}-iso-color:before {
+    content: @iso;
+    color: @iso-color;
+}
+.linuxapp_ico_docu:before,
+.@{flaticon-css-prefix}-linuxapp-color:before {
+    content: @linuxapp;
+    color: @linuxapp-color;
+}
+.log_ico_docu:before,
+.@{flaticon-css-prefix}-log-color:before {
+    content: @log;
+    color: @log-color;
+}
+.log_ico_docu:before {
+    font-size: 12px;
+}
+.ocr_ico_docu:before,
+.@{flaticon-css-prefix}-ocr-color:before {
+    content: @ocr;
+    color: @ocr-color;
+}
+.opendocument_ico_docu:before,
+.@{flaticon-css-prefix}-opendocument-color:before {
+    content: @opendocument;
+    color: @opendocument-color;}
+.osxapp_ico_docu:before,
+.@{flaticon-css-prefix}-osxapp-color:before {
+    content: @osxapp;
+    color: @osxapp-color;
+}
+.pdf_ico_docu:before,
+.@{flaticon-css-prefix}-pdf-color:before {
+    content: @pdf;
+    color: @pdf-color;
+}
+.picture_ico_docu:before,
+.@{flaticon-css-prefix}-picture-color:before {
+    content: @picture;
+    color: @picture-color;
+}
+.image_ico_docu:before,
+.@{flaticon-css-prefix}-image-color:before {
+    content: @image;
+    color: @image-color;
+}
+.camera_ico_docu:before,
+.@{flaticon-css-prefix}-camera-color:before {
+    content: @camera;
+    color: @camera-color;
+}
+.powerpoint_ico_docu:before,
+.@{flaticon-css-prefix}-powerpoint-color:before {
+    content: @powerpoint;
+    color: @powerpoint-color;
+}
+.rtf_ico_docu:before,
+.@{flaticon-css-prefix}-rtf-color:before {
+    content: @rtf;
+    color: @rtf-color;
+}
+.text_ico_docu:before,
+.@{flaticon-css-prefix}-text-color:before {
+    content: @text;
+    color: @texto-color;
+}
+.video_ico_docu:before,
+.@{flaticon-css-prefix}-video-color:before {
+    content: @video;
+    color: @video-color;
+}
+.film_ico_docu:before,
+.@{flaticon-css-prefix}-film-color:before {
+    content: @film;
+    color: @film-color;
+}
+.movie_ico_docu:before,
+.@{flaticon-css-prefix}-movie-color:before {
+    content: @movie;
+    color: @movie-color;
+}
+.windowsapp_ico_docu:before,
+.@{flaticon-css-prefix}-windowsapp-color:before {
+    content: @windowsapp;
+    color: @windowsapp-color;
+}
+.word_ico_docu:before,
+.@{flaticon-css-prefix}-word-color:before {
+    content: @word;
+    color: @word-color;
+}
+
+.@{flaticon-css-prefix}-folder-open-color:before {
+    content: @folder-open;
+    color: @brand-primary;
+}
+.@{flaticon-css-prefix}-folder-close-color:before {
+    content: @folder-close;
+    color: @brand-primary;
+}
+.@{flaticon-css-prefix}-docu-file-color:before {
+    content: @docu-file;
+    color: @brand-primary;
+}
+
+// *** Icons as Roots *** //
+.androidapp_ico_open:before   { content: @androidapp; margin-right: 2px; color: #83b832; }
+.approach_ico_open:before     { content: @approach; margin-right: 2px; color: #2e2e2e; }
+.audio_ico_open:before        { content: @audio; margin-right: 2px; color: #0b6655; }
+.music_ico_open:before        { content: @music; margin-right: 2px; color: #0d59ad; }
+.cd_ico_open:before           { content: @cd; margin-right: 2px; color: #169787; }
+.code_ico_open:before         { content: @code; margin-right: 2px; color: #5b1274; }
+.compressed_ico_open:before   { content: @compressed; margin-right: 2px; color: #f0ad00; font-size: 12px; }
+.csv_ico_open:before          { content: @csv; margin-right: 2px; color: #37630d; }
+.dat_ico_open:before          { content: @dat; margin-right: 2px; color: #6c6d6f; }
+.database_ico_open:before     { content: @database; margin-right: 2px; color: #38449b; }
+.dvd_ico_open:before          { content: @dvd; margin-right: 2px; color: #3d0062; }
+.email_ico_open:before        { content: @email; margin-right: 2px; color: #f34000; }
+.excel_ico_open:before        { content: @excel; margin-right: 2px; color: #146232; }
+.flash_ico_open:before        { content: @flash; margin-right: 2px; color: #910014; }
+.folder_ico_open:before       { content: @folder; margin-right: 2px; color: #6d0f65; }
+.iosapp_ico_open:before       { content: @iosapp; margin-right: 2px; color: #4e98cb; }
+.iso_ico_open:before          { content: @iso; margin-right: 2px; color: #d8c100; }
+.linuxapp_ico_open:before     { content: @linuxapp; margin-right: 2px; color: #0B2F3A; }
+.log_ico_open:before          { content: @log; margin-right: 2px; color: #70542d; font-size: 12px; }
+.ocr_ico_open:before          { content: @ocr; margin-right: 2px; color: #911420; }
+.opendocument_ico_open:before { content: @opendocument; margin-right: 2px; color: #0a6aa0; }
+.osxapp_ico_open:before       { content: @osxapp; margin-right: 2px; color: #50234b; }
+.pdf_ico_open:before          { content: @pdf; margin-right: 2px; color: #cd0000; }
+.picture_ico_open:before      { content: @picture; margin-right: 2px; color: #7c0073; }
+.image_ico_open:before        { content: @image; margin-right: 2px; color: #23466c; }
+.camera_ico_open:before       { content: @camera; margin-right: 2px; color: #383838; }
+.powerpoint_ico_open:before   { content: @powerpoint; margin-right: 2px; color: #c73019; }
+.rtf_ico_open:before          { content: @rtf; margin-right: 2px; color: #5666b1; }
+.text_ico_open:before         { content: @text; margin-right: 2px; color: #0404B4; }
+.video_ico_open:before        { content: @video; margin-right: 2px; color: #030072; }
+.film_ico_open:before         { content: @film; margin-right: 2px; color: #505050; }
+.movie_ico_open:before        { content: @movie; margin-right: 2px; color: #ff4e00; }
+.windowsapp_ico_open:before   { content: @windowsapp; margin-right: 2px; color: #5100ff; }
+.word_ico_open:before         { content: @word; margin-right: 2px; color: #1b4289; }
+
+.androidapp_ico_close:before   { content: @androidapp; margin-right: 2px; color: #83b832; }
+.approach_ico_close:before     { content: @approach; margin-right: 2px; color: #2e2e2e; }
+.audio_ico_close:before        { content: @audio; margin-right: 2px; color: #0b6655; }
+.music_ico_close:before        { content: @music; margin-right: 2px; color: #0d59ad; }
+.cd_ico_close:before           { content: @cd; margin-right: 2px; color: #169787; }
+.code_ico_close:before         { content: @code; margin-right: 2px; color: #5b1274; }
+.compressed_ico_close:before   { content: @compressed; margin-right: 2px; color: #f0ad00; font-size: 12px; }
+.csv_ico_close:before          { content: @csv; margin-right: 2px; color: #37630d; }
+.dat_ico_close:before          { content: @dat; margin-right: 2px; color: #6c6d6f; }
+.database_ico_close:before     { content: @database; margin-right: 2px; color: #38449b; }
+.dvd_ico_close:before          { content: @dvd; margin-right: 2px; color: #3d0062; }
+.email_ico_close:before        { content: @email; margin-right: 2px; color: #f34000; }
+.excel_ico_close:before        { content: @excel; margin-right: 2px; color: #146232; }
+.flash_ico_close:before        { content: @flash; margin-right: 2px; color: #910014; }
+.folder_ico_close:before       { content: @folder; margin-right: 2px; color: #6d0f65; }
+.iosapp_ico_close:before       { content: @iosapp; margin-right: 2px; color: #4e98cb; }
+.iso_ico_close:before          { content: @iso; margin-right: 2px; color: #d8c100; }
+.linuxapp_ico_close:before     { content: @linuxapp; margin-right: 2px; color: #0B2F3A; }
+.log_ico_close:before          { content: @log; margin-right: 2px; color: #70542d; font-size: 12px; }
+.ocr_ico_close:before          { content: @ocr; margin-right: 2px; color: #911420; }
+.opendocument_ico_close:before { content: @opendocument; margin-right: 2px; color: #0a6aa0; }
+.osxapp_ico_close:before       { content: @osxapp; margin-right: 2px; color: #50234b; }
+.pdf_ico_close:before          { content: @pdf; margin-right: 2px; color: #cd0000; }
+.picture_ico_close:before      { content: @picture; margin-right: 2px; color: #7c0073; }
+.image_ico_close:before        { content: @image; margin-right: 2px; color: #23466c; }
+.camera_ico_close:before       { content: @camera; margin-right: 2px; color: #383838; }
+.powerpoint_ico_close:before   { content: @powerpoint; margin-right: 2px; color: #c73019; }
+.rtf_ico_close:before          { content: @rtf; margin-right: 2px; color: #5666b1; }
+.text_ico_close:before         { content: @text; margin-right: 2px; color: #0404B4; }
+.video_ico_close:before        { content: @video; margin-right: 2px; color: #030072; }
+.film_ico_close:before         { content: @film; margin-right: 2px; color: #505050; }
+.movie_ico_close:before        { content: @movie; margin-right: 2px; color: #ff4e00; }
+.windowsapp_ico_close:before   { content: @windowsapp; margin-right: 2px; color: #5100ff; }
+.word_ico_close:before         { content: @word; margin-right: 2px; color: #1b4289; }
+
+.ztree li span.button.ico_loading {
+    margin-right: 2px;
+    background: url("@{tree-image-path}loading.gif") no-repeat scroll 0 0 transparent;
+    vertical-align: top;
+    *vertical-align:middle;
+}
+
+ul.tmpTargetzTree {
+    background-color: @selected-background-color;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+span.tmpzTreeMove_arrow {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    padding: 0;
+    margin: 2px 0 0 1px;
+    border: 0 none;
+    position: absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: -110px -80px;
+    background-image: url("@{tree-image-path}zTreeStandard.png");
+    *background-image: url("@{tree-image-path}zTreeStandard.gif");
+}
+
+ul.ztree.zTreeDragUL {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background-color: #cfcfcf;
+    border: 1px dotted #00b83f;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.zTreeMask {
+    z-index: 10000;
+    background-color: #cfcfcf;
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    position: absolute;
+}
+
+/// *** Don't Delete *** ///
+
+// Level Style
+//.ztree li span.button.level0 {
+//    display:none;
+//}
+//.ztree li ul.level0 {
+//    padding:0;
+//    background:none;
+//}

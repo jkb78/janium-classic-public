@@ -1,0 +1,576 @@
+/*!
+ * ============================================================
+ *  Janium Stylesheet by @desarrollo
+ *  designed for Janium Apps
+ *  -----------------------------------------------------------
+ *
+ *  Copyright 2013 Janium
+ * ============================================================
+ */
+
+
+// App Styles
+// -----------------------------------------------------
+
+body {
+    padding-top: @navbar-height + 30;
+}
+
+.error-messages {
+    font-style: italic;
+    color: @brand-primary;
+}
+
+.menu_button {
+    color: #fff;
+}
+
+.jindigo {
+    color: @jindigo;
+}
+
+.jpink {
+    color: @jpink;
+}
+
+.jblue-light {
+    color: @jblue-light;
+}
+
+.jpurple-light {
+    color: @jpurple-light;
+}
+
+.jgreen-light {
+    color: @jgreen-light;
+}
+
+.jyellow-light {
+    color: @jyellow-light;
+}
+
+.jred-light {
+    color: @jred-light;
+}
+
+.jblue {
+    color: @jblue;
+}
+
+.jpurple {
+    color: @jpurple;
+}
+
+.jgreen {
+    color: @jgreen;
+}
+
+.jyellow {
+    color: @jyellow;
+}
+
+.jred {
+    color: @jred;
+}
+
+
+// TYPOGRAPHY
+// --------------------------------------------------
+
+// Blockquotes
+blockquote { border-left: 5px solid @brand-primary; }
+
+
+// NAVS
+// --------------------------------------------------
+
+// Navbar Profile Photo
+.navbar-inverse {
+    .navbar-nav {
+        > .navbar-profile {
+            > a {
+                height: @navbar-height;
+                padding-top: 0;
+                padding-bottom: 0;
+                line-height: @navbar-height;
+                > img {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.navbar-profile-photo {
+    position: relative;
+    height: @navbar-height - 4;
+    margin-right: .65em;
+    border: 2px solid #fff;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.navbar-profile-label {
+    display: inline;
+}
+
+
+// HEADER
+// -----------------------------------------------------
+.app-header {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background: @brand-primary;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADdJREFUeNpiNDY23s/IyMjw5csXBhDN8v37dwYQ+PbtG5hm+f37N5ghLCwMEYDJMDExgWmAAAMAk4sQIff1gHEAAAAASUVORK5CYII=);
+}
+
+@logo-ph-top: floor((@navbar-height - @logo-ph-height) / 2);
+
+@logo-ph-fw: (@logo-ph-width / @logo-ph-height);
+@logo-fw: (@logo-width / @logo-height);
+
+.logo-ph {
+    width: @logo-ph-width;
+    height: @logo-ph-height;
+    position: relative;
+    left: 0;
+    top: @logo-ph-top;
+}
+
+.logo {
+    width: @final-logo-width;
+    height: @final-logo-height;
+    position: relative;
+    .logo-dimensions(@logo-ph-fw; @logo-fw);
+    .logo-position;
+}
+
+.logo-dimensions (@ph-fw; @fw)  when (@fw > 1) {
+    .logo-is-horizontal(@ph-fw; @fw);
+}
+
+.logo-dimensions (@ph-fw; @fw)  when (@fw <= 1) {
+    .logo-is-vertical(@ph-fw; @fw);
+}
+
+.logo-is-horizontal (@ph-fw; @fw) when (@ph-fw > 1) {
+    .logo-is-horizontal-and-ph-is-horizontal(@ph-fw; @fw);
+}
+
+.logo-is-horizontal (@ph-fw; @fw) when (@ph-fw <= 1) {
+    .logo-is-horizontal-and-ph-is-vertical(@ph-fw; @fw);
+}
+
+.logo-is-vertical (@ph-fw; @fw) when (@ph-fw > 1) {
+    .logo-is-vertical-and-ph-is-horizontal(@ph-fw; @fw);
+}
+
+.logo-is-vertical (@ph-fw; @fw) when (@ph-fw <= 1) {
+    .logo-is-vertical-and-ph-is-vertical(@ph-fw; @fw);
+}
+
+.logo-is-horizontal-and-ph-is-horizontal(@ph-fw; @fw) when (@ph-fw > @fw) {     // ph-fw > fw > 1
+    .logo-is-adjusted-vertically(@ph-fw; @fw);
+}
+
+.logo-is-horizontal-and-ph-is-horizontal(@ph-fw; @fw) when (@ph-fw <= @fw) {    // fw > ph-fw > 1
+    .logo-is-adjusted-horizontally(@ph-fw; @fw);
+}
+
+.logo-is-horizontal-and-ph-is-vertical(@ph-fw; @fw) {       // fw > 1 > ph-fw
+    .logo-is-adjusted-horizontally(@ph-fw; @fw);
+}
+
+.logo-is-vertical-and-ph-is-horizontal(@ph-fw; @fw)  {       // ph-fw > 1 > fw
+    .logo-is-adjusted-vertically(@ph-fw; @fw);
+}
+
+.logo-is-vertical-and-ph-is-vertical(@ph-fw; @fw) when (@ph-fw > @fw) {     // 1 > ph-fw > fw
+    .logo-is-adjusted-vertically(@ph-fw; @fw);
+}
+
+.logo-is-vertical-and-ph-is-vertical(@ph-fw; @fw) when (@ph-fw <= @fw)  {   // 1 > fw > ph-fw
+    .logo-is-adjusted-horizontally(@ph-fw; @fw);
+}
+
+.logo-is-adjusted-vertically(@ph-fw; @fw) {
+    @final-logo-width: round((@logo-width * @logo-ph-height) / @logo-height);
+    @final-logo-height: @logo-ph-height;
+}
+
+.logo-is-adjusted-horizontally(@ph-fw; @fw) {
+    @final-logo-width: @logo-ph-width;
+    @final-logo-height: round((@logo-height * @logo-ph-width) / @logo-width);
+}
+
+.logo-position () {
+    left: round((@logo-ph-width - @final-logo-width) / 2);
+    top: round((@logo-ph-height - @final-logo-height) / 2);
+}
+
+
+// TABLES
+// -----------------------------------------------------
+.table {
+    th {
+        background-color: @brand-primary;
+        color: #fff;
+    }
+}
+
+// Tabla condensada estilo Janium
+.jtable-condensed {
+    font-size: 90%;
+    th {
+        font-weight: normal;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+    }
+    .table-input {
+        text-align: center;
+    }
+    > tbody {
+        > tr {
+            > td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+
+// BUTTONS OUTLINE
+// -----------------------------------------------------
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-default.btn-outline {
+    color: @btn-default-color;
+}
+
+.btn-primary.btn-outline {
+    color: @brand-primary;
+}
+
+.btn-success.btn-outline {
+    color: @brand-success;
+}
+
+.btn-info.btn-outline {
+    color: @brand-info;
+}
+
+.btn-warning.btn-outline {
+    color: @brand-warning;
+}
+
+.btn-danger.btn-outline {
+    color: @brand-danger;
+}
+
+.btn-default.btn-outline:hover,
+.btn-default.btn-outline:focus,
+.btn-default.btn-outline:active,
+.btn-primary.btn-outline:hover,
+.btn-primary.btn-outline:focus,
+.btn-primary.btn-outline:active,
+.btn-success.btn-outline:hover,
+.btn-success.btn-outline:focus,
+.btn-success.btn-outline:active,
+.btn-info.btn-outline:hover,
+.btn-info.btn-outline:focus,
+.btn-info.btn-outline:active,
+.btn-warning.btn-outline:hover,
+.btn-warning.btn-outline:focus,
+.btn-warning.btn-outline:active,
+.btn-danger.btn-outline:hover,
+.btn-danger.btn-outline:focus,
+.btn-danger.btn-outline:active {
+    color: @btn-default-color;
+}
+
+.btn-default.btn-outline.disabled,
+.btn-default.btn-outline[disabled],
+.btn-primary.btn-outline.disabled,
+.btn-primary.btn-outline[disabled],
+.btn-success.btn-outline.disabled,
+.btn-success.btn-outline[disabled],
+.btn-info.btn-outline.disabled,
+.btn-info.btn-outline[disabled],
+.btn-warning.btn-outline.disabled,
+.btn-warning.btn-outline[disabled],
+.btn-danger.btn-outline.disabled,
+.btn-danger.btn-outline[disabled] {
+    background-color: transparent;
+    .opacity(.65);
+}
+
+// PILLS
+// -----------------------------------------------------
+.jnav-pill-hj {
+    li {
+        background-color: #eee;
+        a {
+            border-radius: 0;
+        }
+    }
+    li.active {
+        background: @brand-primary;
+    }
+}
+
+
+// JQUERY VALIDATOR ERROR LABEL
+// -----------------------------------------------------
+.has-error label.error { color: @brand-primary; }
+
+.has-error label.error:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    padding-right: 3px;
+    content: "\f071";
+}
+
+
+// CALLOUT
+// -----------------------------------------------------
+.jnm-callout(@color, @bgcolor: lighten(@color, 35%)) {
+    margin: 10px auto 10px;
+    padding: 20px;
+    border-left: 5px solid @color;
+    background-color: @bgcolor;
+    border-radius: 3px;
+    width: 80%;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        color: @color;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    code, .highlight {
+        background-color: #fff;
+    }
+}
+
+.jnm-callout-primary {
+    .jnm-callout(@brand-primary, lighten(@brand-primary, 45%));
+}
+
+.jnm-callout-danger {
+    .jnm-callout(@brand-danger, lighten(@brand-danger, 30%));
+}
+
+.jnm-callout-warning {
+    .jnm-callout(@brand-warning, lighten(@brand-warning, 30%));
+}
+
+.jnm-callout-info {
+    .jnm-callout(@brand-info, lighten(@brand-info, 30%));
+}
+
+.jnm-callout-success {
+    .jnm-callout(@brand-success, lighten(@brand-success, 30%));
+}
+
+
+// LABEL
+// -----------------------------------------------------
+.label-jindigo {
+  .label-variant(@jindigo);
+}
+
+.label-jpink {
+    .label-variant(@jpink);
+}
+
+.label-jblue-light {
+  .label-variant(@jblue-light);
+}
+
+.label-jpurple-light {
+  .label-variant(@jpurple-light);
+}
+
+.label-jgreen-light {
+  .label-variant(@jgreen-light);
+}
+
+.label-jyellow-light {
+  .label-variant(@jyellow-light);
+}
+
+.label-jred-light {
+  .label-variant(@jred-light);
+}
+
+.label-jblue {
+  .label-variant(@jblue);
+}
+
+.label-jpurple {
+  .label-variant(@jpurple);
+}
+
+.label-jgreen {
+  .label-variant(@jgreen);
+}
+
+.label-jyellow {
+  .label-variant(@jyellow);
+}
+
+.label-jred {
+  .label-variant(@jred);
+}
+
+// Estilo de páginas que debe utilizar variables de bootstrap
+// -----------------------------------------------------
+
+// User/Settings
+.settings-main-right .settings-sidebar {
+    border-right: 1px solid @brand-primary;
+}
+
+.nav-settings-sidebar {
+    border-top: 1px solid @legend-border-color;
+}
+
+.nav-settings-sidebar > li > a {
+    color: @nav-tabs-active-link-hover-color;
+    border-bottom: 1px solid @legend-border-color;
+}
+
+.nav-settings-sidebar > li > a:hover {
+    background-color: @nav-link-hover-bg;
+}
+
+.nav-settings-sidebar > .active > a,
+.nav-settings-sidebar > .active > a:focus,
+.nav-settings-sidebar > .active > a:hover {
+    color: @brand-primary;
+    font-weight: 600;
+    background-color: @nav-tabs-active-link-hover-bg;
+}
+
+.content-title {
+    border-bottom: 1px solid @gray-lighter;
+}
+
+.content-title u {
+    color: @nav-tabs-active-link-hover-color;
+    border-bottom: 1px solid @brand-primary;
+}
+
+
+// MEDIA QUERIES
+// -----------------------------------------------------
+
+// Off Canvas
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+
+// Navbar Profile Photo
+@media screen and (min-width: @screen-sm-min) {
+    .navbar-profile-label {
+        display: none;
+    }
+}
+
+// Responsive Tables
+@media only screen and (max-width: @screen-sm-min) {
+    // * Force table to not be like tables anymore
+    #jtable-responsive table,
+    #jtable-responsive thead,
+    #jtable-responsive tbody,
+    #jtable-responsive th,
+    #jtable-responsive td,
+    #jtable-responsive tr {
+        display: block;
+    }
+
+    // * Hide table headers (but not display: none;, for accessibility)
+    #jtable-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #jtable-responsive tr { border: 1px solid #ccc; }
+
+    #jtable-responsive td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+    }
+
+    #jtable-responsive td:before {
+        // * Now like a table header
+        position: absolute;
+        // * Top/left values mimic padding
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+
+    // * Label the data
+    #jtable-responsive td:before { content: attr(data-title); }
+
+    #jtable-responsive .jtable-condensed { font-size: 100%; }
+}
