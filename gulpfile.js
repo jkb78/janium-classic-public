@@ -44,6 +44,7 @@ gulp.task('bootstrap-fonts', function() {
 gulp.task('build-less', function () {
 
   return gulp.src(config.JNMPath + '/less/*.less')
+  //return gulp.src(config.JNMPath + '/less/deep-blue.less')
     // Compile LESS files
     .pipe(less().on('error', console.log))
 
