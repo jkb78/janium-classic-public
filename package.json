@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jkb78/janium-public.git"
+    "url": "https://github.com/jkb78/janium-classic-public.git"
   },
   "keywords": [
     "Janium",
@@ -22,11 +22,11 @@
     "Javascript"
   ],
   "author": "Desarrollo Janium",
-  "license": "https://github.com/jkb78/janium-public/blob/master/LICENSE",
+  "license": "https://github.com/jkb78/janium-classic-public/blob/master/LICENSE",
   "bugs": {
-    "url": "https://github.com/jkb78/janium-public/issues"
+    "url": "https://github.com/jkb78/janium-classic-public/issues"
   },
-  "homepage": "https://github.com/jkb78/janium-public",
+  "homepage": "https://github.com/jkb78/janium-classic-public",
   "dependencies": {
     "del": "^0.1.3",
     "gulp": "^3.8.10",

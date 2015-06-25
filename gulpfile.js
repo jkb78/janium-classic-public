@@ -19,10 +19,10 @@ var config = {
   JQJsonpPath: path.join(__dirname, 'bower_components', 'jquery-jsonp'),
   JQPhPath: path.join(__dirname, 'bower_components', 'jquery-placeholder'),
   JQValPath: path.join(__dirname, 'bower_components', 'jquery-validation'),
-  JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
-  JQRespondPath: path.join(__dirname, 'bower_components', 'respond-minmax'),
-  JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
-  PubPath: path.join(__dirname, 'dist', 'public')
+  //JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
+  //JQRespondPath: path.join(__dirname, 'bower_components', 'respond-minmax'),
+  //JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
+  PubPath: path.join(__dirname, 'dist', 'htdocs')
 }
 
 // --- TASK
@@ -37,14 +37,9 @@ gulp.task('bootstrap-fonts', function() {
     .pipe(gulp.dest(path.join(config.PubPath, 'fonts')));
 });
 
-
-
-
-
-gulp.task('build-less', function () {
-
-  return gulp.src(config.JNMPath + '/less/*.less')
-  //return gulp.src(config.JNMPath + '/less/deep-blue.less')
+gulp.task('build-janium-theme', function () {
+  //return gulp.src(config.JNMPath + '/less/*.less')
+  return gulp.src(config.JNMPath + '/less/janium-theme/theme.less')
     // Compile LESS files
     .pipe(less().on('error', console.log))
 
@@ -61,14 +56,14 @@ gulp.task('build-less', function () {
     ).on('error', console.log))
 
     // CSS Linter
-    .pipe(csslint('./janium_components/less/.csslintrc.json'))
+    .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
     //.pipe(csslint.reporter())
 
-    // Format style for CSS less/.csscomb.json
+    // Format style for CSS less/janium-theme/.csscomb.json
     .pipe(csscomb())
 
     // Create CSS file
-    .pipe(gulp.dest(path.join(config.PubPath, 'css')))
+    .pipe(gulp.dest(path.join(config.PubPath, 'css', 'bootstrap')))
 
     // Add .min to name file
     .pipe(rename({suffix: '.min'}))
@@ -80,25 +75,28 @@ gulp.task('build-less', function () {
     }))
 
     // Create minified file
-    .pipe(gulp.dest(path.join(config.PubPath, 'css')));
+    .pipe(gulp.dest(path.join(config.PubPath, 'css', 'bootstrap')));
 
 });
 
 gulp.task('clean', function(cb) {
   // Clean destination folder
-  clean(['dist/public/fonts', 'dist/public/css'], cb)
+  clean(['dist/htdocs/fonts/*', 'dist/htdocs/css/*'], cb)
 });
 
 // --- WATCH
 
 
-// --- DEFAULT
-//gulp.task('default', ['build-less'], function() {
-//  console.log('Tareas finalizadas ...');
-//});
+// --- TASK's
+gulp.task('clean-htdocs', ['clean'], function() {
+  console.log('Limpiando directorio htdocs ...');
+});
 
+gulp.task('copy-fonts', ['clean-htdocs', 'fontawesome-fonts', 'bootstrap-fonts'], function() {
+  console.log('Copiando fuentes FontAwesome y Bootstrap...');
+});
 
-gulp.task('default', ['clean', 'fontawesome-fonts', 'bootstrap-fonts', 'build-less'], function() {
-  console.log('Default ...');
-  //gulp.start('build-less');
+gulp.task('default', ['copy-fonts'], function() {
+  console.log('Compilando archivos LESS ...');
+  gulp.start('build-janium-theme');
 });

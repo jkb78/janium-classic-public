@@ -1,0 +1,39 @@
+{
+  "name": "janium-classic-public",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jkb78/janium-classic-public",
+  "authors": [
+    "Juan Carlos Ruiz <juan.carlos.ruiz@janium.com>"
+  ],
+  "description": "Creación de directorio publico",
+  "main": "gulpfile.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Bootstrap",
+    "jQuery",
+    "FontAwesome",
+    "Others"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "fontawesome": "~4.3.0",
+    "bootstrap-switch": "~3.3.2",
+    "bootstrap": "~3.3.4",
+    "jquery-cookie": "~1.4.1",
+    "jquery-jsonp": "~2.4.0",
+    "jquery-placeholder": "~2.1.1",
+    "jquery-validation": "~1.13.1",
+    "respond": "~1.4.2"
+  }
+}
