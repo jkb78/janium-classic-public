@@ -21,3 +21,17 @@
 
 //== Navbar
 @navbar-inverse-bg:             @brand-primary;
+
+
+//== Mixin AdminPanel
+@ap-base:     @brand-primary;
+@ap-lighter1: lighten(spin(@ap-base, 5), 10%);
+@ap-lighter2: lighten(spin(@ap-base, 10), 20%);
+@ap-darker1:  darken(spin(@ap-base, -5), 10%);
+@ap-darker2:  darken(spin(@ap-base, -10), 20%);
+
+
+@adm-panel-color-base      : @brand-primary;
+@adm-panel-color-primary   : mix(@adm-panel-color-base, mediumvioletred);
+@adm-panel-color-secondary : mix(@adm-panel-color-base, lightseagreen);
+@adm-panel-color-tertiary  : mix(@adm-panel-color-base, mintcream);

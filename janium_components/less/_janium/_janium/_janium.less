@@ -625,3 +625,29 @@ blockquote { border-left: 5px solid @brand-primary; }
 
     #jtable-responsive .jtable-condensed { font-size: 100%; }
 }
+
+// fix para elementos primarios sin hijos
+.list-group-item.level0 {
+  margin-bottom: 1px;
+  border-color: @adm-panel-color-base;
+}
+
+.list-group-item.level0  {
+  background-color: @adm-panel-color-base;
+}
+.list-group-item.level1  {
+  background-color: @adm-panel-color-primary;
+  padding-left: 25px;
+}
+.list-group-item.level2  {
+  background-color: @adm-panel-color-secondary;
+  padding-left: 35px;
+}
+.list-group-item.level3  {
+  background-color: @adm-panel-color-tertiary;
+  padding-left: 45px;
+}
+.list-group-item.level4  {
+  background-color: @adm-panel-color-base;
+  padding-left: 55px;
+}

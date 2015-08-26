@@ -26,14 +26,15 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~1.11.3",
-    "fontawesome": "~4.3.0",
+    "AdminLTE": "adminlte#~2.3.0",
+    "bootstrap": "~3.3.5",
     "bootstrap-switch": "~3.3.2",
-    "bootstrap": "~3.3.4",
+    "font-awesome": "fontawesome#~4.4.0",
+    "jquery": "~2.1.4",
     "jquery-cookie": "~1.4.1",
     "jquery-jsonp": "~2.4.0",
     "jquery-placeholder": "~2.1.1",
-    "jquery-validation": "~1.13.1",
+    "jquery-validation": "~1.14.0",
     "respond": "~1.4.2"
   }
 }
