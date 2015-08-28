@@ -98,10 +98,10 @@ gulp.task('copy-bootstrap-js', function() {
 // ** Process Javascript files ** //
 gulp.task('uglify-admin-lte-js', function() {
   return gulp.src(config.LTEPath + '/dist/js/app.js')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
       .pipe(uglify({ preserveComments: 'some' }))
       .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
 
     // Create minified & uglify file and map file
     .pipe(gulp.dest(path.join(config.PubPath, 'js', 'adminlte')));
@@ -117,7 +117,7 @@ gulp.task('lint-admin-lte-js', function() {
 // ** Compile LESS files ** //
 gulp.task('build-font-awesome', function () {
   return gulp.src(config.MTRPath + '/font-awesome.less')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
       // Compile LESS files
       .pipe(less().on('error', console.log))
 
@@ -134,7 +134,7 @@ gulp.task('build-font-awesome', function () {
       // Minify CSS file
       .pipe(minify())
 
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
 
     // Create minified file
     .pipe(gulp.dest(path.join(config.PubPath, 'css', 'font-awesome')));
@@ -142,8 +142,8 @@ gulp.task('build-font-awesome', function () {
 
 gulp.task('build-janium-theme', function () {
   //return gulp.src(config.JNMPath + '/less/*.less')
-  return gulp.src(config.JNMPath + '/less/janium-theme/theme.less')
-    .pipe(sourcemaps.init())
+  return gulp.src(config.MTRPath + '/bootstrap.less')
+    //.pipe(sourcemaps.init())
       // Compile LESS files
       .pipe(less().on('error', console.log))
 
@@ -160,10 +160,10 @@ gulp.task('build-janium-theme', function () {
       ).on('error', console.log))
 
       // CSS Linter
-      .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
-      .pipe(csslint.reporter())
+      .pipe(csslint(config.BSPath + '/less/.csslintrc'))
+      //.pipe(csslint.reporter())
 
-      // Format style for CSS less/janium-theme/.csscomb.json
+      // Format style for CSS /.csscomb.json
       .pipe(csscomb())
 
       // Create CSS file
@@ -178,7 +178,7 @@ gulp.task('build-janium-theme', function () {
         noAdvanced: true
       }))
 
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
 
     // Create minified file
     .pipe(gulp.dest(path.join(config.PubPath, 'css', 'bootstrap')));
@@ -187,7 +187,7 @@ gulp.task('build-janium-theme', function () {
 
 gulp.task('build-adminlte', function () {
   return gulp.src(config.MTRPath + '/adminlte.less')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
       // Compile LESS files
       .pipe(less().on('error', console.log))
 
@@ -204,12 +204,36 @@ gulp.task('build-adminlte', function () {
       // Minify CSS file
       .pipe(minify())
 
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
 
     // Create minified file
     .pipe(gulp.dest(path.join(config.PubPath, 'css', 'adminlte')));
 });
 
+gulp.task('build-skins', function () {
+  return gulp.src(config.MTRPath + '/skins/_all-skins.less')
+    //.pipe(sourcemaps.init())
+      // Compile LESS files
+      .pipe(less().on('error', console.log))
+
+      // CSS Linter
+      .pipe(csslint(config.LTEPath + '/build/less/.csslintrc'))
+      //.pipe(csslint.reporter())
+
+      // Create CSS file
+      //.pipe(gulp.dest(path.join(config.PubPath, 'css', 'adminlte')))
+
+      // Add .min to name file
+      .pipe(rename({suffix: '.min'}))
+
+      // Minify CSS file
+      .pipe(minify())
+
+    //.pipe(sourcemaps.write('./'))
+
+    // Create minified file
+    .pipe(gulp.dest(path.join(config.PubPath, 'css', 'adminlte', 'skins')));
+});
 
 //////// --- WATCH
 
@@ -220,7 +244,7 @@ gulp.task('clean-htdocs', ['clean']);
 
 gulp.task('copy-fonts', ['clean-htdocs', 'copy-flaticon-fonts', 'copy-fontawesome-fonts', 'copy-bootstrap-fonts']);
 
-gulp.task('compile-less-files', ['clean-htdocs', 'build-font-awesome', 'build-adminlte', 'build-janium-theme']);
+gulp.task('compile-less-files', ['clean-htdocs', 'build-font-awesome', 'build-adminlte', 'build-skins', 'build-janium-theme']);
 
 gulp.task('copy-javascript-files', ['clean-htdocs', 'copy-jquery', 'copy-bootstrap-js']);
 
