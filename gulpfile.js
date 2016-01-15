@@ -178,7 +178,7 @@ gulp.task('join-modernizr-response', function() {
     pathTo.modernizr + '/modernizr.min.js',
     pathTo.respond   + '/dest/respond.min.js',
   ])
-    .pipe(concat('modernizr_respond.min.js'))
+    .pipe(concat('modernizr-respond.min.js'))
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'modernizr')));
 });
 
