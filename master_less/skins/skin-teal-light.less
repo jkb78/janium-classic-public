@@ -1,0 +1,61 @@
+/*
+ * Skin: Teal
+ * -----------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-teal-light {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@teal; #fff);
+      .sidebar-toggle {
+        color: #fff;
+        &:hover {
+          background-color: darken(@teal, 5%);
+        }
+      }
+      @media(max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255,255,255,0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: darken(@teal, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(@teal);
+    }
+
+    li.user-header {
+      background-color: @teal;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-light-sidebar(@teal);
+
+}

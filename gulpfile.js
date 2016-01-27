@@ -19,25 +19,30 @@ var runSequence  = require('run-sequence');
 var pathTo = {
   master_less:          path.join(__dirname, 'master_less'),
   jnm_components:       path.join(__dirname, 'janium_components'),
-  bootstrap:            path.join(__dirname, 'bower_components', 'bootstrap'),
   adminlte:             path.join(__dirname, 'bower_components', 'AdminLTE'),
+  bootbox:              path.join(__dirname, 'bower_components', 'bootbox.js'),
+  bootstrap:            path.join(__dirname, 'bower_components', 'bootstrap'),
+  bootstrap_notify:     path.join(__dirname, 'bower_components', 'remarkable-bootstrap-notify'),
+  colorpicker:          path.join(__dirname, 'bower_components', 'mjolnic-bootstrap-colorpicker'),
   font_awesome:         path.join(__dirname, 'bower_components', 'font-awesome'),
+  inputmask:            path.join(__dirname, 'bower_components', 'jquery.inputmask'),
   jquery:               path.join(__dirname, 'bower_components', 'jquery'),
+  jqtree:               path.join(__dirname, 'bower_components', 'jqTree'),
   jquery_cookie:        path.join(__dirname, 'bower_components', 'jquery-cookie'),
   jquery_jsonp:         path.join(__dirname, 'bower_components', 'jquery-jsonp'),
   placeholder:          path.join(__dirname, 'bower_components', 'jquery-placeholder'),
-  validation:           path.join(__dirname, 'bower_components', 'jquery-validation'),
+  qrcode:               path.join(__dirname, 'bower_components', 'jquery-qrcode'),
+  respond:              path.join(__dirname, 'bower_components', 'respond'),
   slimscroll:           path.join(__dirname, 'bower_components', 'slimScroll'),
   select2:              path.join(__dirname, 'bower_components', 'select2'),
-  inputmask:            path.join(__dirname, 'bower_components', 'jquery.inputmask'),
   timepicker:           path.join(__dirname, 'bower_components', 'bootstrap-timepicker'),
-  colorpicker:          path.join(__dirname, 'bower_components', 'mjolnic-bootstrap-colorpicker'),
-  respond:              path.join(__dirname, 'bower_components', 'respond'),
-
+  tokenfield:           path.join(__dirname, 'bower_components', 'bootstrap-tokenfield'),
+  typeaheadjs:          path.join(__dirname, 'bower_components', 'typeahead.js'),
+  validation:           path.join(__dirname, 'bower_components', 'jquery-validation'),
 
   datatables:           path.join(__dirname, 'vendor_components', 'datatables'),
-  modernizr:            path.join(__dirname, 'vendor_components', 'modernizr'),
   flaticon:             path.join(__dirname, 'vendor_components', 'flaticon'),
+  modernizr:            path.join(__dirname, 'vendor_components', 'modernizr'),
   //JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
   //JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
   htdocs_folder:        path.join(__dirname, 'dist', 'htdocs')
@@ -109,6 +114,7 @@ gulp.task('clean', function(cb) {
   ], cb)
 });
 
+
 // ** Copy Icon fonts ** //
 gulp.task('copy-icon-fonts', function() {
   return gulp.src([
@@ -156,17 +162,20 @@ gulp.task('copy-bootstrap-js', function() {
 
 gulp.task('copy-plugins-js', function() {
   return gulp.src([
-    pathTo.datatables  + '/datatables.min.js',
-    pathTo.slimscroll  + '/jquery.slimscroll.min.js',
-    pathTo.select2     + '/dist/js/select2.full.min.js',
-    pathTo.inputmask   + '/dist/jquery.inputmask.bundle.min.js',
-    pathTo.inputmask   + '/jquery.inputmask.extensions.min.js',
-    pathTo.colorpicker + '/dist/js/bootstrap-colorpicker.min.js',
-    pathTo.placeholder + '/jquery.placeholder.js',
-    pathTo.placeholder + '/jquery.placeholder.min.js',
-    pathTo.placeholder + '/jquery.placeholder.min.js.map',
-    pathTo.validation  + '/dist/jquery.validate.min.js',
-    pathTo.validation  + '/dist/additional-methods.min.js'
+    pathTo.bootstrap_notify  + '/bootstrap-notify.min.js',
+    pathTo.colorpicker       + '/dist/js/bootstrap-colorpicker.min.js',
+    pathTo.datatables        + '/datatables.min.js',
+    pathTo.inputmask         + '/dist/min/jquery.inputmask.bundle.min.js',
+    pathTo.placeholder       + '/jquery.placeholder.js',
+    pathTo.placeholder       + '/jquery.placeholder.min.js',
+    pathTo.placeholder       + '/jquery.placeholder.min.js.map',
+    pathTo.qrcode            + '/dist/jquery.qrcode.min.js',
+    pathTo.slimscroll        + '/jquery.slimscroll.min.js',
+    pathTo.select2           + '/dist/js/select2.full.min.js',
+    pathTo.tokenfield        + '/dist/bootstrap-tokenfield.min.js',
+    pathTo.typeaheadjs       + '/dist/typeahead.bundle.min.js',
+    pathTo.validation        + '/dist/jquery.validate.min.js',
+    pathTo.validation        + '/dist/additional-methods.min.js'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
 });
@@ -214,6 +223,56 @@ gulp.task('compile-timepicker-js', function() {
 
     // Create minified & uglify file and map file
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
+});
+
+// gulp.task('compile-bootbox-js', function() {
+//   return gulp.src(pathTo.bootbox + '/bootbox.js')
+//     //.pipe(sourcemaps.init())
+
+//       .pipe(uglify({ preserveComments: 'some' }))
+//       .pipe(rename({suffix: '.min'}))
+//     //.pipe(sourcemaps.write('./'))
+
+//     // Create minified & uglify file and map file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
+// });
+
+// gulp.task('compile-jqtree', function() {
+//   return gulp.src(pathTo.jqtree + '/tree.jquery.js')
+//     //.pipe(sourcemaps.init())
+
+//       .pipe(uglify({ preserveComments: 'some' }))
+//       .pipe(rename({suffix: '.min'}))
+//     //.pipe(sourcemaps.write('./'))
+
+//     // Create minified & uglify file and map file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
+// });
+
+gulp.task('compile-plugins-js', function() {
+  return gulp.src([
+    pathTo.bootbox + '/bootbox.js',
+    pathTo.jqtree  + '/tree.jquery.js'
+  ])
+    .pipe(uglify({ preserveComments: 'some' }))
+    .pipe(rename({suffix: '.min'}))
+
+    // Create minified & uglify file and map file
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
+});
+
+
+// ** Compile CSS files ** //
+gulp.task('compile-jqtree-css', function() {
+  return gulp.src(pathTo.jqtree + '/jqtree.css')
+    // Add .min to name file
+    .pipe(rename({suffix: '.min'}))
+
+    // Minify CSS file
+    .pipe(minify())
+
+    // Create minified file
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
 });
 
 
@@ -348,10 +407,11 @@ gulp.task('default', function(callback) {
     'copy-icon-fonts',
     'copy-plugins-images',
     'copy-plugins-css',
+    'compile-jqtree-css',
     ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js'],
     'join-modernizr-response',
     ['build-font-awesome', 'build-adminlte', 'build-skins', 'build-bootstrap'],
-    ['compile-admin-lte-js', 'compile-timepicker-js'],
+    ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js'],
     function(error) {
       if (error) {
         console.log(error.message);

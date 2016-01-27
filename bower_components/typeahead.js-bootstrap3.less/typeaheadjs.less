@@ -1,0 +1,90 @@
+span.twitter-typeahead {
+  width: 100%;
+
+  .tt-menu,
+  .tt-dropdown-menu
+   {
+    // Replace &:extend(.dropdown-menu)
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: @zindex-dropdown;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: @font-size-base;
+    text-align: left;
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-fallback-border;
+    border: 1px solid @dropdown-border;
+    border-radius: @border-radius-base;
+    .box-shadow(0 6px 12px rgba(0,0,0,.175));
+    background-clip: padding-box;
+  }
+
+  .tt-suggestion {
+    // Replace &:extend(.dropdown-menu > li > a);
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: @line-height-base;
+    color: @dropdown-link-color;
+    white-space: nowrap;
+    &.tt-cursor,
+    &:hover,
+    &:focus {
+      // Replace &:extend(.dropdown-menu > .active > a);
+      color: @dropdown-link-active-color;
+      text-decoration: none;
+      outline: 0;
+      background-color: @dropdown-link-active-bg;
+    }
+  }
+
+  .input-group & {
+    display: block !important;
+    height: @input-height-base;
+    .tt-menu,
+    .tt-dropdown-menu {
+      top:32px !important;
+    }
+    border-radius: @input-border-radius;
+    &:not(:first-child):not(:last-child) {
+      .form-control {
+        border-radius: 0px;
+      } 
+    }
+    &:last-child {
+      .form-control {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+    }
+  }
+  .input-group.input-group-sm & {
+    height: @input-height-small;
+    .tt-menu,
+    .tt-dropdown-menu {
+      top:@input-height-small !important;
+    }
+    .form-control {
+      // Replace &:extend(.input-group-sm > .form-control);
+      .input-sm();
+    }
+  }
+  .input-group.input-group-lg & {
+    height: @input-height-large;
+    .tt-menu,
+    .tt-dropdown-menu {
+      top:@input-height-large !important;
+    }
+    .form-control {
+      // Replace &:extend(.input-group-lg > .form-control);
+      .input-lg();
+    }
+  }
+}

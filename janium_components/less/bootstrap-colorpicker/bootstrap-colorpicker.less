@@ -180,7 +180,7 @@
     height: 15px;
     float: left;
     cursor: col-resize;
-    margin-left: 0;
+    margin-left: 0px;
     margin-bottom: 4px;
 }
 .colorpicker.colorpicker-horizontal .colorpicker-hue i,
@@ -193,7 +193,7 @@
     left: 0;
     width: 1px;
     border: none;
-    margin-top: 0;
+    margin-top: 0px;
 }
 .colorpicker.colorpicker-horizontal .colorpicker-hue {
     .bgImg('hue-horizontal.png');
@@ -220,4 +220,14 @@
 .colorpicker-right:after {
   left: auto;
   right: 7px;
+}
+
+.colorpicker-no-arrow:before {
+  border-right: 0;
+  border-left: 0;
+}
+
+.colorpicker-no-arrow:after {
+  border-right: 0;
+  border-left: 0;
 }

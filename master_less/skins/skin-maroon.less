@@ -1,0 +1,61 @@
+/*
+ * Skin: Maroon
+ * -----------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-maroon {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@maroon; #fff);
+      .sidebar-toggle {
+        color: #fff;
+        &:hover {
+          background-color: darken(@maroon, 5%);
+        }
+      }
+      @media(max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255,255,255,0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: darken(@maroon, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(darken(@maroon, 5%));
+    }
+
+    li.user-header {
+      background-color: @maroon;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-dark-sidebar(@maroon);
+
+}
