@@ -5240,8 +5240,6 @@ span.twitter-typeahead .tt-dropdown-menu {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
-  box-shadow: none;
-  border-color: #eee;
 }
 span.twitter-typeahead .tt-suggestion {
   display: block;
@@ -5249,16 +5247,16 @@ span.twitter-typeahead .tt-suggestion {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #777;
+  color: #333333;
   white-space: nowrap;
 }
 span.twitter-typeahead .tt-suggestion.tt-cursor,
 span.twitter-typeahead .tt-suggestion:hover,
 span.twitter-typeahead .tt-suggestion:focus {
-  background-color: #e1e3e9;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
   outline: 0;
+  background-color: #0277be;
 }
 .input-group span.twitter-typeahead {
   display: block !important;

@@ -23,8 +23,6 @@ span.twitter-typeahead {
     border-radius: @border-radius-base;
     .box-shadow(0 6px 12px rgba(0,0,0,.175));
     background-clip: padding-box;
-    box-shadow: none;
-    border-color: #eee;
   }
 
   .tt-suggestion {
@@ -34,16 +32,16 @@ span.twitter-typeahead {
     clear: both;
     font-weight: normal;
     line-height: @line-height-base;
-    color: #777;
+    color: @dropdown-link-color;
     white-space: nowrap;
     &.tt-cursor,
     &:hover,
     &:focus {
       // Replace &:extend(.dropdown-menu > .active > a);
-      background-color: lighten(@gray, 5%);
-      color: #333;
+      color: @dropdown-link-active-color;
       text-decoration: none;
       outline: 0;
+      background-color: @dropdown-link-active-bg;
     }
   }
 
