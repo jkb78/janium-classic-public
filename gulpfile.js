@@ -2,16 +2,17 @@
 
 //////// --- INIT
 var gulp         = require('gulp');
-var less         = require('gulp-less');
-var csslint      = require('gulp-csslint');
+var autoprefixer = require('gulp-autoprefixer');
+var concat       = require('gulp-concat');
 var csscomb      = require('gulp-csscomb');
+var csslint      = require('gulp-csslint');
+var jshint       = require('gulp-jshint');
+var less         = require('gulp-less');
 var minify       = require('gulp-minify-css');
 var rename       = require('gulp-rename');
-var uglify       = require('gulp-uglify');
 var sourcemaps   = require('gulp-sourcemaps');
-var jshint       = require('gulp-jshint');
-var concat       = require('gulp-concat');
-var autoprefixer = require('gulp-autoprefixer');
+var uglify       = require('gulp-uglify');
+var util         = require('gulp-util');
 var path         = require('path');
 var clean        = require('del');
 var runSequence  = require('run-sequence');
@@ -97,6 +98,14 @@ var jshintTimePickerConfig = {
     "loadFixtures" : true,
     "console"      : true,
     "module"       : true
+  }
+}
+
+var themes = {
+  "cgcof" : {
+    modifyVars: {
+      '@jnm-brand-primary': '#5f9ea0'
+    }
   }
 }
 
@@ -307,7 +316,10 @@ gulp.task('build-bootstrap', function() {
   return gulp.src(pathTo.master_less + '/bootstrap.less')
     //.pipe(sourcemaps.init())
       // Compile LESS files
-      .pipe(less().on('error', console.log))
+      .pipe(less(
+        util.env.theme ?
+        themes[util.env.theme] : ''
+      ).on('error', console.log))
 
       // Prefix CSS
       .pipe(autoprefixer(
@@ -351,7 +363,10 @@ gulp.task('build-adminlte', function() {
   return gulp.src(pathTo.master_less + '/adminlte.less')
     //.pipe(sourcemaps.init())
       // Compile LESS files
-      .pipe(less().on('error', console.log))
+      .pipe(less(
+        util.env.theme ?
+        themes[util.env.theme] : ''
+      ).on('error', console.log))
 
       // CSS Linter
       .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
