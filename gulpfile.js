@@ -49,6 +49,19 @@ var pathTo = {
   htdocs_folder:        path.join(__dirname, 'dist', 'htdocs')
 }
 
+var themes = {
+  "cgcof" : {
+    modifyVars: {
+      '@jnm-brand-primary': '#5f9ea0'
+    }
+  },
+  "blue" : {
+    modifyVars: {
+      '@jnm-brand-primary': '#496cad'
+    }
+  }
+}
+
 var jshintLteConfig = {
   "lookup"   : false,
   "asi"      : true,
@@ -101,13 +114,6 @@ var jshintTimePickerConfig = {
   }
 }
 
-var themes = {
-  "cgcof" : {
-    modifyVars: {
-      '@jnm-brand-primary': '#5f9ea0'
-    }
-  }
-}
 
 //////// --- DEFINE TASK's
 
@@ -234,30 +240,6 @@ gulp.task('compile-timepicker-js', function() {
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
 });
 
-// gulp.task('compile-bootbox-js', function() {
-//   return gulp.src(pathTo.bootbox + '/bootbox.js')
-//     //.pipe(sourcemaps.init())
-
-//       .pipe(uglify({ preserveComments: 'some' }))
-//       .pipe(rename({suffix: '.min'}))
-//     //.pipe(sourcemaps.write('./'))
-
-//     // Create minified & uglify file and map file
-//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
-// });
-
-// gulp.task('compile-jqtree', function() {
-//   return gulp.src(pathTo.jqtree + '/tree.jquery.js')
-//     //.pipe(sourcemaps.init())
-
-//       .pipe(uglify({ preserveComments: 'some' }))
-//       .pipe(rename({suffix: '.min'}))
-//     //.pipe(sourcemaps.write('./'))
-
-//     // Create minified & uglify file and map file
-//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
-// });
-
 gulp.task('compile-plugins-js', function() {
   return gulp.src([
     pathTo.bootbox + '/bootbox.js',
@@ -317,8 +299,8 @@ gulp.task('build-bootstrap', function() {
     //.pipe(sourcemaps.init())
       // Compile LESS files
       .pipe(less(
-        util.env.theme ?
-        themes[util.env.theme] : ''
+        util.env.primary ?
+        themes[util.env.primary] : ''
       ).on('error', console.log))
 
       // Prefix CSS
@@ -364,8 +346,8 @@ gulp.task('build-adminlte', function() {
     //.pipe(sourcemaps.init())
       // Compile LESS files
       .pipe(less(
-        util.env.theme ?
-        themes[util.env.theme] : ''
+        util.env.primary ?
+        themes[util.env.primary] : ''
       ).on('error', console.log))
 
       // CSS Linter
@@ -391,7 +373,10 @@ gulp.task('build-skins', function() {
   return gulp.src(pathTo.master_less + '/skins/_all-skins.less')
     //.pipe(sourcemaps.init())
       // Compile LESS files
-      .pipe(less().on('error', console.log))
+      .pipe(less(
+        util.env.theme ?
+        themes[util.env.theme] : ''
+      ).on('error', console.log))
 
       // CSS Linter
       .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
