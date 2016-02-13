@@ -26,11 +26,13 @@ var pathTo = {
   bootstrap_notify:     path.join(__dirname, 'bower_components', 'remarkable-bootstrap-notify'),
   colorpicker:          path.join(__dirname, 'bower_components', 'mjolnic-bootstrap-colorpicker'),
   font_awesome:         path.join(__dirname, 'bower_components', 'font-awesome'),
+  hasher:               path.join(__dirname, 'bower_components', 'hasher'),
   inputmask:            path.join(__dirname, 'bower_components', 'jquery.inputmask'),
   jquery:               path.join(__dirname, 'bower_components', 'jquery'),
   jqtree:               path.join(__dirname, 'bower_components', 'jqTree'),
   jquery_cookie:        path.join(__dirname, 'bower_components', 'jquery-cookie'),
   jquery_jsonp:         path.join(__dirname, 'bower_components', 'jquery-jsonp'),
+  js_signals:           path.join(__dirname, 'bower_components', 'js-signals'),
   placeholder:          path.join(__dirname, 'bower_components', 'jquery-placeholder'),
   qrcode:               path.join(__dirname, 'bower_components', 'jquery-qrcode'),
   respond:              path.join(__dirname, 'bower_components', 'respond'),
@@ -204,6 +206,17 @@ gulp.task('join-modernizr-response', function() {
   ])
     .pipe(concat('modernizr-respond.min.js'))
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'modernizr')));
+});
+
+
+// ** Join JS-Signals & Hasher ** //
+gulp.task('join-signals-hasher', function() {
+  return gulp.src([
+    pathTo.js_signals + '/dist/signals.min.js',
+    pathTo.hasher     + '/dist/js/hasher.min.js',
+  ])
+    .pipe(concat('signals-hasher.min.js'))
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'hasher')));
 });
 
 
@@ -409,7 +422,7 @@ gulp.task('default', function(callback) {
     'copy-plugins-css',
     'compile-jqtree-css',
     ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js'],
-    'join-modernizr-response',
+    ['join-modernizr-response', 'join-signals-hasher'],
     ['build-font-awesome', 'build-adminlte', 'build-skins', 'build-bootstrap'],
     ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js'],
     function(error) {
