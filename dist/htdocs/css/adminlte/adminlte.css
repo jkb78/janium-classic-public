@@ -1,5 +1,5 @@
 /*!
- *   AdminLTE v2.3.2
+ *   AdminLTE v2.3.3
  *   Author: Almsaeed Studio
  *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
  *   License: Open source - MIT
@@ -1266,6 +1266,9 @@ a:focus {
   border-color: #6f8745;
   box-shadow: none;
 }
+.form-group.has-success .help-block {
+  color: #6f8745;
+}
 .form-group.has-warning label {
   color: #f39c12;
 }
@@ -1273,12 +1276,18 @@ a:focus {
   border-color: #f39c12;
   box-shadow: none;
 }
+.form-group.has-warning .help-block {
+  color: #f39c12;
+}
 .form-group.has-error label {
   color: #ae131f;
 }
 .form-group.has-error .form-control {
   border-color: #ae131f;
   box-shadow: none;
+}
+.form-group.has-error .help-block {
+  color: #ae131f;
 }
 /* Input group */
 .input-group .input-group-addon {
@@ -1500,7 +1509,7 @@ a:focus {
 }
 .small-box h3,
 .small-box p {
-  z-index: 5px;
+  z-index: 5;
 }
 .small-box .icon {
   -webkit-transition: all 0.3s linear;
@@ -5709,7 +5718,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #86618f !important;
 }
 .bg-maroon {
-  background-color: #d81b60 !important;
+  background-color: #fe206a !important;
 }
 .bg-gray-active {
   color: #000;
@@ -5768,7 +5777,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #785780 !important;
 }
 .bg-maroon-active {
-  background-color: #ca195a !important;
+  background-color: #fe1160 !important;
 }
 [class^="bg-"].disabled {
   opacity: 0.65;
@@ -5820,7 +5829,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   color: #86618f !important;
 }
 .text-maroon {
-  color: #d81b60 !important;
+  color: #fe206a !important;
 }
 .link-muted {
   color: #7a869d;
@@ -5967,12 +5976,12 @@ span.twitter-typeahead .tt-suggestion:focus {
   color: #fff;
 }
 .bg-maroon-gradient {
-  background: #d81b60 !important;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #d81b60), color-stop(1, #e73f7c)) !important;
-  background: -ms-linear-gradient(bottom, #d81b60, #e73f7c) !important;
-  background: -moz-linear-gradient(center bottom, #d81b60 0%, #e73f7c 100%) !important;
-  background: -o-linear-gradient(#e73f7c, #d81b60) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e73f7c', endColorstr='#d81b60', GradientType=0) !important;
+  background: #fe206a !important;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fe206a), color-stop(1, #fe538c)) !important;
+  background: -ms-linear-gradient(bottom, #fe206a, #fe538c) !important;
+  background: -moz-linear-gradient(center bottom, #fe206a 0%, #fe538c 100%) !important;
+  background: -o-linear-gradient(#fe538c, #fe206a) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe538c', endColorstr='#fe206a', GradientType=0) !important;
   color: #fff;
 }
 .description-block .description-icon {
