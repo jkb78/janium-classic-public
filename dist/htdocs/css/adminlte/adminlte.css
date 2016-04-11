@@ -5703,7 +5703,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #39cccc !important;
 }
 .bg-olive {
-  background-color: #3d9970 !important;
+  background-color: #808000 !important;
 }
 .bg-lime {
   background-color: #01ff70 !important;
@@ -5712,13 +5712,13 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #f16022 !important;
 }
 .bg-fuchsia {
-  background-color: #fb4483 !important;
+  background-color: #fe206a !important;
 }
 .bg-purple {
   background-color: #86618f !important;
 }
 .bg-maroon {
-  background-color: #fe206a !important;
+  background-color: #800040 !important;
 }
 .bg-gray-active {
   color: #000;
@@ -5762,7 +5762,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #30bbbb !important;
 }
 .bg-olive-active {
-  background-color: #368763 !important;
+  background-color: #666700 !important;
 }
 .bg-lime-active {
   background-color: #00e765 !important;
@@ -5771,13 +5771,13 @@ span.twitter-typeahead .tt-suggestion:focus {
   background-color: #eb510f !important;
 }
 .bg-fuchsia-active {
-  background-color: #fa2b72 !important;
+  background-color: #fe0759 !important;
 }
 .bg-purple-active {
   background-color: #785780 !important;
 }
 .bg-maroon-active {
-  background-color: #fe1160 !important;
+  background-color: #710038 !important;
 }
 [class^="bg-"].disabled {
   opacity: 0.65;
@@ -5814,7 +5814,7 @@ span.twitter-typeahead .tt-suggestion:focus {
   color: #39cccc !important;
 }
 .text-olive {
-  color: #3d9970 !important;
+  color: #808000 !important;
 }
 .text-lime {
   color: #01ff70 !important;
@@ -5823,13 +5823,13 @@ span.twitter-typeahead .tt-suggestion:focus {
   color: #f16022 !important;
 }
 .text-fuchsia {
-  color: #fb4483 !important;
+  color: #fe206a !important;
 }
 .text-purple {
   color: #86618f !important;
 }
 .text-maroon {
-  color: #fe206a !important;
+  color: #800040 !important;
 }
 .link-muted {
   color: #7a869d;
@@ -5976,12 +5976,12 @@ span.twitter-typeahead .tt-suggestion:focus {
   color: #fff;
 }
 .bg-maroon-gradient {
-  background: #fe206a !important;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fe206a), color-stop(1, #fe538c)) !important;
-  background: -ms-linear-gradient(bottom, #fe206a, #fe538c) !important;
-  background: -moz-linear-gradient(center bottom, #fe206a 0%, #fe538c 100%) !important;
-  background: -o-linear-gradient(#fe538c, #fe206a) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe538c', endColorstr='#fe206a', GradientType=0) !important;
+  background: #800040 !important;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #800040), color-stop(1, #b3005a)) !important;
+  background: -ms-linear-gradient(bottom, #800040, #b3005a) !important;
+  background: -moz-linear-gradient(center bottom, #800040 0%, #b3005a 100%) !important;
+  background: -o-linear-gradient(#b3005a, #800040) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3005a', endColorstr='#800040', GradientType=0) !important;
   color: #fff;
 }
 .description-block .description-icon {
