@@ -23,7 +23,9 @@ var pathTo = {
   adminlte:             path.join(__dirname, 'bower_components', 'AdminLTE'),
   bootbox:              path.join(__dirname, 'bower_components', 'bootbox.js'),
   bootstrap:            path.join(__dirname, 'bower_components', 'bootstrap'),
+  bootstrap_datepicker: path.join(__dirname, 'bower_components', 'bootstrap-datepicker'),
   bootstrap_notify:     path.join(__dirname, 'bower_components', 'remarkable-bootstrap-notify'),
+  bootstrap_select:     path.join(__dirname, 'bower_components', 'bootstrap-select'),
   colorpicker:          path.join(__dirname, 'bower_components', 'mjolnic-bootstrap-colorpicker'),
   font_awesome:         path.join(__dirname, 'bower_components', 'font-awesome'),
   hasher:               path.join(__dirname, 'bower_components', 'hasher'),
@@ -32,7 +34,9 @@ var pathTo = {
   jqtree:               path.join(__dirname, 'bower_components', 'jqTree'),
   jquery_cookie:        path.join(__dirname, 'bower_components', 'jquery-cookie'),
   jquery_jsonp:         path.join(__dirname, 'bower_components', 'jquery-jsonp'),
+  jquery_paging:        path.join(__dirname, 'bower_components', 'paging'),
   js_signals:           path.join(__dirname, 'bower_components', 'js-signals'),
+  moment:               path.join(__dirname, 'bower_components', 'moment'),
   placeholder:          path.join(__dirname, 'bower_components', 'jquery-placeholder'),
   qrcode:               path.join(__dirname, 'bower_components', 'jquery-qrcode'),
   respond:              path.join(__dirname, 'bower_components', 'respond'),
@@ -43,8 +47,11 @@ var pathTo = {
   typeaheadjs:          path.join(__dirname, 'bower_components', 'typeahead.js'),
   validation:           path.join(__dirname, 'bower_components', 'jquery-validation'),
 
+  bootstrap_assets:     path.join(__dirname, 'vendor_components', 'bootstrap'),
   datatables:           path.join(__dirname, 'vendor_components', 'datatables'),
   flaticon:             path.join(__dirname, 'vendor_components', 'flaticon'),
+  json_forms:           path.join(__dirname, 'vendor_components', 'json-forms'),
+  markdown:             path.join(__dirname, 'vendor_components', 'markdown'),
   modernizr:            path.join(__dirname, 'vendor_components', 'modernizr'),
   //JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
   //JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
@@ -155,8 +162,11 @@ gulp.task('copy-plugins-images', function() {
 // ** Copy Plugins CSS files ** //
 gulp.task('copy-plugins-css', function() {
   return gulp.src([
-    pathTo.datatables + '/datatables.min.css',
-    pathTo.select2    + '/dist/css/select2.min.css'
+    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
+    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map',
+    pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
+    pathTo.datatables           + '/datatables.min.css',
+    pathTo.select2              + '/dist/css/select2.min.css'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
 });
@@ -173,26 +183,47 @@ gulp.task('copy-jquery', function() {
 });
 
 gulp.task('copy-bootstrap-js', function() {
-  return gulp.src(pathTo.bootstrap + '/dist/js/bootstrap.min.js')
+  return gulp.src([
+    pathTo.bootstrap        + '/dist/js/bootstrap.min.js',
+    pathTo.bootstrap_assets + '/ie10-viewport-bug-workaround.js'
+  ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'bootstrap')));
+});
+
+gulp.task('copy-markdown-js', function() {
+  return gulp.src(pathTo.markdown + '/markdown.min.js')
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'markdown')));
+});
+
+gulp.task('copy-moment-js', function() {
+  return gulp.src(pathTo.moment + '/min/moment.min.js')
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'moment')));
 });
 
 gulp.task('copy-plugins-js', function() {
   return gulp.src([
-    pathTo.bootstrap_notify  + '/bootstrap-notify.min.js',
-    pathTo.colorpicker       + '/dist/js/bootstrap-colorpicker.min.js',
-    pathTo.datatables        + '/datatables.min.js',
-    pathTo.inputmask         + '/dist/min/jquery.inputmask.bundle.min.js',
-    pathTo.placeholder       + '/jquery.placeholder.js',
-    pathTo.placeholder       + '/jquery.placeholder.min.js',
-    pathTo.placeholder       + '/jquery.placeholder.min.js.map',
-    pathTo.qrcode            + '/dist/jquery.qrcode.min.js',
-    pathTo.slimscroll        + '/jquery.slimscroll.min.js',
-    pathTo.select2           + '/dist/js/select2.full.min.js',
-    pathTo.tokenfield        + '/dist/bootstrap-tokenfield.min.js',
-    pathTo.typeaheadjs       + '/dist/typeahead.bundle.min.js',
-    pathTo.validation        + '/dist/jquery.validate.min.js',
-    pathTo.validation        + '/dist/additional-methods.min.js'
+    pathTo.bootstrap_datepicker  + '/dist/js/bootstrap-datepicker.min.js',
+    pathTo.bootstrap_notify      + '/bootstrap-notify.min.js',
+    pathTo.bootstrap_select      + '/dist/js/bootstrap-select.min.js',
+    pathTo.bootstrap_select      + '/dist/js/bootstrap-select.js.map',
+    pathTo.bootstrap_select      + '/dist/js/i18n/defaults-es_CL.min.js',
+    pathTo.colorpicker           + '/dist/js/bootstrap-colorpicker.min.js',
+    pathTo.datatables            + '/datatables.min.js',
+    pathTo.datatables            + '/datatables-i18n-spanish.json',
+    pathTo.datatables            + '/pdfmake.min.js.map',
+    pathTo.inputmask             + '/dist/min/jquery.inputmask.bundle.min.js',
+    pathTo.jquery_paging         + '/jquery.paging.min.js',
+    pathTo.json_forms            + '/brutusin-json-forms-lan-es_ES.min.js',
+    pathTo.placeholder           + '/jquery.placeholder.js',
+    pathTo.placeholder           + '/jquery.placeholder.min.js',
+    pathTo.placeholder           + '/jquery.placeholder.min.js.map',
+    pathTo.qrcode                + '/dist/jquery.qrcode.min.js',
+    pathTo.slimscroll            + '/jquery.slimscroll.min.js',
+    pathTo.select2               + '/dist/js/select2.full.min.js',
+    pathTo.tokenfield            + '/dist/bootstrap-tokenfield.min.js',
+    pathTo.typeaheadjs           + '/dist/typeahead.bundle.min.js',
+    pathTo.validation            + '/dist/jquery.validate.min.js',
+    pathTo.validation            + '/dist/additional-methods.min.js'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
 });
@@ -253,10 +284,26 @@ gulp.task('compile-timepicker-js', function() {
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
 });
 
+gulp.task('compile-json-forms-js', function() {
+  return gulp.src([
+    pathTo.json_forms + '/brutusin-json-forms.js',
+    pathTo.json_forms + '/brutusin-json-forms-bootstrap.js'
+  ])
+    .pipe(uglify({ preserveComments: 'some' }))
+    .pipe(rename({suffix: '.min'}))
+
+    // Create minified & uglify file and map file
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'json-forms')));
+});
+
 gulp.task('compile-plugins-js', function() {
   return gulp.src([
-    pathTo.bootbox + '/bootbox.js',
-    pathTo.jqtree  + '/tree.jquery.js'
+    pathTo.bootbox    + '/bootbox.js',
+    pathTo.datatables + '/datatables-row-show.js',
+    pathTo.datatables + '/datatables-datetime-moment.js',
+    pathTo.jqtree     + '/tree.jquery.js',
+    pathTo.json_forms + '/brutusin-json-forms.js',
+    pathTo.json_forms + '/brutusin-json-forms-bootstrap.js'
   ])
     .pipe(uglify({ preserveComments: 'some' }))
     .pipe(rename({suffix: '.min'}))
@@ -421,10 +468,10 @@ gulp.task('default', function(callback) {
     'copy-plugins-images',
     'copy-plugins-css',
     'compile-jqtree-css',
-    ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js'],
+    ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js', 'copy-markdown-js', 'copy-moment-js'],
     ['join-modernizr-response', 'join-signals-hasher'],
     ['build-font-awesome', 'build-adminlte', 'build-skins', 'build-bootstrap'],
-    ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js'],
+    ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js', 'compile-json-forms-js'],
     function(error) {
       if (error) {
         console.log(error.message);

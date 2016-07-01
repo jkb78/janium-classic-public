@@ -6187,3 +6187,86 @@ span.twitter-typeahead .tt-suggestion:focus {
     white-space: normal !important;
   }
 }
+/*
+ * General: Miscellaneous
+ * ----------------------
+ */
+.bg-clementine,
+.bg-curious-blue,
+.bg-ocean,
+.bg-picton-blue,
+.bg-san-marino,
+.bg-clementine-active,
+.bg-curious-blue-active,
+.bg-ocean-active,
+.bg-san-marino-active {
+  color: #fff !important;
+}
+.bg-clementine {
+  background-color: #f16022 !important;
+}
+.bg-clementine-active {
+  background-color: #eb510f !important;
+}
+.text-clementine {
+  color: #f16022 !important;
+}
+.bg-curious-blue {
+  background-color: #2780e3 !important;
+}
+.bg-curious-blue-active {
+  background-color: #1c73d5 !important;
+}
+.text-curious-blue {
+  color: #2780e3 !important;
+}
+.bg-ocean {
+  background-color: #3d9970 !important;
+}
+.bg-ocean-active {
+  background-color: #368763 !important;
+}
+.text-ocean {
+  color: #3d9970 !important;
+}
+.bg-picton-blue {
+  background-color: #33b5e5 !important;
+}
+.bg-picton-blue-active {
+  background-color: #1dade2 !important;
+}
+.text-picton-blue {
+  color: #33b5e5 !important;
+}
+.bg-san-marino {
+  background-color: #496cad !important;
+}
+.bg-san-marino-active {
+  background-color: #41619b !important;
+}
+.text-san-marino {
+  color: #496cad !important;
+}
+.wrapper,
+.content-wrapper {
+  background-color: #f9f9f9;
+}
+/*
+ * Fix to IE10 in Win8 & Windows Phone 8
+ * ----------------------
+ */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}

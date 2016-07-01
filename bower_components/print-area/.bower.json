@@ -8,8 +8,7 @@
     "tag": "2.4.1",
     "commit": "c092e2e2b2f190ad5016afa168580d0ee13bc252"
   },
-  "_source": "git://github.com/RitsC/PrintArea.git",
+  "_source": "https://github.com/RitsC/PrintArea.git",
   "_target": "~2.4.1",
-  "_originalSource": "print-area",
-  "_direct": true
+  "_originalSource": "print-area"
 }
