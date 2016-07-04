@@ -8,7 +8,7 @@ var csscomb      = require('gulp-csscomb');
 var csslint      = require('gulp-csslint');
 var jshint       = require('gulp-jshint');
 var less         = require('gulp-less');
-var minify       = require('gulp-minify-css');
+var cleanCSS     = require('gulp-clean-css');
 var rename       = require('gulp-rename');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
@@ -320,7 +320,7 @@ gulp.task('compile-jqtree-css', function() {
     .pipe(rename({suffix: '.min'}))
 
     // Minify CSS file
-    .pipe(minify())
+    .pipe(cleanCSS())
 
     // Create minified file
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
@@ -345,7 +345,7 @@ gulp.task('build-font-awesome', function() {
       .pipe(rename({suffix: '.min'}))
 
       // Minify CSS file
-      .pipe(minify())
+      .pipe(cleanCSS())
 
     //.pipe(sourcemaps.write('./'))
 
@@ -389,7 +389,7 @@ gulp.task('build-bootstrap', function() {
       .pipe(rename({suffix: '.min'}))
 
       // Minify CSS file
-      .pipe(minify({
+      .pipe(cleanCSS({
         compatibility: 'ie8',
         noAdvanced: true
       }))
@@ -421,7 +421,7 @@ gulp.task('build-adminlte', function() {
       .pipe(rename({suffix: '.min'}))
 
       // Minify CSS file
-      .pipe(minify())
+      .pipe(cleanCSS())
 
     //.pipe(sourcemaps.write('./'))
 
@@ -449,7 +449,7 @@ gulp.task('build-skins', function() {
       .pipe(rename({suffix: '.min'}))
 
       // Minify CSS file
-      .pipe(minify())
+      .pipe(cleanCSS())
 
     //.pipe(sourcemaps.write('./'))
 

@@ -11,13 +11,29 @@
 .bg-clementine,
 .bg-curious-blue,
 .bg-ocean,
-.bg-picton-blue,
+.bg-summer-sky,
 .bg-san-marino,
 .bg-clementine-active,
 .bg-curious-blue-active,
 .bg-ocean-active,
-.bg-san-marino-active, {
+.bg-san-marino-active,
+.bg-janium,
+.bg-librarian,
+.bg-blush,
+.bg-thunderbird {
   color: #fff !important;
+}
+
+.bg-blush {
+  background-color: @blush !important;
+}
+
+.bg-blush-active {
+  background-color: darken(@blush , 5%) !important;
+}
+
+.text-blush {
+  color: @blush !important;
 }
 
 .bg-clementine {
@@ -44,6 +60,30 @@
   color: @curious-blue !important;
 }
 
+.bg-janium {
+  background-color: @janium !important;
+}
+
+.bg-janium-active {
+  background-color: darken(@janium , 5%) !important;
+}
+
+.text-janium {
+  color: @janium !important;
+}
+
+.bg-librarian {
+  background-color: @librarian !important;
+}
+
+.bg-librarian-active {
+  background-color: darken(@librarian , 5%) !important;
+}
+
+.text-librarian {
+  color: @librarian !important;
+}
+
 .bg-ocean {
   background-color: @ocean !important;
 }
@@ -56,16 +96,16 @@
   color: @ocean !important;
 }
 
-.bg-picton-blue {
-  background-color: @picton-blue !important;
+.bg-summer-sky {
+  background-color: @summer-sky !important;
 }
 
-.bg-picton-blue-active {
-  background-color: darken(@picton-blue , 5%) !important;
+.bg-summer-sky-active {
+  background-color: darken(@summer-sky , 5%) !important;
 }
 
-.text-picton-blue {
-  color: @picton-blue !important;
+.text-summer-sky {
+  color: @summer-sky !important;
 }
 
 .bg-san-marino {
@@ -80,9 +120,27 @@
   color: @san-marino !important;
 }
 
-.wrapper,
-.content-wrapper {
-    background-color: #f9f9f9;
+.bg-thunderbird {
+  background-color: @thunderbird !important;
+}
+
+.bg-thunderbird-active {
+  background-color: darken(@thunderbird , 5%) !important;
+}
+
+.text-thunderbird {
+  color: @thunderbird !important;
+}
+
+// // Fix AdminLTE Background
+// .wrapper,
+// .content-wrapper {
+//   background-color: @body-bg;
+// }
+
+// Permite customizar la fuente del tema
+body {
+  font-family: @jnm-font-family;
 }
 
 /*
