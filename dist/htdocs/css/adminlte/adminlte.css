@@ -333,8 +333,6 @@ a:focus {
   position: absolute;
   top: 15px;
   right: 10px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 .content-header > .breadcrumb > li > a {
@@ -730,8 +728,6 @@ a:focus {
   border-left-width: 0;
 }
 .nav-tabs.control-sidebar-tabs > li > a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .nav-tabs.control-sidebar-tabs > li > a,
@@ -1238,8 +1234,6 @@ a:focus {
  * ---------------
  */
 .form-control {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   box-shadow: none;
   border-color: #d2d6de;
@@ -1291,8 +1285,6 @@ a:focus {
 }
 /* Input group */
 .input-group .input-group-addon {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-color: #d2d6de;
   background-color: #fff;
@@ -1300,8 +1292,6 @@ a:focus {
 /* button groups */
 .btn-group-vertical .btn.btn-flat:first-of-type,
 .btn-group-vertical .btn.btn-flat:last-of-type {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .icheck > label {
@@ -1334,8 +1324,6 @@ a:focus {
 .progress > .progress-bar,
 .progress .progress-bar,
 .progress > .progress-bar .progress-bar {
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 /* size variation */
@@ -1347,8 +1335,6 @@ a:focus {
 .progress-sm,
 .progress.sm .progress-bar,
 .progress-sm .progress-bar {
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 .progress.xs,
@@ -1359,8 +1345,6 @@ a:focus {
 .progress-xs,
 .progress.xs .progress-bar,
 .progress-xs .progress-bar {
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 .progress.xxs,
@@ -1371,8 +1355,6 @@ a:focus {
 .progress-xxs,
 .progress.xxs .progress-bar,
 .progress-xxs .progress-bar {
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
 }
 /* Vertical bars */
@@ -1465,8 +1447,6 @@ a:focus {
  * --------------------
  */
 .small-box {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   position: relative;
   display: block;
@@ -1546,8 +1526,6 @@ a:focus {
  */
 .box {
   position: relative;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   background: #ffffff;
   border-top: 3px solid #d2d6de;
@@ -1707,8 +1685,6 @@ a:focus {
 .overlay-wrapper .overlay {
   z-index: 50;
   background: rgba(255, 255, 255, 0.7);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .box .overlay > .fa,
@@ -1888,8 +1864,6 @@ a:focus {
   overflow: auto;
 }
 .todo-list > li {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   padding: 10px;
   background: #f4f4f4;
@@ -1975,8 +1949,6 @@ a:focus {
   width: 40px;
   height: 40px;
   border: 2px solid transparent;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .chat .item > .online {
@@ -1994,8 +1966,6 @@ a:focus {
   font-weight: 600;
 }
 .chat .item > .attachment {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   background: #f4f4f4;
   margin-left: 65px;
@@ -2038,8 +2008,6 @@ a:focus {
   background: #fff;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   margin-bottom: 15px;
 }
@@ -2053,8 +2021,6 @@ a:focus {
 }
 .info-box .progress,
 .info-box .progress .progress-bar {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .info-box .progress .progress-bar {
@@ -2122,8 +2088,6 @@ a:focus {
   background: #ddd;
   left: 31px;
   margin: 0;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 .timeline > li {
@@ -2142,8 +2106,6 @@ a:focus {
 .timeline > li > .timeline-item {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   margin-top: 0;
   background: #fff;
@@ -2194,8 +2156,6 @@ a:focus {
   padding: 5px;
   display: inline-block;
   background-color: #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .timeline-inverse > li > .timeline-item {
@@ -2212,8 +2172,6 @@ a:focus {
  * -----------------
  */
 .btn {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -2223,8 +2181,6 @@ a:focus {
   text-transform: uppercase;
 }
 .btn.btn-flat {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2333,8 +2289,6 @@ a:focus {
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
 }
 .btn-app {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   position: relative;
   padding: 15px 5px;
@@ -2376,8 +2330,6 @@ a:focus {
  * ------------------
  */
 .callout {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 0 0 20px 0;
   padding: 15px 30px 15px 15px;
@@ -2418,8 +2370,6 @@ a:focus {
  * ----------------
  */
 .alert {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .alert h4 {
@@ -2466,8 +2416,6 @@ a:focus {
 }
 /* NAV PILLS */
 .nav-pills > li > a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-top: 3px solid transparent;
   color: #444;
@@ -2487,8 +2435,6 @@ a:focus {
 }
 /* NAV STACKED */
 .nav-stacked > li > a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-top: 0;
   border-left: 3px solid transparent;
@@ -2528,8 +2474,6 @@ a:focus {
 }
 .nav-tabs-custom > .nav-tabs > li > a {
   color: #444;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .nav-tabs-custom > .nav-tabs > li > a.text-muted {
@@ -2629,8 +2573,6 @@ a:focus {
   color: #666;
 }
 .pagination.pagination-flat > li > a {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
   border-radius: 0 !important;
 }
 /*
@@ -2643,8 +2585,6 @@ a:focus {
   padding: 0;
 }
 .products-list > .item {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -2682,8 +2622,6 @@ a:focus {
 .product-list-in-box > .item {
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-bottom: 1px solid #f4f4f4;
 }
@@ -2797,8 +2735,6 @@ table.text-center th {
   transition: transform 0.5s ease-in-out;
 }
 .direct-chat-text {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   position: relative;
   padding: 5px 10px;
@@ -2839,8 +2775,6 @@ table.text-center th {
   border-left-color: #d2d6de;
 }
 .direct-chat-img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   float: left;
   width: 40px;
@@ -2897,8 +2831,6 @@ table.text-center th {
   border-bottom: none;
 }
 .contacts-list-img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   width: 40px;
   float: left;
@@ -2980,8 +2912,6 @@ table.text-center th {
   text-align: center;
 }
 .users-list > li img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   max-width: 100%;
   height: auto;
@@ -3029,8 +2959,6 @@ table.text-center th {
   background: rgba(0, 0, 0, 0.3);
 }
 .modal-content {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
@@ -3227,8 +3155,6 @@ table.text-center th {
 }
 /* Will contain the image and the sign in form */
 .lockscreen-item {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 0;
   background: #fff;
@@ -3238,8 +3164,6 @@ table.text-center th {
 }
 /* User image */
 .lockscreen-image {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   left: -10px;
@@ -3249,8 +3173,6 @@ table.text-center th {
   z-index: 10;
 }
 .lockscreen-image > img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -4855,700 +4777,6 @@ fieldset[disabled] .btn-yahoo.focus {
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding-right: 10px;
 }
-/*!
- * Timepicker Component for Twitter Bootstrap
- *
- * Copyright 2013 Joris de Wit
- *
- * Contributors https://github.com/jdewit/bootstrap-timepicker/graphs/contributors
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-.bootstrap-timepicker {
-  position: relative;
-}
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu {
-  left: auto;
-  right: 0;
-}
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:before {
-  left: auto;
-  right: 12px;
-}
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:after {
-  left: auto;
-  right: 13px;
-}
-.bootstrap-timepicker .input-group-addon {
-  cursor: pointer;
-}
-.bootstrap-timepicker .input-group-addon i {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-}
-.bootstrap-timepicker-widget.dropdown-menu {
-  padding: 4px;
-}
-.bootstrap-timepicker-widget.dropdown-menu.open {
-  display: inline-block;
-}
-.bootstrap-timepicker-widget.dropdown-menu:before {
-  border-bottom: 7px solid rgba(0, 0, 0, 0.2);
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  content: "";
-  display: inline-block;
-  position: absolute;
-}
-.bootstrap-timepicker-widget.dropdown-menu:after {
-  border-bottom: 6px solid #FFFFFF;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  content: "";
-  display: inline-block;
-  position: absolute;
-}
-.bootstrap-timepicker-widget.timepicker-orient-left:before {
-  left: 6px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-left:after {
-  left: 7px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-right:before {
-  right: 6px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-right:after {
-  right: 7px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-top:before {
-  top: -7px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-top:after {
-  top: -6px;
-}
-.bootstrap-timepicker-widget.timepicker-orient-bottom:before {
-  bottom: -7px;
-  border-bottom: 0;
-  border-top: 7px solid #999;
-}
-.bootstrap-timepicker-widget.timepicker-orient-bottom:after {
-  bottom: -6px;
-  border-bottom: 0;
-  border-top: 6px solid #ffffff;
-}
-.bootstrap-timepicker-widget a.btn,
-.bootstrap-timepicker-widget input {
-  border-radius: 4px;
-}
-.bootstrap-timepicker-widget table {
-  width: 100%;
-  margin: 0;
-}
-.bootstrap-timepicker-widget table td {
-  text-align: center;
-  height: 30px;
-  margin: 0;
-  padding: 2px;
-}
-.bootstrap-timepicker-widget table td:not(.separator) {
-  min-width: 30px;
-}
-.bootstrap-timepicker-widget table td span {
-  width: 100%;
-}
-.bootstrap-timepicker-widget table td a {
-  border: 1px transparent solid;
-  width: 100%;
-  display: inline-block;
-  margin: 0;
-  padding: 8px 0;
-  outline: 0;
-  color: #333;
-}
-.bootstrap-timepicker-widget table td a:hover {
-  text-decoration: none;
-  background-color: #eee;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border-color: #ddd;
-}
-.bootstrap-timepicker-widget table td a i {
-  margin-top: 2px;
-  font-size: 18px;
-}
-.bootstrap-timepicker-widget table td input {
-  width: 25px;
-  margin: 0;
-  text-align: center;
-}
-.bootstrap-timepicker-widget .modal-content {
-  padding: 4px;
-}
-@media (min-width: 767px) {
-  .bootstrap-timepicker-widget.modal {
-    width: 200px;
-    margin-left: -100px;
-  }
-}
-@media (max-width: 767px) {
-  .bootstrap-timepicker {
-    width: 100%;
-  }
-  .bootstrap-timepicker .dropdown-menu {
-    width: 100%;
-  }
-}
-/*!
- * Bootstrap Colorpicker
- * http://mjolnic.github.io/bootstrap-colorpicker/
- *
- * Originally written by (c) 2012 Stefan Petre
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0.txt
- *
- */
-.colorpicker-saturation {
-  width: 100px;
-  height: 100px;
-  background-image: url("../../img/bootstrap-colorpicker/saturation.png");
-  cursor: crosshair;
-  float: left;
-}
-.colorpicker-saturation i {
-  display: block;
-  height: 5px;
-  width: 5px;
-  border: 1px solid #000;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: -4px 0 0 -4px;
-}
-.colorpicker-saturation i b {
-  display: block;
-  height: 5px;
-  width: 5px;
-  border: 1px solid #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.colorpicker-hue,
-.colorpicker-alpha {
-  width: 15px;
-  height: 100px;
-  float: left;
-  cursor: row-resize;
-  margin-left: 4px;
-  margin-bottom: 4px;
-}
-.colorpicker-hue i,
-.colorpicker-alpha i {
-  display: block;
-  height: 1px;
-  background: #000;
-  border-top: 1px solid #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: -1px;
-}
-.colorpicker-hue {
-  background-image: url("../../img/bootstrap-colorpicker/hue.png");
-}
-.colorpicker-alpha {
-  background-image: url("../../img/bootstrap-colorpicker/alpha.png");
-  display: none;
-}
-.colorpicker-saturation,
-.colorpicker-hue,
-.colorpicker-alpha {
-  background-size: contain;
-}
-.colorpicker {
-  *zoom: 1;
-  top: 0;
-  left: 0;
-  padding: 4px;
-  min-width: 130px;
-  margin-top: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  z-index: 2500;
-}
-.colorpicker:before,
-.colorpicker:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.colorpicker:after {
-  clear: both;
-}
-.colorpicker:before {
-  content: '';
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: -7px;
-  left: 6px;
-}
-.colorpicker:after {
-  content: '';
-  display: inline-block;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #ffffff;
-  position: absolute;
-  top: -6px;
-  left: 7px;
-}
-.colorpicker div {
-  position: relative;
-}
-.colorpicker.colorpicker-with-alpha {
-  min-width: 140px;
-}
-.colorpicker.colorpicker-with-alpha .colorpicker-alpha {
-  display: block;
-}
-.colorpicker-color {
-  height: 10px;
-  margin-top: 5px;
-  clear: both;
-  background-image: url("../../img/bootstrap-colorpicker/alpha.png");
-  background-position: 0 100%;
-}
-.colorpicker-color div {
-  height: 10px;
-}
-.colorpicker-selectors {
-  display: none;
-  height: 10px;
-  margin-top: 5px;
-  clear: both;
-}
-.colorpicker-selectors i {
-  cursor: pointer;
-  float: left;
-  height: 10px;
-  width: 10px;
-}
-.colorpicker-selectors i + i {
-  margin-left: 3px;
-}
-.colorpicker-element .input-group-addon i,
-.colorpicker-element .add-on i {
-  display: inline-block;
-  cursor: pointer;
-  height: 16px;
-  vertical-align: text-top;
-  width: 16px;
-}
-.colorpicker.colorpicker-inline {
-  position: relative;
-  display: inline-block;
-  float: none;
-  z-index: auto;
-}
-.colorpicker.colorpicker-horizontal {
-  width: 110px;
-  min-width: 110px;
-  height: auto;
-}
-.colorpicker.colorpicker-horizontal .colorpicker-saturation {
-  margin-bottom: 4px;
-}
-.colorpicker.colorpicker-horizontal .colorpicker-color {
-  width: 100px;
-}
-.colorpicker.colorpicker-horizontal .colorpicker-hue,
-.colorpicker.colorpicker-horizontal .colorpicker-alpha {
-  width: 100px;
-  height: 15px;
-  float: left;
-  cursor: col-resize;
-  margin-left: 0px;
-  margin-bottom: 4px;
-}
-.colorpicker.colorpicker-horizontal .colorpicker-hue i,
-.colorpicker.colorpicker-horizontal .colorpicker-alpha i {
-  display: block;
-  height: 15px;
-  background: #ffffff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  border: none;
-  margin-top: 0px;
-}
-.colorpicker.colorpicker-horizontal .colorpicker-hue {
-  background-image: url("../../img/bootstrap-colorpicker/hue-horizontal.png");
-}
-.colorpicker.colorpicker-horizontal .colorpicker-alpha {
-  background-image: url("../../img/bootstrap-colorpicker/alpha-horizontal.png");
-}
-.colorpicker.colorpicker-hidden {
-  display: none;
-}
-.colorpicker.colorpicker-visible {
-  display: block;
-}
-.colorpicker-inline.colorpicker-visible {
-  display: inline-block;
-}
-.colorpicker-right:before {
-  left: auto;
-  right: 6px;
-}
-.colorpicker-right:after {
-  left: auto;
-  right: 7px;
-}
-.colorpicker-no-arrow:before {
-  border-right: 0;
-  border-left: 0;
-}
-.colorpicker-no-arrow:after {
-  border-right: 0;
-  border-left: 0;
-}
-span.twitter-typeahead {
-  width: 100%;
-}
-span.twitter-typeahead .tt-menu,
-span.twitter-typeahead .tt-dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  list-style: none;
-  font-size: 14px;
-  text-align: left;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-clip: padding-box;
-}
-span.twitter-typeahead .tt-suggestion {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #333333;
-  white-space: nowrap;
-}
-span.twitter-typeahead .tt-suggestion.tt-cursor,
-span.twitter-typeahead .tt-suggestion:hover,
-span.twitter-typeahead .tt-suggestion:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  background-color: #0277be;
-}
-.input-group span.twitter-typeahead {
-  display: block !important;
-  height: 34px;
-  border-radius: 4px;
-}
-.input-group span.twitter-typeahead .tt-menu,
-.input-group span.twitter-typeahead .tt-dropdown-menu {
-  top: 32px !important;
-}
-.input-group span.twitter-typeahead:not(:first-child):not(:last-child) .form-control {
-  border-radius: 0px;
-}
-.input-group span.twitter-typeahead:last-child .form-control {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.input-group.input-group-sm span.twitter-typeahead {
-  height: 30px;
-}
-.input-group.input-group-sm span.twitter-typeahead .tt-menu,
-.input-group.input-group-sm span.twitter-typeahead .tt-dropdown-menu {
-  top: 30px !important;
-}
-.input-group.input-group-sm span.twitter-typeahead .form-control {
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-}
-.input-group.input-group-lg span.twitter-typeahead {
-  height: 46px;
-}
-.input-group.input-group-lg span.twitter-typeahead .tt-menu,
-.input-group.input-group-lg span.twitter-typeahead .tt-dropdown-menu {
-  top: 46px !important;
-}
-.input-group.input-group-lg span.twitter-typeahead .form-control {
-  height: 46px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
-}
-/*!
- * bootstrap-tokenfield
- * https://github.com/sliptree/bootstrap-tokenfield
- * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
- */
-@-webkit-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-@keyframes blink {
-  0% {
-    border-color: #ededed;
-  }
-  100% {
-    border-color: #b94a48;
-  }
-}
-.tokenfield {
-  height: auto;
-  min-height: 34px;
-  padding-bottom: 0;
-}
-.tokenfield.focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-.tokenfield .token {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  display: inline-block;
-  border: 1px solid #d9d9d9;
-  background-color: #ededed;
-  white-space: nowrap;
-  margin: -1px 5px 5px 0;
-  height: 22px;
-  vertical-align: top;
-  cursor: default;
-}
-.tokenfield .token:hover {
-  border-color: #b9b9b9;
-}
-.tokenfield .token.active {
-  border-color: #52a8ec;
-  border-color: rgba(82, 168, 236, 0.8);
-}
-.tokenfield .token.duplicate {
-  border-color: #ebccd1;
-  -webkit-animation-name: blink;
-  animation-name: blink;
-  -webkit-animation-duration: 0.1s;
-  animation-duration: 0.1s;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-.tokenfield .token.invalid {
-  background: none;
-  border: 1px solid transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  border-bottom: 1px dotted #d9534f;
-}
-.tokenfield .token.invalid.active {
-  background: #ededed;
-  border: 1px solid #ededed;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.tokenfield .token .token-label {
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-left: 4px;
-  vertical-align: top;
-}
-.tokenfield .token .close {
-  font-family: Arial;
-  display: inline-block;
-  line-height: 100%;
-  font-size: 1.1em;
-  line-height: 1.49em;
-  margin-left: 5px;
-  float: none;
-  height: 100%;
-  vertical-align: top;
-  padding-right: 4px;
-}
-.tokenfield .token-input {
-  background: none;
-  width: 60px;
-  min-width: 60px;
-  border: 0;
-  height: 20px;
-  padding: 0;
-  margin-bottom: 6px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.tokenfield .token-input:focus {
-  border-color: transparent;
-  outline: 0;
-  /* IE6-9 */
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.tokenfield.disabled {
-  cursor: not-allowed;
-  background-color: #eeeeee;
-}
-.tokenfield.disabled .token-input {
-  cursor: not-allowed;
-}
-.tokenfield.disabled .token:hover {
-  cursor: not-allowed;
-  border-color: #d9d9d9;
-}
-.tokenfield.disabled .token:hover .close {
-  cursor: not-allowed;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-}
-.has-warning .tokenfield.focus {
-  border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-}
-.has-error .tokenfield.focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-}
-.has-success .tokenfield.focus {
-  border-color: #2b542c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-}
-.tokenfield.input-sm,
-.input-group-sm .tokenfield {
-  min-height: 30px;
-  padding-bottom: 0;
-}
-.input-group-sm .token,
-.tokenfield.input-sm .token {
-  height: 20px;
-  margin-bottom: 4px;
-}
-.input-group-sm .token-input,
-.tokenfield.input-sm .token-input {
-  height: 18px;
-  margin-bottom: 5px;
-}
-.tokenfield.input-lg,
-.input-group-lg .tokenfield {
-  min-height: 45px;
-  padding-bottom: 4px;
-}
-.input-group-lg .token,
-.tokenfield.input-lg .token {
-  height: 25px;
-}
-.input-group-lg .token-label,
-.tokenfield.input-lg .token-label {
-  line-height: 23px;
-}
-.input-group-lg .token .close,
-.tokenfield.input-lg .token .close {
-  line-height: 1.3em;
-}
-.input-group-lg .token-input,
-.tokenfield.input-lg .token-input {
-  height: 23px;
-  line-height: 23px;
-  margin-bottom: 6px;
-  vertical-align: top;
-}
-.tokenfield.rtl {
-  direction: rtl;
-  text-align: right;
-}
-.tokenfield.rtl .token {
-  margin: -1px 0 5px 5px;
-}
-.tokenfield.rtl .token .token-label {
-  padding-left: 0;
-  padding-right: 4px;
-}
-/*!
- * bootstrap-tokenfield
- * https://github.com/sliptree/bootstrap-tokenfield
- * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
- */
-/* General Typeahead styling, from http://jsfiddle.net/ragulka/Dy9au/1/ */
-/* Tokenfield-specific Typeahead styling */
-.tokenfield .twitter-typeahead {
-  width: auto;
-}
-.tokenfield .twitter-typeahead .tt-hint {
-  padding: 0;
-  height: 20px;
-}
-.tokenfield.input-sm .twitter-typeahead .tt-input,
-.tokenfield.input-sm .twitter-typeahead .tt-hint {
-  height: 18px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-.tokenfield.input-lg .twitter-typeahead .tt-input,
-.tokenfield.input-lg .twitter-typeahead .tt-hint {
-  height: 23px;
-  font-size: 18px;
-  line-height: 1.33;
-}
-.tokenfield .twitter-typeahead .tt-suggestions {
-  font-size: 14px;
-}
 /*
  * General: Miscellaneous
  * ----------------------
@@ -5877,8 +5105,6 @@ span.twitter-typeahead .tt-suggestion:focus {
   padding-right: 0;
 }
 .flat {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
   border-radius: 0 !important;
 }
 .text-bold,

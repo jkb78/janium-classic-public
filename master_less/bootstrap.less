@@ -1,15 +1,26 @@
 /*!
+ * This combined file was created by the Janium ThemeBuilder.
+ *
+ *
+ * Included libraries:
+ * Bootstrap v3.3.6, Font Awesome 4.6.3, Bootstrap-select v1.10.0, DataTables 1.10.8, JSON-forms v1.4.0,
+ * Datepicker for Bootstrap v1.6.1, Bootstrap Colorpicker 2.3.2, typeahead.js v0.11.1, Bootstrap Tokenfield v0.12.1
+ * JqTree 1.3.3, Select2 v4.0.3, AdminLTE v2.3.3
+ */
+
+/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-// Contruye hoja de estilo de Bootstrap
+// Construye hoja de estilo de Bootstrap
 // Algunas variables se definen nuevamente en archivos de
 // Janium
 
 @bootstrap:    "../bower_components/bootstrap/less";
 @janium-path:  "../janium_components/less";
+@timepicker:   "../bower_components/bootstrap-timepicker/css";
 
 // Core variables and mixins
 @import "@{bootstrap}/variables.less";
@@ -62,6 +73,13 @@
 // Utility classes
 @import "@{bootstrap}/utilities.less";
 @import "@{bootstrap}/responsive-utilities.less";
+
+//Plugins
+@import "@{timepicker}/timepicker.less";
+@import "@{janium-path}/bootstrap-colorpicker/bootstrap-colorpicker.less";
+@import "@{janium-path}/typeahead-js/typeaheadjs.less";
+@import "@{janium-path}/bootstrap-tokenfield/bootstrap-tokenfield.less";
+@import "@{janium-path}/bootstrap-tokenfield/tokenfield-typeahead.less";
 
 // JQuery plugins - Bootstrap-switch, zTree
 //@import "../../../bower_components/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less";
