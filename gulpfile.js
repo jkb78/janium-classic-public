@@ -157,13 +157,16 @@ gulp.task('copy-plugins-images', function() {
 // ** Copy Plugins CSS files ** //
 gulp.task('copy-plugins-css', function() {
   return gulp.src([
-    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
-    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map',
-    pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
-    pathTo.datatables           + '/datatables.min.css',
-    pathTo.select2              + '/dist/css/select2.min.css'
+    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map'
   ])
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium')));
+});
+
+gulp.task('copy-plugins-css-custom', function() {
+  return gulp.src([
+    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map'
+  ])
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'custom')));
 });
 
 
@@ -309,143 +312,217 @@ gulp.task('compile-plugins-js', function() {
 
 
 // ** Compile CSS files ** //
-gulp.task('compile-jqtree-css', function() {
-  return gulp.src(pathTo.jqtree + '/jqtree.css')
-    // Add .min to name file
-    .pipe(rename({suffix: '.min'}))
+// gulp.task('compile-jqtree-css', function() {
+//   return gulp.src(pathTo.jqtree + '/jqtree.css')
+//     // Add .min to name file
+//     .pipe(rename({suffix: '.min'}))
 
-    // Minify CSS file
-    .pipe(cleanCSS())
+//     // Minify CSS file
+//     .pipe(cleanCSS())
 
-    // Create minified file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
-});
+//     // Create minified file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'jquery_plugin')));
+// });
 
 
 // ** Compile LESS files ** //
-gulp.task('build-font-awesome', function() {
-  return gulp.src(pathTo.master_less + '/font-awesome.less')
-    //.pipe(sourcemaps.init())
-      // Compile LESS files
-      .pipe(less().on('error', console.log))
+// gulp.task('build-font-awesome', function() {
+//   return gulp.src(pathTo.master_less + '/font-awesome.less')
+//     //.pipe(sourcemaps.init())
+//       // Compile LESS files
+//       .pipe(less().on('error', console.log))
 
-      // CSS Linter
-      .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
-      .pipe(csslint.reporter())
+//       // CSS Linter
+//       .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
+//       .pipe(csslint.reporter())
 
-      // Create CSS file
-      //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'font-awesome')))
+//       // Create CSS file
+//       //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'font-awesome')))
 
-      // Add .min to name file
-      .pipe(rename({suffix: '.min'}))
+//       // Add .min to name file
+//       .pipe(rename({suffix: '.min'}))
 
-      // Minify CSS file
-      .pipe(cleanCSS())
+//       // Minify CSS file
+//       .pipe(cleanCSS())
 
-    //.pipe(sourcemaps.write('./'))
+//     //.pipe(sourcemaps.write('./'))
 
-    // Create minified file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'font-awesome')));
-});
+//     // Create minified file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'font-awesome')));
+// });
 
-gulp.task('build-bootstrap', function() {
-  //return gulp.src(pathTo.jnm_components + '/less/*.less')
-  return gulp.src(pathTo.master_less + '/bootstrap.less')
-    //.pipe(sourcemaps.init())
-      // Compile LESS files
-      .pipe(less().on('error', console.log))
+// gulp.task('build-bootstrap', function() {
+//   //return gulp.src(pathTo.jnm_components + '/less/*.less')
+//   return gulp.src(pathTo.master_less + '/bootstrap.less')
+//     //.pipe(sourcemaps.init())
+//       // Compile LESS files
+//       .pipe(less().on('error', console.log))
 
-      // Prefix CSS
-      .pipe(autoprefixer(
-        'Android 2.3',
-        'Android >= 4',
-        'Chrome >= 20',
-        'Firefox >= 24',
-        'Explorer >= 8',
-        'iOS >= 6',
-        'Opera >= 12',
-        'Safari >= 6'
-      ).on('error', console.log))
+//       // Prefix CSS
+//       .pipe(autoprefixer(
+//         'Android 2.3',
+//         'Android >= 4',
+//         'Chrome >= 20',
+//         'Firefox >= 24',
+//         'Explorer >= 8',
+//         'iOS >= 6',
+//         'Opera >= 12',
+//         'Safari >= 6'
+//       ).on('error', console.log))
 
-      // CSS Linter
-      .pipe(csslint(pathTo.bootstrap + '/less/.csslintrc'))
-      //.pipe(csslint.reporter())
+//       // CSS Linter
+//       .pipe(csslint(pathTo.bootstrap + '/less/.csslintrc'))
+//       //.pipe(csslint.reporter())
 
-      // Format style for CSS /.csscomb.json
-      .pipe(csscomb())
+//       // Format style for CSS /.csscomb.json
+//       .pipe(csscomb())
 
-      // Create CSS file
-      //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'bootstrap')))
+//       // Create CSS file
+//       //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'bootstrap')))
 
-      // Add .min to name file
-      .pipe(rename({suffix: '.min'}))
+//       // Add .min to name file
+//       .pipe(rename({suffix: '.min'}))
 
-      // Minify CSS file
-      .pipe(cleanCSS({
-        compatibility: 'ie8',
-        noAdvanced: true
-      }))
+//       // Minify CSS file
+//       .pipe(cleanCSS({
+//         compatibility: 'ie8',
+//         noAdvanced: true
+//       }))
 
-    //.pipe(sourcemaps.write('./'))
+//     //.pipe(sourcemaps.write('./'))
 
-    // Create minified file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'bootstrap')));
+//     // Create minified file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'bootstrap')));
 
-});
+// });
 
-gulp.task('build-adminlte', function() {
-  return gulp.src(pathTo.master_less + '/adminlte.less')
-    //.pipe(sourcemaps.init())
-      // Compile LESS files
-      .pipe(less().on('error', console.log))
+// gulp.task('build-adminlte', function() {
+//   return gulp.src(pathTo.master_less + '/adminlte.less')
+//     //.pipe(sourcemaps.init())
+//       // Compile LESS files
+//       .pipe(less().on('error', console.log))
 
-      // CSS Linter
-      .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
-      .pipe(csslint.reporter())
+//       // CSS Linter
+//       .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
+//       .pipe(csslint.reporter())
 
-      // Create CSS file
-      .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')))
+//       // Create CSS file
+//       .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')))
 
-      // Add .min to name file
-      .pipe(rename({suffix: '.min'}))
+//       // Add .min to name file
+//       .pipe(rename({suffix: '.min'}))
 
-      // Minify CSS file
-      .pipe(cleanCSS())
+//       // Minify CSS file
+//       .pipe(cleanCSS())
 
-    //.pipe(sourcemaps.write('./'))
+//     //.pipe(sourcemaps.write('./'))
 
-    // Create minified file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')));
-});
+//     // Create minified file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')));
+// });
 
-gulp.task('build-skins', function() {
-  return gulp.src(pathTo.master_less + '/skins/_all-skins.less')
-    //.pipe(sourcemaps.init())
-      // Compile LESS files
-      .pipe(less().on('error', console.log))
+// gulp.task('build-skins', function() {
+//   return gulp.src(pathTo.master_less + '/skins/_all-skins.less')
+//     //.pipe(sourcemaps.init())
+//       // Compile LESS files
+//       .pipe(less().on('error', console.log))
 
-      // CSS Linter
-      .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
-      //.pipe(csslint.reporter())
+//       // CSS Linter
+//       .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
+//       //.pipe(csslint.reporter())
 
-      // Create CSS file
-      //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')))
+//       // Create CSS file
+//       //.pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte')))
 
-      // Add .min to name file
-      .pipe(rename({suffix: '.min'}))
+//       // Add .min to name file
+//       .pipe(rename({suffix: '.min'}))
 
-      // Minify CSS file
-      .pipe(cleanCSS())
+//       // Minify CSS file
+//       .pipe(cleanCSS())
 
-    //.pipe(sourcemaps.write('./'))
+//     //.pipe(sourcemaps.write('./'))
 
-    // Create minified file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte', 'skins')));
+//     // Create minified file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'adminlte', 'skins')));
+// });
+
+// Genera Temas Janium
+gulp.task('build-janium-skins', function() {
+
+    var JBootstrap = gulp.src(pathTo.master_less + '/bootstrap.less')
+        // Compile LESS files
+        .pipe(less().on('error', console.log))
+
+        // Prefix CSS
+        .pipe(autoprefixer(
+          'Android 2.3',
+          'Android >= 4',
+          'Chrome >= 20',
+          'Firefox >= 24',
+          'Explorer >= 8',
+          'iOS >= 6',
+          'Opera >= 12',
+          'Safari >= 6'
+        ).on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint(pathTo.bootstrap + '/less/.csslintrc'))
+        //.pipe(csslint.reporter())
+
+        // Format style for CSS /.csscomb.json
+        .pipe(csscomb())
+    ;
+
+    var JFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
+        // Compile LESS files
+        .pipe(less().on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
+        //.pipe(csslint.reporter())
+    ;
+
+    var JAdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
+        // Compile LESS files
+        .pipe(less().on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
+        //.pipe(csslint.reporter())
+    ;
+
+    var JSkins = gulp.src(pathTo.master_less + '/skins/_all-skins.less')
+        // Compile LESS files
+        .pipe(less().on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
+        //.pipe(csslint.reporter())
+    ;
+
+    var JPlugins = gulp.src([
+        pathTo.json_forms           + '/brutusin-json-forms.min.css',
+        pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
+        pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
+        pathTo.datatables           + '/datatables.min.css',
+        pathTo.select2              + '/dist/css/select2.min.css',
+        pathTo.jqtree               + '/jqtree.css'
+    ]);
+
+    var mergedStream = ee.concatenate([JBootstrap, JFontAwesome, JPlugins, JAdminLTE, JSkins])
+        .pipe(concat('janium_skins.min.css'))
+        .pipe(cleanCSS({
+          compatibility: 'ie8',
+          noAdvanced: true
+        }))
+        .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium')));
+
+    return mergedStream;
 });
 
 
 // Genera Temas Custom
-gulp.task('build-custom-skins', function() {
+gulp.task('generate-custom-skins', function() {
 
   try {
     var s = fs.statSync('custom.json');
@@ -455,9 +532,9 @@ gulp.task('build-custom-skins', function() {
     var custom_variables = {
       modifyVars: JSON.parse( json_data.toString() )
     };
-    console.log(custom_variables);
+    //console.log(custom_variables);
 
-    var Bootstrap = gulp.src(pathTo.master_less + '/bootstrap.less')
+    var CBootstrap = gulp.src(pathTo.master_less + '/bootstrap.less')
         // Compile LESS files
         .pipe(less(custom_variables).on('error', console.log))
 
@@ -481,7 +558,7 @@ gulp.task('build-custom-skins', function() {
         .pipe(csscomb())
     ;
 
-    var FontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
+    var CFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
         // Compile LESS files
         .pipe(less().on('error', console.log))
 
@@ -490,19 +567,7 @@ gulp.task('build-custom-skins', function() {
         //.pipe(csslint.reporter())
     ;
 
-    var AdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
-        // Compile LESS files
-        .pipe(less(custom_variables).on('error', console.log))
-
-        // CSS Linter
-        .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
-        .pipe(csslint.reporter())
-
-        // Minify CSS file
-        .pipe(cleanCSS())
-    ;
-
-    var Skins = gulp.src(pathTo.master_less + '/skins/_all-skins.less')
+    var CAdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
         // Compile LESS files
         .pipe(less(custom_variables).on('error', console.log))
 
@@ -511,22 +576,30 @@ gulp.task('build-custom-skins', function() {
         //.pipe(csslint.reporter())
     ;
 
-    var Plugins = gulp.src([
+    var CSkins = gulp.src(pathTo.master_less + '/skins/_all-skins.less')
+        // Compile LESS files
+        .pipe(less(custom_variables).on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
+        //.pipe(csslint.reporter())
+    ;
+
+    var CPlugins = gulp.src([
         pathTo.json_forms           + '/brutusin-json-forms.min.css',
         pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
         pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
         pathTo.datatables           + '/datatables.min.css',
-        pathTo.select2              + '/dist/css/select2.min.css'
+        pathTo.select2              + '/dist/css/select2.min.css',
+        pathTo.jqtree               + '/jqtree.css'
     ]);
 
-    var MinifyPlugins = gulp.src(pathTo.jqtree + '/jqtree.css');
-
-    var mergedStream = ee.concatenate([Bootstrap, FontAwesome, Plugins, MinifyPlugins, AdminLTE, Skins])
-        .pipe(concatCss('janium_skins.min.css'))
-        // .pipe(cleanCSS({
-        //   compatibility: 'ie8',
-        //   noAdvanced: true
-        // }))
+    var mergedStream = ee.concatenate([CBootstrap, CFontAwesome, CPlugins, CAdminLTE, CSkins])
+        .pipe(concat('janium_skins.min.css'))
+        .pipe(cleanCSS({
+          compatibility: 'ie8',
+          noAdvanced: true
+        }))
         .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'custom')));
 
     return mergedStream;
@@ -548,10 +621,9 @@ gulp.task('default', function(callback) {
     'copy-icon-fonts',
     'copy-plugins-images',
     'copy-plugins-css',
-    'compile-jqtree-css',
     ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js', 'copy-markdown-js', 'copy-moment-js'],
     ['join-modernizr-response', 'join-signals-hasher'],
-    ['build-font-awesome', 'build-adminlte', 'build-skins', 'build-bootstrap'],
+    'build-janium-skins',
     ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js', 'compile-json-forms-js'],
     function(error) {
       if (error) {
@@ -562,3 +634,5 @@ gulp.task('default', function(callback) {
       callback(error);
     });
 });
+
+gulp.task('build-custom-skins', ['generate-custom-skins', 'copy-plugins-css-custom']);
