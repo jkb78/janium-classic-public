@@ -606,7 +606,7 @@ gulp.task('generate-custom-skins', function() {
   }
   catch( err ) {
     // el archivo no existe...
-    throw "El archivo custom no existe...";
+    throw "En el archivo custom...";
   }
 
 });
