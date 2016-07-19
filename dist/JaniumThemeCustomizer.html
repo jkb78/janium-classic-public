@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="htdocs/css/janium/janium_skins.min.css" rel="stylesheet">
+    <script src="htdocs/js/modernizr/modernizr-respond.min.js"></script>
+    <style type="text/css">
+      .wrapper,
+      .content-wrapper {
+        background-color: #eee;
+      }
+      .layout-top-nav:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        z-index: 2;
+        background-color: #f16022;
+      }
+      .hero {
+        position: relative;
+        text-align: center;
+        padding: 80px 0;
+        border-bottom: 1px solid #0277be;
+      }
+      .hero-homepage.hero {
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        border-bottom: 0;
+      }
+      .hero-jnmicon {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        border: 1px solid #0277be;
+        color: #0277be;
+        background-color: transparent;
+        margin: 0 auto 30px;
+        width: 144px;
+        height: 144px;
+        font-size: 108px;
+        line-height: 140px;
+        display: block;
+        font-weight: 500;
+        text-align: center;
+        cursor: default;
+        border-radius: 15%;
+        margin-top: 30px;
+      }
+      .jnm-content {
+        margin-top: 30px;
+      }
+    </style>
+    <title>Janium Theme Customizer</title>
+  </head>
+  <body class="hold-transition layout-top-nav skin-blue">
+    <div class="wrapper">
+      <div class="content-wrapper">
+
+         <!-- Header -->
+        <div class="hero hero-homepage">
+          <span class="hero-jnmicon">J</span>
+          <h1 class="hero-header">Janium Theme Customizer</h1>
+          <h4 class="text-muted">Definición de variables para creación de temas personalizados.</h4>
+        </div>
+
+        <!-- Main content -->
+        <div class="row jnm-content content">
+
+          <form>
+            <!-- left-side -->
+            <div class="col-md-6">
+              <div class="box box-primary">
+                <div class="box-header">
+                  <h3 class="box-title">Colores Base</h3>
+                </div>
+                <div class="box-body">
+                  <div class="form-group">
+                    <label>Primary</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-brand-primary" id="@jnm-brand-primary"
+                        value="#0277be" class="form-control" placeholder="#0277be"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Success</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-brand-success" id="@jnm-brand-success"
+                        value="#6f8745" class="form-control" placeholder="#6f8745"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Info</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-brand-info" id="@jnm-brand-info"
+                        value="#33b5e5" class="form-control" placeholder="#33b5e5"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Warning</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-brand-warning" id="@jnm-brand-warning"
+                        value="#edbb02" class="form-control" placeholder="#edbb02"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Danger</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-brand-danger" id="@jnm-brand-danger"
+                        value="#ae131f" class="form-control" placeholder="#ae131f"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- ./primary -->
+
+              <div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Temas <small>A-N</small></h3>
+                </div>
+                <div class="box-body">
+                  <div class="form-group">
+                    <label>Blue</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@blue" id="@blue"
+                        value="#0277be" class="form-control" placeholder="#0277be"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Blush</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@blush" id="@blush"
+                        value="#b94b6f" class="form-control" placeholder="#b94b6f"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Clementine</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@clementine" id="@clementine"
+                        value="#f16022" class="form-control" placeholder="#f16022"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Curious Blue</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@curious-blue" id="@curious-blue"
+                        value="#2780e3" class="form-control" placeholder="#2780e3"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Fuchsia</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@fuchsia" id="@fuchsia"
+                        value="#fe206a" class="form-control" placeholder="#fe206a"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Janium</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@janium" id="@janium"
+                        value="#669" class="form-control" placeholder="#669"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Librarian</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@librarian" id="@librarian"
+                        value="#033672" class="form-control" placeholder="#033672"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Maroon</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@maroon" id="@maroon"
+                        value="#800040" class="form-control" placeholder="#800040"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Navy</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@navy" id="@navy"
+                        value="#2c3e50" class="form-control" placeholder="#2c3e50"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- ./info -->
+            </div> <!-- ./left-side -->
+
+            <!-- right-side -->
+            <div class="col-md-6">
+              <div class="box box-success">
+                <div class="box-header">
+                  <h3 class="box-title">Generales de la Página</h3>
+                </div>
+                <div class="box-body">
+                  <div class="form-group">
+                    <label>Fuente</label>
+                    <input
+                      type="text" name="@jnm-font-family" id="@jnm-font-family"
+                      value='"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                      class="form-control"
+                      placeholder='"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label>Fondo de la página</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-body-bg" id="@jnm-body-bg"
+                        value="#f9f9f9" class="form-control" placeholder="#f9f9f9"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Color de texto</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-text-color" id="@jnm-text-color"
+                        value="#333" class="form-control" placeholder="#333"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Color de vinculos</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-link-color" id="@jnm-link-color"
+                        value="#0277be" class="form-control" placeholder="#0277be"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Color de encabezados</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@jnm-headings-color" id="@jnm-headings-color"
+                        value="#333" class="form-control" placeholder="#333"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- ./success -->
+
+              <div class="box box-warning">
+                <div class="box-header">
+                  <h3 class="box-title">Temas <small>O-Z</small></h3>
+                </div>
+                <div class="box-body">
+                  <div class="form-group">
+                    <label>Ocean</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@ocean" id="@ocean"
+                        value="#3d9970" class="form-control" placeholder="#3d9970"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Olive</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@olive" id="@olive"
+                        value="#808000" class="form-control" placeholder="#808000"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Orange</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@orange" id="@orange"
+                        value="#f0ab00" class="form-control" placeholder="#f0ab00"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Purple</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@purple" id="@purple"
+                        value="#86618f" class="form-control" placeholder="#86618f"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>San Marino</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@san-marino" id="@san-marino"
+                        value="#496cad" class="form-control" placeholder="#496cad"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Summer Sky</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@summer-sky" id="@summer-sky"
+                        value="#008cba" class="form-control" placeholder="#008cba"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Teal</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@teal" id="@teal"
+                        value="#39cccc" class="form-control" placeholder="#39cccc"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Thunderbird</label>
+                    <div class="input-group jnm-colorpicker colorpicker-element">
+                      <input
+                        type="text" name="@thunderbird" id="@thunderbird"
+                        value="#d9230f" class="form-control" placeholder="#d9230f"
+                      >
+                      <div class="input-group-addon"><i></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- ./warning -->
+            </div> <!-- ./right-side -->
+
+            <button type="submit" class="btn bg-fuchsia btn-lg btn-block">Generar archivo JSON</button>
+          </form>
+
+        </div> <!-- ./jnm-content -->
+      </div> <!-- ./content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="container">
+          <div class="pull-right hidden-xs">
+            <b>Versión</b> 1.1.0
+          </div>
+          <strong>Copyright © 2016-2020 <a href="http://janium.com">Janium</a></strong>
+        </div>
+      </footer>
+
+    </div> <!-- ./wrapper -->
+
+    <script src="htdocs/js/jquery/jquery.min.js"></script>
+    <script src="htdocs/js/bootstrap/bootstrap.min.js"></script>
+    <script src="htdocs/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="htdocs/js/jquery/plugin/jquery.placeholder.min.js"></script>
+    <script src="htdocs/js/jquery/plugin/bootstrap-colorpicker.min.js"></script>
+    <script src="htdocs/js/adminlte/app.min.js"></script>
+    <script type="text/javascript">
+      // Define función serializeObject
+      $.fn.serializeObject = function() {
+          var o = {};
+          var a = this.serializeArray();
+          $.each(a, function() {
+              if (o[this.name] !== undefined) {
+                  if (!o[this.name].push) {
+                      o[this.name] = [o[this.name]];
+                  }
+                  o[this.name].push(this.value || '');
+              } else {
+                  o[this.name] = this.value || '';
+              }
+          });
+          return o;
+      };
+
+      $( document ).ready(function() {
+        $('.jnm-colorpicker').colorpicker();
+
+        $('form').on( "submit", function( event ) {
+          event.preventDefault();
+
+          var json_data = JSON.stringify($('form').serializeObject(), null, 4);
+          console.log(json_data);
+          alert(json_data)
+        });
+      });
+    </script>
+  </body>
+</html>

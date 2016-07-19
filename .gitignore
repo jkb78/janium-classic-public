@@ -28,4 +28,4 @@ Thumbs.db
 
 # Files
 custom.json
-dist/*
+dist/htdocs
