@@ -7,7 +7,7 @@
     <link href="htdocs/css/janium/janium_skins.min.css" rel="stylesheet">
     <script src="htdocs/js/modernizr/modernizr-respond.min.js"></script>
     <style type="text/css">
-      .wrapper,
+      /*.wrapper,
       .content-wrapper {
         background-color: #eee;
       }
@@ -53,7 +53,7 @@
       }
       .jnm-content {
         margin-top: 30px;
-      }
+      }*/
     </style>
     <title>Janium Theme Customizer</title>
   </head>
@@ -402,9 +402,7 @@
               </div> <!-- ./warning -->
             </div> <!-- ./right-side -->
 
-            <button type="submit" class="btn bg-fuchsia btn-lg btn-block">
-              Descargar archivo JSON <i class="fa fa-download"></i>
-            </button>
+            <button type="submit" class="btn bg-fuchsia btn-lg btn-block">Generar archivo JSON</button>
           </form>
 
         </div> <!-- ./jnm-content -->
@@ -434,32 +432,17 @@
         var a = this.serializeArray();
         $.each(a, function() {
           if (o[this.name] !== undefined) {
-            if (!o[this.name].push) {
-              o[this.name] = [o[this.name]];
-            }
+              if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+              }
             o[this.name].push(this.value || '');
           }
           else {
-            o[this.name] = this.value || '';
+              o[this.name] = this.value || '';
           }
         });
         return o;
       };
-
-      function download_as_json(filename, obj) {
-          var pom = document.createElement('a');
-          pom.setAttribute( 'href', 'data:application/json;base64,' + btoa( obj ) );
-          pom.setAttribute( 'download', filename );
-
-          if (document.createEvent) {
-              var event = document.createEvent('MouseEvents');
-              event.initEvent('click', true, true);
-              pom.dispatchEvent(event);
-          }
-          else {
-              pom.click();
-          }
-      }
 
       $( document ).ready(function() {
         $('.jnm-colorpicker').colorpicker();
@@ -468,7 +451,8 @@
           event.preventDefault();
 
           var json_data = JSON.stringify($('form').serializeObject(), null, 4);
-          download_as_json( 'JaniumThemeCustomFile.json' , json_data );
+          console.log(json_data);
+          alert(json_data)
         });
       });
     </script>
