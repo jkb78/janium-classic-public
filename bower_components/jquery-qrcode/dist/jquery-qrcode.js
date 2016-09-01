@@ -1,40 +1,43 @@
-/* jQuery.qrcode 0.12.0 - http://larsjung.de/jquery-qrcode/ - uses //github.com/kazuhikoarase/qrcode-generator (MIT) */
-(function (qrcode) {
+/*! jquery-qrcode v0.14.0 - https://larsjung.de/jquery-qrcode/ */
+(function (vendor_qrcode) {
     'use strict';
 
-    var $ = jQuery;
+    var jq = window.jQuery;
+
+    // Check if canvas is available in the browser (as Modernizr does)
+    var hasCanvas = (function () {
+        var elem = document.createElement('canvas');
+        return !!(elem.getContext && elem.getContext('2d'));
+    }());
 
     // Wrapper for the original QR code generator.
-    function QRCode(text, level, version, quiet) {
+    function createQRCode(text, level, version, quiet) {
+        var qr = {};
 
-        var qr = qrcode(version, level);
-        qr.addData(text);
-        qr.make();
+        var vqr = vendor_qrcode(version, level);
+        vqr.addData(text);
+        vqr.make();
 
         quiet = quiet || 0;
 
-        var qrModuleCount = qr.getModuleCount();
-        var quietModuleCount = qr.getModuleCount() + 2 * quiet;
+        var qrModuleCount = vqr.getModuleCount();
+        var quietModuleCount = vqr.getModuleCount() + 2 * quiet;
 
         function isDark(row, col) {
-
             row -= quiet;
             col -= quiet;
 
             if (row < 0 || row >= qrModuleCount || col < 0 || col >= qrModuleCount) {
                 return false;
             }
-
-            return qr.isDark(row, col);
+            return vqr.isDark(row, col);
         }
 
-        var addBlank = function (l, t, r, b) {
-
-            var prevIsDark = this.isDark;
+        function addBlank(l, t, r, b) {
+            var prevIsDark = qr.isDark;
             var moduleSize = 1 / quietModuleCount;
 
-            this.isDark = function (row, col) {
-
+            qr.isDark = function (row, col) {
                 var ml = col * moduleSize;
                 var mt = row * moduleSize;
                 var mr = ml + moduleSize;
@@ -42,42 +45,35 @@
 
                 return prevIsDark(row, col) && (l > mr || ml > r || t > mb || mt > b);
             };
-        };
+        }
 
-        this.text = text;
-        this.level = level;
-        this.version = version;
-        this.moduleCount = quietModuleCount;
-        this.isDark = isDark;
-        this.addBlank = addBlank;
+        qr.text = text;
+        qr.level = level;
+        qr.version = version;
+        qr.moduleCount = quietModuleCount;
+        qr.isDark = isDark;
+        qr.addBlank = addBlank;
+
+        return qr;
     }
-
-    // Check if canvas is available in the browser (as Modernizr does)
-    var hasCanvas = (function () {
-
-        var elem = document.createElement('canvas');
-        return Boolean(elem.getContext && elem.getContext('2d'));
-    }());
-    var hasArcTo = Object.prototype.toString.call(window.opera) !== '[object Opera]';
 
     // Returns a minimal QR code for the given text starting with version `minVersion`.
     // Returns `undefined` if `text` is too long to be encoded in `maxVersion`.
-    function createQRCode(text, level, minVersion, maxVersion, quiet) {
-
+    function createMinQRCode(text, level, minVersion, maxVersion, quiet) {
         minVersion = Math.max(1, minVersion || 1);
         maxVersion = Math.min(40, maxVersion || 40);
         for (var version = minVersion; version <= maxVersion; version += 1) {
             try {
-                return new QRCode(text, level, version, quiet);
-            } catch (err) {}
+                return createQRCode(text, level, version, quiet);
+            } catch (err) {/* empty */}
         }
+        return undefined;
     }
 
     function drawBackgroundLabel(qr, context, settings) {
-
         var size = settings.size;
-        var font = 'bold ' + (settings.mSize * size) + 'px ' + settings.fontname;
-        var ctx = $('<canvas/>')[0].getContext('2d');
+        var font = 'bold ' + settings.mSize * size + 'px ' + settings.fontname;
+        var ctx = jq('<canvas/>')[0].getContext('2d');
 
         ctx.font = font;
 
@@ -104,7 +100,6 @@
     }
 
     function drawBackgroundImage(qr, context, settings) {
-
         var size = settings.size;
         var w = settings.image.naturalWidth || 1;
         var h = settings.image.naturalHeight || 1;
@@ -128,8 +123,7 @@
     }
 
     function drawBackground(qr, context, settings) {
-
-        if ($(settings.background).is('img')) {
+        if (jq(settings.background).is('img')) {
             context.drawImage(settings.background, 0, 0, settings.size, settings.size);
         } else if (settings.background) {
             context.fillStyle = settings.background;
@@ -145,14 +139,12 @@
     }
 
     function drawModuleDefault(qr, context, settings, left, top, width, row, col) {
-
         if (qr.isDark(row, col)) {
             context.rect(left, top, width, width);
         }
     }
 
     function drawModuleRoundedDark(ctx, l, t, r, b, rad, nw, ne, se, sw) {
-
         if (nw) {
             ctx.moveTo(l + rad, t);
         } else {
@@ -189,7 +181,6 @@
     }
 
     function drawModuleRoundendLight(ctx, l, t, r, b, rad, nw, ne, se, sw) {
-
         if (nw) {
             ctx.moveTo(l + rad, t);
             ctx.lineTo(l, t);
@@ -220,7 +211,6 @@
     }
 
     function drawModuleRounded(qr, context, settings, left, top, width, row, col) {
-
         var isDark = qr.isDark;
         var right = left + width;
         var bottom = top + width;
@@ -247,21 +237,19 @@
     }
 
     function drawModules(qr, context, settings) {
-
         var moduleCount = qr.moduleCount;
         var moduleSize = settings.size / moduleCount;
         var fn = drawModuleDefault;
         var row;
         var col;
 
-        if (hasArcTo && settings.radius > 0 && settings.radius <= 0.5) {
+        if (settings.radius > 0 && settings.radius <= 0.5) {
             fn = drawModuleRounded;
         }
 
         context.beginPath();
         for (row = 0; row < moduleCount; row += 1) {
             for (col = 0; col < moduleCount; col += 1) {
-
                 var l = settings.left + col * moduleSize;
                 var t = settings.top + row * moduleSize;
                 var w = moduleSize;
@@ -269,7 +257,7 @@
                 fn(qr, context, settings, l, t, w, row, col);
             }
         }
-        if ($(settings.fill).is('img')) {
+        if (jq(settings.fill).is('img')) {
             context.strokeStyle = 'rgba(0,0,0,0.5)';
             context.lineWidth = 2;
             context.stroke();
@@ -289,13 +277,12 @@
 
     // Draws QR code to the given `canvas` and returns it.
     function drawOnCanvas(canvas, settings) {
-
-        var qr = createQRCode(settings.text, settings.ecLevel, settings.minVersion, settings.maxVersion, settings.quiet);
+        var qr = createMinQRCode(settings.text, settings.ecLevel, settings.minVersion, settings.maxVersion, settings.quiet);
         if (!qr) {
             return null;
         }
 
-        var $canvas = $(canvas).data('qrcode', qr);
+        var $canvas = jq(canvas).data('qrcode', qr);
         var context = $canvas[0].getContext('2d');
 
         drawBackground(qr, context, settings);
@@ -306,21 +293,18 @@
 
     // Returns a `canvas` element representing the QR code for the given settings.
     function createCanvas(settings) {
-
-        var $canvas = $('<canvas/>').attr('width', settings.size).attr('height', settings.size);
+        var $canvas = jq('<canvas/>').attr('width', settings.size).attr('height', settings.size);
         return drawOnCanvas($canvas, settings);
     }
 
     // Returns an `image` element representing the QR code for the given settings.
     function createImage(settings) {
-
-        return $('<img/>').attr('src', createCanvas(settings)[0].toDataURL('image/png'));
+        return jq('<img/>').attr('src', createCanvas(settings)[0].toDataURL('image/png'));
     }
 
     // Returns a `div` element representing the QR code for the given settings.
     function createDiv(settings) {
-
-        var qr = createQRCode(settings.text, settings.ecLevel, settings.minVersion, settings.maxVersion, settings.quiet);
+        var qr = createMinQRCode(settings.text, settings.ecLevel, settings.minVersion, settings.maxVersion, settings.quiet);
         if (!qr) {
             return null;
         }
@@ -338,24 +322,24 @@
         var col;
 
         var containerCSS = {
-                position: 'relative',
-                left: 0,
-                top: 0,
-                padding: 0,
-                margin: 0,
-                width: settings_size,
-                height: settings_size
-            };
+            position: 'relative',
+            left: 0,
+            top: 0,
+            padding: 0,
+            margin: 0,
+            width: settings_size,
+            height: settings_size
+        };
         var darkCSS = {
-                position: 'absolute',
-                padding: 0,
-                margin: 0,
-                width: moduleSize,
-                height: moduleSize,
-                'background-color': settings.fill
-            };
+            position: 'absolute',
+            padding: 0,
+            margin: 0,
+            width: moduleSize,
+            height: moduleSize,
+            'background-color': settings.fill
+        };
 
-        var $div = $('<div/>').data('qrcode', qr).css(containerCSS);
+        var $div = jq('<div/>').data('qrcode', qr).css(containerCSS);
 
         if (settings_bgColor) {
             $div.css('background-color', settings_bgColor);
@@ -364,7 +348,7 @@
         for (row = 0; row < moduleCount; row += 1) {
             for (col = 0; col < moduleCount; col += 1) {
                 if (qr.isDark(row, col)) {
-                    $('<div/>')
+                    jq('<div/>')
                         .css(darkCSS)
                         .css({
                             left: offset + col * moduleSize,
@@ -379,7 +363,6 @@
     }
 
     function createHTML(settings) {
-
         if (hasCanvas && settings.render === 'canvas') {
             return createCanvas(settings);
         } else if (hasCanvas && settings.render === 'image') {
@@ -395,7 +378,6 @@
     // Default settings
     // ----------------
     var defaults = {
-
         // render method: `'canvas'`, `'image'` or `'div'`
         render: 'canvas',
 
@@ -449,21 +431,18 @@
 
     // Register the plugin
     // -------------------
-    $.fn.qrcode = function (options) {
+    jq.fn.qrcode = function (options) {
+        var settings = jq.extend({}, defaults, options);
 
-        var settings = $.extend({}, defaults, options);
-
-        return this.each(function () {
-
-            if (this.nodeName.toLowerCase() === 'canvas') {
-                drawOnCanvas(this, settings);
+        return this.each(function (idx, el) {
+            if (el.nodeName.toLowerCase() === 'canvas') {
+                drawOnCanvas(el, settings);
             } else {
-                $(this).append(createHTML(settings));
+                jq(el).append(createHTML(settings));
             }
         });
     };
 }(function () {
-
     // `qrcode` is the single public function defined by the `QR Code Generator`
     //---------------------------------------------------------------------
     //
@@ -2349,5 +2328,5 @@
 
     }(qrcode);
 
-    return qrcode;
+    return qrcode; // eslint-disable-line no-undef
 }()));
