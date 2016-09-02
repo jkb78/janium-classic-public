@@ -132,15 +132,15 @@
   color: @thunderbird !important;
 }
 
-// // Fix AdminLTE Background
-// .wrapper,
-// .content-wrapper {
-//   background-color: @body-bg;
-// }
-
 // Permite customizar la fuente del tema
 body {
   font-family: @jnm-font-family;
+}
+
+// Define color al fondo de los logos, oculta color
+// del wrapper cuando este no es un tema light.
+.layout-top-nav .wrapper .main-header .logo_y_menu {
+  background-color: @jnm-logo-bg;
 }
 
 /*
