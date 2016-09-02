@@ -282,17 +282,17 @@ gulp.task('compile-timepicker-js', function() {
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'jquery', 'plugin')));
 });
 
-gulp.task('compile-json-forms-js', function() {
-  return gulp.src([
-    pathTo.json_forms + '/brutusin-json-forms.js',
-    pathTo.json_forms + '/brutusin-json-forms-bootstrap.js'
-  ])
-    .pipe(uglify({ preserveComments: 'some' }))
-    .pipe(rename({suffix: '.min'}))
+// gulp.task('compile-json-forms-js', function() {
+//   return gulp.src([
+//     pathTo.json_forms + '/brutusin-json-forms.js',
+//     pathTo.json_forms + '/brutusin-json-forms-bootstrap.js'
+//   ])
+//     .pipe(uglify({ preserveComments: 'some' }))
+//     .pipe(rename({suffix: '.min'}))
 
-    // Create minified & uglify file and map file
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'json-forms')));
-});
+//     // Create minified & uglify file and map file
+//     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'json-forms')));
+// });
 
 gulp.task('compile-plugins-js', function() {
   return gulp.src([
@@ -624,7 +624,7 @@ gulp.task('default', function(callback) {
     ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js', 'copy-markdown-js', 'copy-moment-js'],
     ['join-modernizr-response', 'join-signals-hasher'],
     'build-janium-skins',
-    ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js', 'compile-json-forms-js'],
+    ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js'],
     function(error) {
       if (error) {
         console.log(error.message);
