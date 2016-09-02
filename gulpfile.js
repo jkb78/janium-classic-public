@@ -166,7 +166,7 @@ gulp.task('copy-plugins-css-custom', function() {
   return gulp.src([
     pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map'
   ])
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'custom')));
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium', 'custom')));
 });
 
 
@@ -600,7 +600,7 @@ gulp.task('generate-custom-skins', function() {
           compatibility: 'ie8',
           noAdvanced: true
         }))
-        .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'custom')));
+        .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium', 'custom')));
 
     return mergedStream;
   }
