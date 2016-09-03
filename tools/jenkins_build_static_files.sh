@@ -14,7 +14,7 @@ gulp
 cd dist
 rm -f "${GOOGLE_DRIVE_PATH}"/htdocs.zip
 zip -9r "${GOOGLE_DRIVE_PATH}"/htdocs.zip htdocs/*
-cp JaniumThemeCustomizer.html "${GOOGLE_DRIVE_PATH}"
+cp JaniumThemeCustomizer.html "${GOOGLE_DRIVE_PATH}"/
 cd ..
 
 # publicar
