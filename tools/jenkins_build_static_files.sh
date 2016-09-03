@@ -20,3 +20,4 @@ cd ..
 # publicar
 cd "${GOOGLE_DRIVE_PATH}"
 drive push --no-prompt htdocs.zip
+drive push --no-prompt JaniumThemeCustomizer.html
