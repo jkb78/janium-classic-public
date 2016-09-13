@@ -49,8 +49,8 @@ do
                 echo "   (OK)"
                 pushd dist/htdocs/css >/dev/null 2>&1
                         zip -q "/${OUTBOX}/${custom_name}.zip" \
-                                custom/janium_skins.min.css \
-                                custom/bootstrap-datepicker3.min.css.map
+                                janium/custom/janium_skins.min.css \
+                                janium/custom/bootstrap-datepicker3.min.css.map
                 popd >/dev/null 2>&1
         fi
 
