@@ -57,7 +57,7 @@ do
         echo "  moviendo archivo a OUTBOX..."
         pushd "${INBOX}" >/dev/null 2>&1
             # en "mv" OUTBOX es "relativo remoto"
-            drive mv "${custom_name}" ../OUTBOX
+            drive mv "'${custom_name}'" ../OUTBOX
         popd >/dev/null 2>&1
 done
 
