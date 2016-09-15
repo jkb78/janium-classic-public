@@ -44,23 +44,30 @@ do
         then
                 echo "   (ERR)"
                 cp /tmp/gulp-build-custom-skins.out \
-                        "/${OUTBOX}/${custom_name}.err"
+                        "/${OUTBOX}/'${custom_name}'.err"
         else
                 echo "   (OK)"
                 pushd dist/htdocs/css >/dev/null 2>&1
-                        zip -q "/${OUTBOX}/${custom_name}.zip" \
+                        zip -q "/${OUTBOX}/'${custom_name}'.zip" \
                                 janium/custom/janium_skins.min.css \
                                 janium/custom/bootstrap-datepicker3.min.css.map
                 popd >/dev/null 2>&1
         fi
 
-        rm -f "${json_path}"
+        echo "  moviendo archivo a OUTBOX..."
+        pushd "${INBOX}" >/dev/null 2>&1
+            # en "mv" OUTBOX es "relativo remoto"
+            drive mv "${custom_name}" ../OUTBOX
+        popd >/dev/null 2>&1
 done
 
-echo "Enviando INBOX y OUTBOX..."
+echo "Sincronizando OUTBOX..."
+echo "   ( los errores de permisos de drive probablemente sean inofensivos...)"
 pushd "${OUTBOX}" >/dev/null 2>&1
         drive push --no-prompt
 popd >/dev/null 2>&1
+
+echo "Sincronizando INBOX..."
 pushd "${INBOX}" >/dev/null 2>&1
-        drive push --no-prompt
+        drive pull --no-prompt
 popd >/dev/null 2>&1
