@@ -13,7 +13,7 @@ gulp
 # empaquetar
 cd dist
 rm -f "${GOOGLE_DRIVE_PATH}"/htdocs.zip
-zip -9r "${GOOGLE_DRIVE_PATH}"/htdocs.zip htdocs/*
+zip -9r "${GOOGLE_DRIVE_PATH}"/htdocs.zip htdocs/* test/* JaniumThemeCustomizer.html
 cp JaniumThemeCustomizer.html "${GOOGLE_DRIVE_PATH}"/
 cd ..
 
