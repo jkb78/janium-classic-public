@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../../htdocs/css/janium/janium_skins.min.css" rel="stylesheet">
+    <link href="../../htdocs/css/janium/custom/janium_skins.min.css" rel="stylesheet">
+    <script src="../../htdocs/js/modernizr/modernizr-respond.min.js"></script>
+    <title>Búsqueda rápida - Test Page</title>
+    <style type="text/css">
+      /* css/janium/janium.css */
+      .main-header {
+        max-height: none;
+      }
+
+      /* css/janium/quick_search.css */
+      @media (min-width: 992px) {
+        .col-md-12 { float: none; }
+      }
+    </style>
+  </head>
+  <body class="hold-transition layout-top-nav skin-janium">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <div style="clear: both; position: absolute; top: 0px; left: 0px">
+          <form name="forma_progs" action="" method="post">
+            <input type="hidden" name="prog" value="">
+            </form>
+          <form action="" name="language_form" method="post" id="language_form">
+            <input type="hidden" name="prog" value="fija_idioma.pl">
+            <input type="hidden" name="cat" value="1">
+            <input type="hidden" name="idiomas" value="">
+          </form>
+        </div>
+        <table width="100%" class="logo_y_menu">
+          <tr class="logo_y_menu">
+            <td colspan="2" width="100%" class="logo_y_menu">
+              <table width="100%" class="logos">
+                <tr class="logos">
+                  <td class="logo1" align="left" width="*">
+                    <a href="../index.html">
+                      <img border="0" src="../img/logo_janium.png" >
+                    </a>
+                  </td>
+                  <td class="logo2" align="right" width="*">
+                    <a href="../index.html">
+                      <img border="0" src="../img/logo_janium.png" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td colspan="2" width="100%" bgcolor="#ffffff">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr align="center">
+                  <td>
+                    <font size="-1" face="Arial,Helvetica" color="ff0000">
+                      <b>*** No olvides terminar la sesión, de lo contrario tus datos podrian ser vistos por otro usuario ***</b>
+                    </font>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <nav class="navbar navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="busqueda_avanzada.html">Búsqueda avanzada</a>
+                </li>
+                <li>
+                  <a href="otros_catalogos.html">Otros catálogos</a>
+                </li>
+                <li>
+                  <a href="servicios_de_alerta.html">Servicios de alerta</a>
+                </li>
+                <li>
+                  <a href="servicios_al_usuario.html">Servicios al usuario</a>
+                </li>
+                <li>
+                  <a href="referencista.html">Referencista</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#">Tags</a>
+                </li>
+                <li>
+                  <a href="#">Terminar</a>
+                </li>
+                <li>
+                  <a href="#">Ayuda</a>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      </header>
+
+      <!-- Full Width Column -->
+      <div class="content-wrapper">
+        <div class="container">
+          <!-- Content Header (Page header) -->
+          <!-- Main content -->
+          <section class="content">
+            <form action="" method="post" name="search_form">
+
+              <input type="hidden" name="indice" value="1">
+              <input type="hidden" name="Prog" value="busqueda.pl">
+
+              <div class="box box-default collapsed-box">
+
+                <div class="box-header">
+                  <div class="input-group input-group-md">
+                    <div class="input-group-btn search-panel">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span id="search_concept">Palabra</span>
+                        <span class="fa fa-caret-down"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#1">Palabra</a></li>
+                        <li><a href="#2">Título</a></li>
+                        <li><a href="#3">Autor</a></li>
+                        <li><a href="#4">Tema</a></li>
+                        <li><a href="#50">ISBN</a></li>
+                        <li><a href="#8">ISSN</a></li>
+                        <li><a href="#5">Editorial</a></li>
+                        <li><a href="#6">Serie</a></li>
+                        <li><a href="#51">Clasificación</a></li>
+                        <li><a href="#9">Texto completo</a></li>
+                      </ul>
+                    </div><!-- /.input-group-btn / índices -->
+                    <input type="text" class="form-control" name="buscar" placeholder="Términos de búsqueda...">
+                    <div class="input-group-btn">
+                      <button id="go" type="button" class="btn btn-info btn-flat">Buscar</button>
+                      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                    </div><!-- /.input-group-btn / botones -->
+                  </div><!-- /.input-group -->
+                </div><!-- /.box-header -->
+
+                <div class="box-body">
+
+                  <div class="box-group" id="accordion">
+                    <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+
+                    <div class="panel box">
+                      <div class="box-header with-border">
+                        <h4 class="box-title">
+                          <input type="radio" name="tipo" value="catalogo" checked="1" id="tipo_catalogo">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-catalogo" aria-expanded="true" class="collapse-title">
+                           Búsqueda en el catálogo
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapse-catalogo" class="panel-collapse collapse in" aria-expanded="true">
+                        <div class="box-body">
+                          <div class="form-group text-center">
+                            <div id="crit_btns" class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-default ">
+                                <input type="radio" name="search_criterion" value="alfabeticamente" id="crit_a" autocomplete="off"> Alfabéticamente
+                              </label>
+                              <label class="btn btn-default active">
+                                <input type="radio" name="search_criterion" value="palabra_clave" id="crit_p" autocomplete="off"> Por palabra clave
+                              </label>
+                            </div>
+                          </div><!-- /.form-group -->
+                          <input type="hidden" id="criterio" name="criterio" value="palabra_clave">
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <select name="biblioteca" id="library" class="form-control">
+                                <option value="todas">Todas las bibliotecas
+                                <option value="4" >Biblioteca de Artes
+                                <option value="2" >Biblioteca de Ciencias
+                                <option value="3" >Biblioteca de Derecho
+                                <option value="1" selected>Biblioteca de Literatura
+                                <option value="5" >Biblioteca APR
+                                <option value="6" >PB - BELEN
+                              </select>
+                            </div><!-- /.col-md-12 -->
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <select name="ubicacion" class="form-control">
+                                <option value="todas">Todas las colecciones
+                                <option value="1" >Acervo General
+                              </select>
+                            </div><!-- /.col-md-12 -->
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <select name="tipom" class="form-control">
+                                <option value="todos">Todos los materiales
+                                <option value="6" >AUDIOVISUALES
+                                <option value="8" >COMPUTADOR
+                                <option value="1" >LIBRO GENERAL
+                                <option value="2" >LIBRO REFERENCIA
+                                <option value="3" >LIBRO RESERVA
+                                <option value="7" >MAPAS
+                                <option value="4" >PUBLIC. PERIODICA
+                                <option value="5" >TESIS
+                              </select>
+                            </div><!-- /.col-md-12 -->
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <div class="col-md-12">
+                              <select name="estadoitem" class="form-control">
+                                <option value="todos">Todos los estados
+                                <option value="0" >Estado
+                                <option value="1" >Disponible
+                                <option value="2" >Prestado
+                                <option value="3" >Ordenado
+                                <option value="4" >En Catalogación
+                                <option value="5" >Perdido
+                                <option value="6" >Apartado
+                                <option value="8" >Faltante
+                                <option value="9" >Inexistente
+                                <option value="10" >En Encuadernacion
+                                <option value="20" >En Transito
+                              </select>
+                            </div><!-- /.col-md-12 -->
+                          </div><!-- /.form-group -->
+                        </div><!-- /.box-body -->
+                      </div><!-- /.panel-collapse -->
+                    </div><!-- /.panel -->
+
+                  <div class="panel box">
+                    <div class="box-header with-border">
+                      <h4 class="box-title">
+                        <input type="radio" name="tipo" value="otros_catalogos" id="tipo_otros_catalogos">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-otros_catalogos" aria-expanded="true" class="collapse-title">
+                          Búsqueda en otro catálogo
+                        </a>
+                      </h4>
+                    </div><!-- /.box-header -->
+                    <div id="collapse-otros_catalogos" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                      <div class="box-body">
+                        <div class="form-group">
+                          <div class="col-md-12">
+                            <select name="otro_catalogo_escape" class="form-control">
+                              <option value="seleccione">Seleccione un catálogo
+                              <option value="otro_catalogo&#9;itec.mty.itesm.mx&#9;sys&#9;Z3950&#9;sysid&#9;itesm">Centro de Inf. Biblioteca ITESM, Monterrey
+                              <option value="otro_catalogo&#9;192.168.60.23&#9;sys&#9;Z3950&#9;sysid&#9;SIABUC::Luna ">SIABUC::Luna
+                              <option value="otro_catalogo&#9;www2.ujaen.es&#9;sys&#9;Z3950&#9;sysid&#9;jaen">Universidad de Jaén (España)
+                            </select>
+                          </div>
+                        </div>
+                      </div><!-- /.box-body -->
+                    </div><!-- /.panel-collapse -->
+                  </div><!-- /.panel -->
+
+                  <div class="panel box">
+                    <div class="box-header with-border">
+                      <h4 class="box-title">
+                        <input type="radio" name="tipo" value="web" id="tipo_web">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-web" aria-expanded="true" class="collapse-title">
+                          Búsqueda en web
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse-web" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                      <div class="box-body">
+                        <div class="form-group">
+                          <div class="col-md-12">
+                            <select name="web" class="form-control">
+                              <option value="seleccione">Seleccione un portal
+                              <option value="http://www.google.com/search?hl=es&safe=off&lr=lang_es&q=">Google
+                              <option value="http://search.netscape.com/nscp_results.adp?source=NSCPIndex&query=">Netscape
+                              <option value="http://search.msn.com.mx/results.asp?FORM=MSNH&v=1&RS=CHECKED&CY=es-mx&q=">T1MSN
+                              <option value="http://mx.search.yahoo.com/search/mx?p=">Yahoo
+                            </select>
+                          </div>
+                        </div>
+                      </div><!-- /.box-body -->
+                    </div><!-- /.panel-collapse -->
+                  </div><!-- /.panel -->
+
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </form>
+
+          </section><!-- /.content -->
+        </div><!-- /.container -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="container">
+          <div class="pull-right hidden-xs">
+           <b>Versión 2016 ???????</b>
+          </div>
+          <strong>Copyright &copy; 2001-2016 <a href="http://www.janium.com">Janium</a></strong>
+        </div><!-- /.container -->
+      </footer>
+
+    </div><!-- ./wrapper -->
+
+    <script src="../../htdocs/js/jquery/jquery.min.js"></script>
+    <script src="../../htdocs/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../htdocs/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/datatables.min.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/jquery.placeholder.min.js"></script>
+    <script src="../../htdocs/js/moment/moment.min.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/datatables-datetime-moment.min.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/datatables-row-show.min.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/jquery.slimscroll.min.js"></script>
+    <script src="../../htdocs/js/jquery/plugin/jquery.validate.min.js"></script>
+    <script src="../../htdocs/js/adminlte/app.min.js"></script>
+    <script src="../js/test.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+      });
+    </script>
+  </body>
+</html>

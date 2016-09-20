@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../htdocs/css/janium/janium_skins.min.css" rel="stylesheet">
+    <link href="../htdocs/css/janium/custom/janium_skins.min.css" rel="stylesheet">
+    <script src="../htdocs/js/modernizr/modernizr-respond.min.js"></script>
+    <title>Login - Test Page</title>
+    <style type="text/css">
+      /* css/janium/janium.css */
+      .main-header {
+        max-height: none;
+      }
+    </style>
+  </head>
+  <body class="hold-transition layout-top-nav skin-janium">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <div style="clear: both; position: absolute; top: 0px; left: 0px">
+          <form name="forma_progs" action="" method="post">
+            <input type="hidden" name="prog" value="">
+            </form>
+          <form action="" name="language_form" method="post" id="language_form">
+            <input type="hidden" name="prog" value="fija_idioma.pl">
+            <input type="hidden" name="cat" value="1">
+            <input type="hidden" name="idiomas" value="">
+          </form>
+        </div>
+        <table width="100%" class="logo_y_menu">
+          <tr class="logo_y_menu">
+            <td colspan="2" width="100%" class="logo_y_menu">
+              <table width="100%" class="logos">
+                <tr class="logos">
+                  <td class="logo1" align="left" width="*">
+                    <a href="index.html">
+                      <img border="0" src="img/logo_janium.png" >
+                    </a>
+                  </td>
+                  <td class="logo2" align="right" width="*">
+                    <a href="index.html">
+                      <img border="0" src="img/logo_janium.png" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <nav class="navbar navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Ayuda</a>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      </header>
+
+      <!-- Full Width Column -->
+      <div class="content-wrapper">
+        <div class="container">
+          <!-- Content Header (Page header) -->
+          <!-- Main content -->
+          <section class="content">
+            <div class="login-box-body col-md-6 col-md-offset-3">
+              <p class="login-box-msg">Para entrar, introduce tu número de cuenta y password, y luego presiona el botón "Entrar".</p>
+
+              <form id="form-signin" class="form-signin" autocomplete="off" role="form" action="" method="post">
+                <div class="form-group has-feedback">
+                  <input class="form-control" id="cuenta" name="cuenta" type="text" placeholder="Número de cuenta" autofocus required>
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <input class="form-control" id="password" name="password" type="password" placeholder="Password" required>
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group form-signin-button">
+                  <button class="btn btn-primary" type="submit">Entrar</button>
+                </div>
+              </form>
+            </div><!-- /.login-box-body -->
+
+          </section><!-- /.content -->
+        </div><!-- /.container -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="container">
+          <div class="pull-right hidden-xs">
+           <b>Versión 2016 ???????</b>
+          </div>
+          <strong>Copyright &copy; 2001-2016 <a href="http://www.janium.com">Janium</a></strong>
+        </div><!-- /.container -->
+      </footer>
+
+    </div><!-- ./wrapper -->
+
+    <script src="../htdocs/js/jquery/jquery.min.js"></script>
+    <script src="../htdocs/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../htdocs/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="../htdocs/js/jquery/plugin/datatables.min.js"></script>
+    <script src="../htdocs/js/jquery/plugin/jquery.placeholder.min.js"></script>
+    <script src="../htdocs/js/moment/moment.min.js"></script>
+    <script src="../htdocs/js/jquery/plugin/datatables-datetime-moment.min.js"></script>
+    <script src="../htdocs/js/jquery/plugin/datatables-row-show.min.js"></script>
+    <script src="../htdocs/js/jquery/plugin/jquery.slimscroll.min.js"></script>
+    <script src="../htdocs/js/jquery/plugin/jquery.validate.min.js"></script>
+    <script src="../htdocs/js/adminlte/app.min.js"></script>
+    <script src="js/test.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+      });
+    </script>
+  </body>
+</html>
