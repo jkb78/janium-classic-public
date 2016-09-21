@@ -1,8 +1,8 @@
-// test.js //
+// test_site.js //
 /**
- * test.js
- * Este código es de uso exclusivo del tester de páginas
- * Janium
+ * test_site.js
+ * Este código es de uso exclusivo del tester de páginas Janium.
+ * Hacer caso omiso del mismo.
  */
 
 // Lista Temas de Janium
@@ -41,10 +41,6 @@ $( document ).ready(function() {
     e.preventDefault();
     change_skin($(this).data('skin'));
   });
-
-  prettyPrint();
-
-  new Clipboard('.btn-copy');
 
 });
 

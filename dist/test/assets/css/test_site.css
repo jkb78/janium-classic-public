@@ -1,0 +1,11 @@
+// test_site.css //
+/**
+ * test_site.css
+ * Este código es de uso exclusivo del tester de páginas Janium.
+ * Hacer caso omiso del mismo.
+ */
+
+/* css/janium/janium.css */
+.main-header {
+  max-height: none;
+}
