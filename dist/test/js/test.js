@@ -42,6 +42,10 @@ $( document ).ready(function() {
     change_skin($(this).data('skin'));
   });
 
+  prettyPrint();
+
+  new Clipboard('.btn-copy');
+
 });
 
 /**
