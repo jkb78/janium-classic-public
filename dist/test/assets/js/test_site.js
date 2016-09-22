@@ -1,4 +1,3 @@
-// test_site.js //
 /**
  * test_site.js
  * Este código es de uso exclusivo del tester de páginas Janium.
@@ -7,6 +6,7 @@
 
 // Lista Temas de Janium
 var janium_skins = [
+  "dummy",
   "skin-blue",
   "skin-blush",
   "skin-clementine",
@@ -32,13 +32,15 @@ var janium_skins = [
 $( document ).ready(function() {
 
   var current_skin = get('skin');
+  //console.log('CSK: ', current_skin);
 
   if (current_skin && $.inArray(current_skin, janium_skins)) {
+    //console.log('EXIST CSK: ', current_skin);
     change_skin( current_skin );
   }
 
   $("[data-skin]").on('click', function (e) {
-    e.preventDefault();
+   // e.preventDefault();
     change_skin($(this).data('skin'));
   });
 
