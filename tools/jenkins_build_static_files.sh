@@ -14,9 +14,11 @@ gulp
 cd dist
 rm -f "${GOOGLE_DRIVE_PATH}"/htdocs.zip
 rm -f "${GOOGLE_DRIVE_PATH}"/JaniumThemeCustomizer.html
-zip -9r "${GOOGLE_DRIVE_PATH}"/janium_test_and_developer.zip htdocs/* test/* JaniumThemeCustomizer.html
+rm -f "${GOOGLE_DRIVE_PATH}"/janium_test_and_developer.zip
+rm -f "${GOOGLE_DRIVE_PATH}"/JaniumThemeTest.zip
+zip -9r "${GOOGLE_DRIVE_PATH}"/JaniumThemeTest.zip htdocs/* test/* JaniumThemeCustomizer.html
 cd ..
 
 # publicar
 cd "${GOOGLE_DRIVE_PATH}"
-drive push --no-prompt janium_test_and_developer.zip
+drive push --no-prompt JaniumThemeTest.zip
