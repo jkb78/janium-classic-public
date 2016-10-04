@@ -26,6 +26,9 @@ if [ "$inbox_is_empty" = "" ]; then
         exit 0
 fi
 
+echo "Por mis pistolas..."
+sleep 10
+
 for json_path in "$INBOX"/*.json
 do
         json=$(basename "$json_path")
