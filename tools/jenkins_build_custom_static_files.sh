@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 # jenkins_build_custom_static_files.sh
 #
 # $INBOX: Directorio de entrada (conectado a Google Drive)
