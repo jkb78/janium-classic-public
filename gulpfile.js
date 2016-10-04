@@ -527,12 +527,15 @@ gulp.task('generate-custom-skins', function() {
   try {
     var s = fs.statSync('custom.json');
 
+    console.log('Generando archivo personalizado...');
+
     // el archivo existe...
     var json_data = fs.readFileSync('custom.json');
     var custom_variables = {
       modifyVars: JSON.parse( json_data.toString() )
     };
-    //console.log(custom_variables);
+    console.log('Datos archivo custom...');
+    console.log(custom_variables);
 
     var CBootstrap = gulp.src(pathTo.master_less + '/bootstrap.less')
         // Compile LESS files
@@ -557,6 +560,7 @@ gulp.task('generate-custom-skins', function() {
         // Format style for CSS /.csscomb.json
         .pipe(csscomb())
     ;
+    console.log('Bootstrap procesado...');
 
     var CFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
         // Compile LESS files
@@ -566,6 +570,7 @@ gulp.task('generate-custom-skins', function() {
         .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
         //.pipe(csslint.reporter())
     ;
+    console.log('FontAwesome procesado...');
 
     var CAdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
         // Compile LESS files
@@ -575,6 +580,7 @@ gulp.task('generate-custom-skins', function() {
         .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
         //.pipe(csslint.reporter())
     ;
+    console.log('AdminLTE procesado...');
 
     var CSkins = gulp.src(pathTo.master_less + '/skins/_all-skins.less')
         // Compile LESS files
@@ -584,6 +590,7 @@ gulp.task('generate-custom-skins', function() {
         .pipe(csslint(pathTo.adminlte + '/build/less/.csslintrc'))
         //.pipe(csslint.reporter())
     ;
+    console.log('Skins procesados...');
 
     var CPlugins = gulp.src([
         pathTo.json_forms           + '/brutusin-json-forms.min.css',
@@ -593,6 +600,7 @@ gulp.task('generate-custom-skins', function() {
         pathTo.select2              + '/dist/css/select2.min.css',
         pathTo.jqtree               + '/jqtree.css'
     ]);
+    console.log('Plugins procesados...');
 
     var mergedStream = ee.concatenate([CBootstrap, CFontAwesome, CPlugins, CAdminLTE, CSkins])
         .pipe(concat('janium_skins.min.css'))
@@ -601,6 +609,8 @@ gulp.task('generate-custom-skins', function() {
           noAdvanced: true
         }))
         .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium', 'custom')));
+
+    console.log('Skin personalizado creado...');
 
     return mergedStream;
   }
