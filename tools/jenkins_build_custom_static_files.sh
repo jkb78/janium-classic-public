@@ -40,6 +40,9 @@ do
         rm -f custom.json
         cp "${json_path}" custom.json
 
+        echo "Por mis pistolas2..."
+        sleep 10
+
         gulp build-custom-skins \
                 >/tmp/gulp-build-custom-skins.out \
                 2>&1
