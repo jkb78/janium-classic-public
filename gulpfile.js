@@ -531,7 +531,6 @@ gulp.task('generate-custom-skins', function() {
 
     // el archivo existe...
     var json_data = fs.readFileSync('custom.json');
-    console.log('JD->',json_data.toString());
     var custom_variables = {
       modifyVars: JSON.parse( json_data.toString() )
     };
