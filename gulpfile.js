@@ -56,6 +56,7 @@ var pathTo = {
   json_forms:           path.join(__dirname, 'vendor_components', 'json-forms'),
   markdown:             path.join(__dirname, 'vendor_components', 'markdown'),
   modernizr:            path.join(__dirname, 'vendor_components', 'modernizr'),
+  jquery_file_upload:   path.join(__dirname, 'vendor_components', 'jquery-file-upload'),
   //JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
   //JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
   htdocs_folder:        path.join(__dirname, 'dist', 'htdocs')
@@ -137,9 +138,9 @@ gulp.task('clean', function(cb) {
 // ** Copy Icon fonts ** //
 gulp.task('copy-icon-fonts', function() {
   return gulp.src([
-    pathTo.flaticon + '/fonts/**/*.{ttf,woff,eot,svg}',
+    pathTo.flaticon     + '/fonts/**/*.{ttf,woff,eot,svg}',
     pathTo.font_awesome + '/fonts/**/*.{ttf,woff,eot,svg,woff2}',
-    pathTo.bootstrap + '/fonts/**/*.{ttf,woff,eot,svg,woff2}'
+    pathTo.bootstrap    + '/fonts/**/*.{ttf,woff,eot,svg,woff2}'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'fonts')));
 });
@@ -148,7 +149,8 @@ gulp.task('copy-icon-fonts', function() {
 // ** Copy Images of Plugins ** //
 gulp.task('copy-plugins-images', function() {
   return gulp.src([
-    pathTo.colorpicker + '/dist/img/**/*'
+    pathTo.colorpicker        + '/dist/img/**/*',
+    pathTo.jquery_file_upload + '/img/**/*'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'img')));
 });
@@ -207,7 +209,6 @@ gulp.task('copy-plugins-js', function() {
     pathTo.bootstrap_select      + '/dist/js/i18n/defaults-es_CL.min.js',
     pathTo.colorpicker           + '/dist/js/bootstrap-colorpicker.min.js',
     pathTo.datatables            + '/datatables.min.js',
-    pathTo.datatables            + '/datatables-i18n-spanish.json',
     pathTo.datatables            + '/pdfmake.min.js.map',
     pathTo.inputmask             + '/dist/min/jquery.inputmask.bundle.min.js',
     pathTo.jquery_paging         + '/jquery.paging.min.js',
@@ -296,12 +297,14 @@ gulp.task('compile-timepicker-js', function() {
 
 gulp.task('compile-plugins-js', function() {
   return gulp.src([
-    pathTo.bootbox    + '/bootbox.js',
-    pathTo.datatables + '/datatables-row-show.js',
-    pathTo.datatables + '/datatables-datetime-moment.js',
-    pathTo.jqtree     + '/tree.jquery.js',
-    pathTo.json_forms + '/brutusin-json-forms.js',
-    pathTo.json_forms + '/brutusin-json-forms-bootstrap.js'
+    pathTo.bootbox            + '/bootbox.js',
+    pathTo.datatables         + '/datatables-row-show.js',
+    pathTo.datatables         + '/datatables-datetime-moment.js',
+    pathTo.jqtree             + '/tree.jquery.js',
+    pathTo.json_forms         + '/brutusin-json-forms.js',
+    pathTo.json_forms         + '/brutusin-json-forms-bootstrap.js',
+    pathTo.jquery_file_upload + '/jquery.fileupload.js',
+    pathTo.jquery_file_upload + '/jquery.ui.widget.js'
   ])
     .pipe(uglify({ preserveComments: 'some' }))
     .pipe(rename({suffix: '.min'}))
