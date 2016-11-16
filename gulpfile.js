@@ -565,15 +565,15 @@ gulp.task('generate-custom-skins', function() {
     ;
     console.log('Bootstrap procesado...');
 
-    var CFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
+    //var CFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
         // Compile LESS files
-        .pipe(less().on('error', console.log))
+        //.pipe(less().on('error', console.log))
 
         // CSS Linter
-        .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
+        //.pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
         //.pipe(csslint.reporter())
-    ;
-    console.log('FontAwesome procesado...');
+    //;
+    //console.log('FontAwesome procesado...');
 
     var CAdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
         // Compile LESS files
@@ -605,7 +605,7 @@ gulp.task('generate-custom-skins', function() {
     ]);
     console.log('Plugins procesados...');
 
-    var mergedStream = ee.concatenate([CBootstrap, CFontAwesome, CPlugins, CAdminLTE, CSkins])
+    var mergedStream = ee.concatenate([CBootstrap, CPlugins, CAdminLTE, CSkins])
         .pipe(concat('janium_skins.min.css'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
