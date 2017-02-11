@@ -4,14 +4,13 @@
 
 //== Path to fonts
 @jnm-font-path:            "../../fonts/";
-@jnm-font-awesome-path:    "../../fonts";
 
 //== Colors
-@jnm-brand-primary:        #016bab;
-@jnm-brand-success:        #6f8745;
+@jnm-brand-primary:        #1d69a5;
+@jnm-brand-success:        #8bc34a;
 @jnm-brand-info:           #33b5e5;
-@jnm-brand-warning:        #edbb02;
-@jnm-brand-danger:         #ae131f;
+@jnm-brand-warning:        #f8bd2f;
+@jnm-brand-danger:         #f47264;
 
 //== Scaffolding
 @jnm-body-bg:              #f9f9f9;
@@ -23,7 +22,9 @@
 @jnm-headings-color:       inherit;
 
 //== Navbar
-@jnm-nav-bg:               #eeb23a;
+@jnm-navbar-light-color:   #fff;
+@jnm-navbar-dark-color:    #333;
+@jnm-navbar-bg:            #eeb23a;
 @jnm-logo-bg:              #fff;
 
 
@@ -34,6 +35,10 @@
 
 //== Colors
 @brand-primary:            @jnm-brand-primary;
+@brand-success:            @jnm-brand-success;
+@brand-info:               @jnm-brand-info;
+@brand-warning:            @jnm-brand-warning;
+@brand-danger:             @jnm-brand-danger;
 
 //== Scaffolding
 @body-bg:                  @jnm-body-bg;
@@ -51,7 +56,7 @@
 // ************************************************************** //
 //                    Variables Font Awesome                      //
 // ************************************************************** //
-@fa-font-path:             @jnm-font-awesome-path;
+@fa-font-path:             "../../fonts";
 
 
 
@@ -59,30 +64,54 @@
 //                      Variables AdminLTE                        //
 // ************************************************************** //
 @light-blue:               @jnm-brand-primary;   //Primary
-@green:                    @jnm-brand-success;   //Success   //midori
-@aqua:                     @jnm-brand-info;      //Info      //mizuiro
+@green:                    @jnm-brand-success;   //Success
+@aqua:                     @jnm-brand-info;      //Info
 @yellow:                   @jnm-brand-warning;   //Warning
-@red:                      @jnm-brand-danger;    //Danger    //aka
-@black:                    #111;
+@red:                      @jnm-brand-danger;    //Danger
+@black:                    #222;
 @blue:                     #0277be;
-@blush:                    #b94b6f;              //momoiro
-@clementine:               #f16022;              //orenji
-@curious-blue:             #2780e3;              //modern
-@fuchsia:                  #fe206a;              //janiumdoc
-@janium:                   #669;                 //janium
-@librarian:                #033672;              //librarian
-@lime:                     #01ff70;
+@blue-grey:                #607d8b;
+@blush:                    #b94b6f;
+@bright-red:               #f44336;
+@brown:                    #795548;
+@clementine:               #f16022;
+@cranberry:                #d55472;
+@curious-blue:             #2780e3;
+@cyan:                     #00bcd4;
+@dark-cyan:                #009688;
+@dark-green:               #6f8745;
+@dark-lime:                #4caf50;
+@dark-magenta:             #9c27b0;
+@dark-pink:                #975a7b;
+@dark-red:                 #ae131f;
+@deep-orange:              #ff5722;
+@deep-purple:              #673ab7;
+@fuchsia:                  #fe206a;
+@gray-lte:                 #d2d6de;
+@grey:                     #9e9e9e;
+@indigo:                   #3f51b5;
+@janium:                   #669;
+@librarian:                #033672;
+@light-cyan:               #84cbc5;
+@light-grey:               #e6e7e8;
+@light-orange:             #f49464;
+@lime:                     #cddc39;
 @maroon:                   #800040;
-@navy:                     #2c3e50;              //navy
+@navy:                     #2c3e50;
 @ocean:                    #3d9970;
 @olive:                    #808000;
-@orange:                   #f0ab00;
-@purple:                   #86618f;              //murasaki
-@san-marino:               #496cad;              //ao
-@summer-sky:               #008cba;              //janium-one
+@orange:                   #ff9800;
+@pure-yellow:              #ffeb3b;
+@purple:                   #86618f;
+@san-marino:               #496cad;
+@soft-blue:                #7dc7ee;
+@summer-sky:               #008cba;
 @teal:                     #39cccc;
-@thunderbird:              #d9230f;              //simplired
-@box-border-color:         #ddd;                 // Restore border for table
+@thunderbird:              #d9230f;
+@vivid-blue:               #03a9f4;
+
+@box-border-color:         #ddd;                 // Define bordes de tablas en AdminLTE
+                                                 // valor original muy claro #f4f4f4
 
 
 
@@ -90,7 +119,22 @@
 //              Variables Bootstrap Colorpicker                   //
 // ************************************************************** //
 
-@bcp-image-path:           "../../img/bootstrap-colorpicker/";
+@colorpicker-img-path:     "../../img/bootstrap-colorpicker/";
+
+
+
+// ************************************************************** //
+//              Variables Bootstrap Tokenfield                    //
+// ************************************************************** //
+
+@token-background:               #ededed;
+@token-border:                   #d9d9d9;
+@token-hover-border:             #b9b9b9;
+@token-active-border:            rgba(82, 168, 236, 0.8);
+@token-active-border-fallback:   rgb(82, 168, 236);
+@token-active-invalid-border:    @token-background;
+
+
 
 // ************************************************************** //
 //                Variables jQuery File Upload                    //

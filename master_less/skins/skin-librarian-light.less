@@ -17,16 +17,11 @@
   //Navbar
   .main-header {
     .navbar {
-      .navbar-variant(@librarian; #fff);
+      .navbar-variant(@librarian; @jnm-navbar-light-color; @jnm-navbar-light-color; @jnm-navbar-bg);
       .sidebar-toggle {
-        color: #fff;
+        color: @jnm-navbar-light-color;
         &:hover {
          background-color: darken(@librarian, 5%);
-        }
-      }
-      li {
-        &:hover {
-          background-color: @jnm-nav-bg;
         }
       }
       @media(max-width: @screen-header-collapse) {
@@ -36,7 +31,7 @@
               background-color: rgba(255,255,255,0.1);
             }
             a {
-              color: #fff;
+              color: @jnm-navbar-light-color;
               &:hover {
                 background: darken(@librarian, 5%);
               }
@@ -47,7 +42,7 @@
     }
     //Logo
     .logo {
-      .logo-variant(@librarian);
+      .logo-variant(@librarian); @jnm-navbar-light-color);
     }
 
     li.user-header {

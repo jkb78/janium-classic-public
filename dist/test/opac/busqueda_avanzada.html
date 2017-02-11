@@ -109,7 +109,431 @@
           <!-- Content Header (Page header) -->
           <!-- Main content -->
           <section class="content">
+            <div class="row">
+              <div class="col-md-9">
 
+                <!-- búsqueda numérica -->
+                <div class="row" id="numeric-search-section">
+                  <form action="/janium-bin/janium_store.pl?Id=20170203034341" id="numeric-search-form" name="numeric_search_form" method="post" role="form" novalidate="novalidate">
+                    <input type="hidden" name="Prog" value="busqueda.pl">
+                    <input type="hidden" name="tipo" value="catalogo">
+                    <input type="hidden" name="criterio" value="palabra_clave">
+                    <input type="hidden" name="operador" value="Codbarras">
+                    <input type="hidden" name="formato" value="">
+                    <input type="hidden" name="biblioteca" value="">
+                    <input type="hidden" name="ubicacion" value="">
+                    <input type="hidden" name="tipom" value="">
+                    <input type="hidden" name="estadoitem" value="">
+                    <input type="hidden" name="input_cb" value="id_form.Item_id">
+                    <input type="hidden" name="from_to" value="nocirculacion">
+
+                    <div class="box box-solid box-info">
+                      <div class="box-header">
+                        <h3 class="box-title">Búsquedas por número</h3>
+                      </div><!-- /.box-header -->
+                      <div class="box-body form-group">
+                        <div class="input-group input-group-md">
+                          <div class="input-group-btn numeric-search-panel">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                              <span id="numeric-index">Cod. barras</span>
+                              <span class="fa fa-caret-down"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#Codbarras">Cod. barras</a></li>
+                              <li><a href="#NoCtrl">No. control</a></li>
+                              <li><a href="#NoAdq">No. adquisición</a></li>
+                              <li><a href="#Call">Clasif.</a></li>
+                              <li><a href="#CallB">Clasif (Bib)</a></li>
+                              <li><a href="#ISBN">ISBN</a></li>
+                              <li><a href="#ISSN">ISSN</a></li>
+                              <li><a href="#NoBIB">No. de ficha</a></li>
+                              <li><a href="#NoITEM">No. ITEM</a></li>
+                            </ul>
+                          </div><!-- /.input-group-btn / índices -->
+                          <input type="text" class="form-control" id="numero" name="numero" placeholder="NÚMERO" aria-required="true">
+                        </div><!-- /.input-group -->
+                      </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                  </form><!-- /#numeric-search-form -->
+                </div><!-- /#numeric-search-section /.row -->
+
+                <!-- búsqueda combinada de palabra clave -->
+                <div class="row" id="keyword-search-section">
+                  <form action="/janium-bin/janium_store.pl?Id=20170203034341" id="keyword-search-form" name="keyword_search_form" method="post" role="form">
+                    <input type="hidden" name="Prog" value="busqueda.pl">
+                    <input type="hidden" name="tipo" value="catalogo">
+                    <input type="hidden" name="criterio" value="palabra_clave">
+                    <input type="hidden" name="operador" value="">
+                    <input type="hidden" name="formato" value="">
+                    <input type="hidden" name="biblioteca" value="">
+                    <input type="hidden" name="ubicacion" value="">
+                    <input type="hidden" name="tipom" value="">
+                    <input type="hidden" name="estadoitem" value="">
+                    <input type="hidden" name="input_cb" value="id_form.Item_id">
+                    <input type="hidden" name="from_to" value="nocirculacion">
+
+                    <div class="box box-solid box-info">
+                      <div class="box-header">
+                        <h3 class="box-title">Búsqueda avanzada</h3>
+                      </div><!-- /.box-header -->
+                      <div class="box-body form-group">
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-xs-6 col-md-4 col-xs-offset-2"><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index1" value="1">
+                                  <span id="span_index1">General de palabras</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="1">General de palabras</a></li>
+                                  <li><a href="#2" data-index="1">Título</a></li>
+                                  <li><a href="#3" data-index="1">Autor</a></li>
+                                  <li><a href="#4" data-index="1">Tema</a></li>
+                                  <li><a href="#5" data-index="1">Editorial</a></li>
+                                  <li><a href="#6" data-index="1">Serie</a></li>
+                                  <li><a href="#7" data-index="1">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="1">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar1" name="buscar1" placeholder="General de palabras">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper1" value="::AND::">
+                                  <span id="span_oper1">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="1">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="1">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="1">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index2" value="2">
+                                  <span id="span_index2">Título</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="2">General de palabras</a></li>
+                                  <li><a href="#2" data-index="2">Título</a></li>
+                                  <li><a href="#3" data-index="2">Autor</a></li>
+                                  <li><a href="#4" data-index="2">Tema</a></li>
+                                  <li><a href="#5" data-index="2">Editorial</a></li>
+                                  <li><a href="#6" data-index="2">Serie</a></li>
+                                  <li><a href="#7" data-index="2">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="2">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar2" name="buscar2" placeholder="Título">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper2" value="::AND::">
+                                  <span id="span_oper2">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="2">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="2">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="2">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index3" value="3">
+                                  <span id="span_index3">Autor</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="3">General de palabras</a></li>
+                                  <li><a href="#2" data-index="3">Título</a></li>
+                                  <li><a href="#3" data-index="3">Autor</a></li>
+                                  <li><a href="#4" data-index="3">Tema</a></li>
+                                  <li><a href="#5" data-index="3">Editorial</a></li>
+                                  <li><a href="#6" data-index="3">Serie</a></li>
+                                  <li><a href="#7" data-index="3">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="3">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar3" name="buscar3" placeholder="Autor">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper3" value="::AND::">
+                                  <span id="span_oper3">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="3">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="3">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="3">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index4" value="4">
+                                  <span id="span_index4">Tema</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="4">General de palabras</a></li>
+                                  <li><a href="#2" data-index="4">Título</a></li>
+                                  <li><a href="#3" data-index="4">Autor</a></li>
+                                  <li><a href="#4" data-index="4">Tema</a></li>
+                                  <li><a href="#5" data-index="4">Editorial</a></li>
+                                  <li><a href="#6" data-index="4">Serie</a></li>
+                                  <li><a href="#7" data-index="4">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="4">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar4" name="buscar4" placeholder="Tema">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper4" value="::AND::">
+                                  <span id="span_oper4">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="4">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="4">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="4">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index5" value="5">
+                                  <span id="span_index5">Editorial</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="5">General de palabras</a></li>
+                                  <li><a href="#2" data-index="5">Título</a></li>
+                                  <li><a href="#3" data-index="5">Autor</a></li>
+                                  <li><a href="#4" data-index="5">Tema</a></li>
+                                  <li><a href="#5" data-index="5">Editorial</a></li>
+                                  <li><a href="#6" data-index="5">Serie</a></li>
+                                  <li><a href="#7" data-index="5">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="5">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar5" name="buscar5" placeholder="Editorial">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper5" value="::AND::">
+                                  <span id="span_oper5">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="5">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="5">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="5">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index6" value="6">
+                                  <span id="span_index6">Serie</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="6">General de palabras</a></li>
+                                  <li><a href="#2" data-index="6">Título</a></li>
+                                  <li><a href="#3" data-index="6">Autor</a></li>
+                                  <li><a href="#4" data-index="6">Tema</a></li>
+                                  <li><a href="#5" data-index="6">Editorial</a></li>
+                                  <li><a href="#6" data-index="6">Serie</a></li>
+                                  <li><a href="#7" data-index="6">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="6">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar6" name="buscar6" placeholder="Serie">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper6" value="::AND::">
+                                  <span id="span_oper6">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="6">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="6">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="6">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index7" value="7">
+                                  <span id="span_index7">Listas de selección</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="7">General de palabras</a></li>
+                                  <li><a href="#2" data-index="7">Título</a></li>
+                                  <li><a href="#3" data-index="7">Autor</a></li>
+                                  <li><a href="#4" data-index="7">Tema</a></li>
+                                  <li><a href="#5" data-index="7">Editorial</a></li>
+                                  <li><a href="#6" data-index="7">Serie</a></li>
+                                  <li><a href="#7" data-index="7">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="7">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar7" name="buscar7" placeholder="Listas de selección">
+                            </div>
+                          </div><!-- ./row -->
+                          <div class="row">
+                            <div class="col-xs-2"><!-- operador -->
+                              <div class="input-group-btn oper-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="oper7" value="::AND::">
+                                  <span id="span_oper7">AND</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#::AND::" data-oper="7">AND</a></li>
+                                  <li><a href="#::OR::" data-oper="7">OR</a></li>
+                                  <li><a href="#::NOT::" data-oper="7">NOT</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-2 : operador -->
+                            <div class="col-xs-6 col-md-4 "><!-- índice -->
+                              <div class="input-group-btn index-panel">
+                                <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <input type="hidden" name="index8" value="9">
+                                  <span id="span_index8">Texto completo</span>
+                                  <span class="fa fa-caret-down"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#1" data-index="8">General de palabras</a></li>
+                                  <li><a href="#2" data-index="8">Título</a></li>
+                                  <li><a href="#3" data-index="8">Autor</a></li>
+                                  <li><a href="#4" data-index="8">Tema</a></li>
+                                  <li><a href="#5" data-index="8">Editorial</a></li>
+                                  <li><a href="#6" data-index="8">Serie</a></li>
+                                  <li><a href="#7" data-index="8">Listas de selección</a></li>
+                                  <li><a href="#9" data-index="8">Texto completo</a></li>
+                                </ul>
+                              </div><!-- /.input-group-btn -->
+                            </div><!-- ./col-xs-6 ./col-md-4 : índice -->
+                            <div class="col-xs-4 col-md-6">
+                              <input type="text" class="form-control buscar" id="buscar8" name="buscar8" placeholder="Texto completo">
+                            </div>
+                          </div><!-- ./row -->
+                        </div><!-- ./ form-group -->
+                      </div><!-- ./box-body -->
+                    </div><!-- /.box -->
+                  </form><!-- /keyword-search-form -->
+                </div><!-- /keyword-search-section /.row -->
+              </div><!-- ./col-md-9 / secciones de búsqueda -->
+
+              <div class="col-md-3">
+                <div class="box box-solid box-default">
+                  <div class="box-header">
+                    <h3 class="box-title">Restricciones de la búsqueda</h3>
+                  </div><!-- /.box-header -->
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="library"><i class="fa fa-filter"></i> Biblioteca</label>
+                      <select id="library" class="form-control">
+                        <option value="todas">Todas las bibliotecas
+                        </option><option value="4">Biblioteca de Artes
+                        </option><option value="2">Biblioteca de Ciencias
+                        </option><option value="3">Biblioteca de Derecho
+                        </option><option value="1" selected="">Biblioteca de Literatura
+                        </option><option value="5">Biblioteca APR
+                        </option><option value="6">PB - BELEN
+                      </option></select>
+                      <label for="location"><i class="fa fa-filter"></i> Colección</label>
+                      <select id="location" class="form-control">
+                        <option value="todas">Todas las colecciones
+                        </option><option value="1">Acervo General
+                      </option></select>
+                      <label for="item_type"><i class="fa fa-filter"></i> Tipo del ejemplar</label>
+                      <select id="item_type" class="form-control">
+                        <option value="todos">Todos los materiales
+                        </option><option value="6">AUDIOVISUALES
+                        </option><option value="8">COMPUTADOR
+                        </option><option value="1">LIBRO GENERAL
+                        </option><option value="2">LIBRO REFERENCIA
+                        </option><option value="3">LIBRO RESERVA
+                        </option><option value="7">MAPAS
+                        </option><option value="4">PUBLIC. PERIODICA
+                        </option><option value="5">TESIS
+                      </option></select>
+                      <label for="item_status"><i class="fa fa-filter"></i> Estado del ejemplar</label>
+                      <select id="item_status" class="form-control">
+                        <option value="todos">Todos los estados
+                        </option><option value="0">Estado
+                        </option><option value="1">Disponible
+                        </option><option value="2">Prestado
+                        </option><option value="3">Ordenado
+                        </option><option value="4">En Catalogación
+                        </option><option value="5">Perdido
+                        </option><option value="6">Apartado
+                        </option><option value="8">Faltante
+                        </option><option value="9">Inexistente
+                        </option><option value="10">En Encuadernacion
+                        </option><option value="20">En Transito
+                      </option></select>
+                    </div><!-- /.form-group -->
+                  </div><!-- /.box-body -->
+                </div><!-- ./box -->
+                <div class="form-group">
+                  <div class="input-group-btn text-center">
+                    <button id="go" type="button" class="btn btn-primary btn-block btn-lg go">Buscar</button>
+                  </div><!-- /.input-group-btn / botones -->
+                </div>
+              </div><!-- ./col-md-3 / filtros -->
+            </div>
           </section><!-- /.content -->
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../htdocs/css/janium/janium_skins.min.css" rel="stylesheet">
+    <link href="../../htdocs/css/janium/custom/janium_skins.min.css" rel="stylesheet">
+    <script src="../../htdocs/js/modernizr/modernizr-respond.min.js"></script>
+    <style type="text/css">
+      .content-gallery {
+        height: 200px;
+        width: 140px;
+        margin-left: 10px;
+        float: left;
+      }
+      .gallery-element {
+        height: 130px;
+        width: 130px;
+        border-radius: 5px;
+        padding-top: 50px;
+        font-size: 120%;
+      }
+      .is-theme {
+        cursor: pointer;
+      }
+      .my-bg-pagina {
+        background-color: #f9f9f9;
+        border: solid 1px #ccc;
+      }
+      .my-bg-texto {
+        color: #fff;
+        background-color: #333333;
+      }
+    </style>
+    <title>Galería de Colores</title>
+  </head>
+  <body class="hold-transition skin-janium">
+    <div class="wrapper">
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <span class="logo-mini"><b>J</b>TT</span>
+          <span class="logo-lg"><b>Janium</b>ThemeTest</span>
+        </a>
+
+        <nav class="navbar navbar-static-top">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#">Inicio</a>
+              </li>
+              <li>
+                <a href="#">Acerca de</a>
+              </li>
+              <li>
+                <a href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </header>
+
+      <aside class="main-sidebar">
+        <section class="sidebar">
+          <ul class="sidebar-menu">
+            <li class="header">SISTEMA JANIUM</li>
+            <li class="">
+              <a href="../unique_pages/janium_login.html">
+                <i class="fa fa-sign-in"></i> <span>Login</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-desktop"></i> <span>OPAC</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../opac/busqueda_rapida.html"><i class="fa fa-circle-o"></i> Búsqueda rápida</a></li>
+                <li><a href="../opac/busqueda_avanzada.html"><i class="fa fa-circle-o"></i> Búsqueda avanzada</a></li>
+                <li><a href="../opac/otros_catalogos.html"><i class="fa fa-circle-o"></i> Otros catálogos</a></li>
+                <li><a href="../opac/servicios_de_alerta.html"><i class="fa fa-circle-o"></i> Servicios de alerta</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Servicios al usuario
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="../opac/servicios_al_usuario.html"><i class="fa fa-circle-o"></i> Servicios al usuario</a></li>
+                    <li><a href="../opac/crear_solicitudes.html"><i class="fa fa-circle-o"></i> Crear solicitudes</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-th"></i> <span>Sección 2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Sección 3</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Sección 4</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-edit"></i> <span>Sección 5</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="../site_pages/color_gallery.html">
+                <i class="fa fa-table"></i> <span>Galería de Colores</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-copy"></i> <span>Ejemplos</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../examples/blank_page.html"><i class="fa fa-circle-o"></i> Página en blanco</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Otro ejemplo</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Otro más</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-share"></i> <span>Multinivel</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Level One
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Level Two
+                        <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                      </a>
+                      <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+              </ul>
+            </li>
+            <!-- <li class="header">TEMAS</li>
+            <li><a href="#" data-skin="skin-black"><i class="fa fa-circle-o text-black"></i> <span>black</span></a></li>
+            <li><a href="#" data-skin="skin-blue"><i class="fa fa-circle-o text-blue"></i> <span>blue</span></a></li>
+            <li><a href="#" data-skin="skin-blue-grey"><i class="fa fa-circle-o text-blue-grey"></i> <span>blue-grey</span></a></li>
+            <li><a href="#" data-skin="skin-blush"><i class="fa fa-circle-o text-blush"></i> <span>blush</span></a></li>
+            <li><a href="#" data-skin="skin-brown"><i class="fa fa-circle-o text-brown"></i> <span>brown</span></a></li>
+            <li><a href="#" data-skin="skin-clementine"><i class="fa fa-circle-o text-clementine"></i> <span>clementine</span></a></li>
+            <li><a href="#" data-skin="skin-cranberry"><i class="fa fa-circle-o text-cranberry"></i> <span>cranberry</span></a></li>
+            <li><a href="#" data-skin="skin-curious-blue"><i class="fa fa-circle-o text-curious-blue"></i> <span>curious-blue</span></a></li>
+            <li><a href="#" data-skin="skin-cyan"><i class="fa fa-circle-o text-cyan"></i> <span>cyan</span></a></li>
+            <li><a href="#" data-skin="skin-dark-lime"><i class="fa fa-circle-o text-dark-lime"></i> <span>dark-lime</span></a></li>
+            <li><a href="#" data-skin="skin-dark-pink"><i class="fa fa-circle-o text-dark-pink"></i> <span>dark-pink</span></a></li>
+            <li><a href="#" data-skin="skin-deep-orange"><i class="fa fa-circle-o text-deep-orange"></i> <span>deep-orange</span></a></li>
+            <li><a href="#" data-skin="skin-deep-purple"><i class="fa fa-circle-o text-deep-purple"></i> <span>deep-purple</span></a></li>
+            <li><a href="#" data-skin="skin-fuchsia"><i class="fa fa-circle-o text-fuchsia"></i> <span>fuchsia</span></a></li>
+            <li><a href="#" data-skin="skin-green"><i class="fa fa-circle-o text-green"></i> <span>green</span></a></li>
+            <li><a href="#" data-skin="skin-grey"><i class="fa fa-circle-o text-grey"></i> <span>grey</span></a></li>
+            <li><a href="#" data-skin="skin-indigo"><i class="fa fa-circle-o text-indigo"></i> <span>indigo</span></a></li>
+            <li><a href="#" data-skin="skin-janium"><i class="fa fa-circle-o text-janium"></i> <span>janium</span></a></li>
+            <li><a href="#" data-skin="skin-librarian"><i class="fa fa-circle-o text-librarian"></i> <span>librarian</span></a></li>
+            <li><a href="#" data-skin="skin-light-green"><i class="fa fa-circle-o text-light-green"></i> <span>light-green</span></a></li>
+            <li><a href="#" data-skin="skin-light-grey"><i class="fa fa-circle-o text-light-grey"></i> <span>light-grey</span></a></li>
+            <li><a href="#" data-skin="skin-light-orange"><i class="fa fa-circle-o text-light-orange"></i> <span>light-orange</span></a></li>
+            <li><a href="#" data-skin="skin-lime"><i class="fa fa-circle-o text-lime"></i> <span>lime</span></a></li>
+            <li><a href="#" data-skin="skin-maroon"><i class="fa fa-circle-o text-maroon"></i> <span>maroon</span></a></li>
+            <li><a href="#" data-skin="skin-navy"><i class="fa fa-circle-o text-navy"></i> <span>navy</span></a></li>
+            <li><a href="#" data-skin="skin-ocean"><i class="fa fa-circle-o text-ocean"></i> <span>ocean</span></a></li>
+            <li><a href="#" data-skin="skin-olive"><i class="fa fa-circle-o text-olive"></i> <span>olive</span></a></li>
+            <li><a href="#" data-skin="skin-orange"><i class="fa fa-circle-o text-orange"></i> <span>orange</span></a></li>
+            <li><a href="#" data-skin="skin-pure-yellow"><i class="fa fa-circle-o text-pure-yellow"></i> <span>Pure Yellow</span></a></li>
+            <li><a href="#" data-skin="skin-purple"><i class="fa fa-circle-o text-purple"></i> <span>purple</span></a></li>
+            <li><a href="#" data-skin="skin-red"><i class="fa fa-circle-o text-red"></i> <span>red</span></a></li>
+            <li><a href="#" data-skin="skin-san-marino"><i class="fa fa-circle-o text-san-marino"></i> <span>san-marino</span></a></li>
+            <li><a href="#" data-skin="skin-summer-sky"><i class="fa fa-circle-o text-summer-sky"></i> <span>summer-sky</span></a></li>
+            <li><a href="#" data-skin="skin-teal"><i class="fa fa-circle-o text-teal"></i> <span>teal</span></a></li>
+            <li><a href="#" data-skin="skin-thunderbird"><i class="fa fa-circle-o text-thunderbird"></i> <span>thunderbird</span></a></li>
+            <li><a href="#" data-skin="skin-yellow"><i class="fa fa-circle-o text-yellow"></i> <span>yellow</span></a></li> -->
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <div class="content-wrapper">
+        <section class="content-header">
+          <h1>
+            Galería de colores
+            <small>Preview de colores utilizados en los temas</small>
+          </h1>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <h2 class="page-header">Colores Base</h2>
+          <div class="row">
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-primary text-center">
+                  Primary
+                </div>
+                <div class="caption text-center">
+                  <samp>#1d69a5</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-green text-center is-theme" data-skin="skin-green">
+                  Success (Green)
+                </div>
+                <div class="caption text-center">
+                  <samp>#8bc34a</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-aqua text-center">
+                  Info
+                </div>
+                <div class="caption text-center">
+                  <samp>#33b5e5</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-yellow text-center is-theme" data-skin="skin-yellow">
+                  Warning (Yellow)
+                </div>
+                <div class="caption text-center">
+                  <samp>#f8bd2f</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-red text-center is-theme" data-skin="skin-red">
+                  Danger (Red)
+                </div>
+                <div class="caption text-center">
+                  <samp>#f47264</samp>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="page-header">Colores Temas Oscuros</h2>
+          <div class="row">
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-blue text-center is-theme" data-skin="skin-blue">
+                  Blue
+                </div>
+                <div class="caption text-center">
+                  <samp>#0277be</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-vivid-blue text-center is-theme" data-skin="skin-vivid-blue">
+                  Vivid Blue
+                </div>
+                <div class="caption text-center">
+                  <samp>#03a9f4</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-blue-grey text-center is-theme" data-skin="skin-blue-grey">
+                  Blue Grey
+                </div>
+                <div class="caption text-center">
+                  <samp>#607d8b</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-curious-blue text-center is-theme" data-skin="skin-curious-blue">
+                  Curious Blue
+                </div>
+                <div class="caption text-center">
+                  <samp>#2780e3</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-indigo text-center is-theme" data-skin="skin-indigo">
+                  Indigo
+                </div>
+                <div class="caption text-center">
+                  <samp>#3f51b5</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-librarian text-center is-theme" data-skin="skin-librarian">
+                  Librarian
+                </div>
+                <div class="caption text-center">
+                  <samp>#033672</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-navy text-center is-theme" data-skin="skin-navy">
+                  Navy
+                </div>
+                <div class="caption text-center">
+                  <samp>#2c3e50</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-san-marino text-center is-theme" data-skin="skin-san-marino">
+                  San Marino
+                </div>
+                <div class="caption text-center">
+                  <samp>#496cad</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-summer-sky text-center is-theme" data-skin="skin-summer-sky">
+                  Summer Sky
+                </div>
+                <div class="caption text-center">
+                  <samp>#008cba</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-cyan text-center is-theme" data-skin="skin-cyan">
+                  Cyan
+                </div>
+                <div class="caption text-center">
+                  <samp>#00bcd4</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-ocean text-center is-theme" data-skin="skin-ocean">
+                  Ocean
+                </div>
+                <div class="caption text-center">
+                  <samp>#3d9970</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-teal text-center is-theme" data-skin="skin-teal">
+                  Teal
+                </div>
+                <div class="caption text-center">
+                  <samp>#39cccc</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-lime text-center is-theme" data-skin="skin-dark-lime">
+                  Dark Lime
+                </div>
+                <div class="caption text-center">
+                  <samp>#4caf50</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-green text-center is-theme" data-skin="skin-dark-green">
+                  Dark Green
+                </div>
+                <div class="caption text-center">
+                  <samp>#6f8745</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-cyan text-center is-theme" data-skin="skin-dark-cyan">
+                  Dark Cyan
+                </div>
+                <div class="caption text-center">
+                  <samp>#009688</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-olive text-center is-theme" data-skin="skin-olive">
+                  Olive
+                </div>
+                <div class="caption text-center">
+                  <samp>#808000</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-orange text-center is-theme" data-skin="skin-orange">
+                  Orange
+                </div>
+                <div class="caption text-center">
+                  <samp>#ff9800</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-clementine text-center is-theme" data-skin="skin-clementine">
+                  Clementine
+                </div>
+                <div class="caption text-center">
+                  <samp>#f16022</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-deep-orange text-center is-theme" data-skin="skin-deep-orange">
+                  Deep Orange
+                </div>
+                <div class="caption text-center">
+                  <samp>#ff5722</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-light-orange text-center is-theme" data-skin="skin-light-orange">
+                  Light Orange
+                </div>
+                <div class="caption text-center">
+                  <samp>#f49464</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-bright-red text-center is-theme" data-skin="skin-bright-red">
+                  Bright Red
+                </div>
+                <div class="caption text-center">
+                  <samp>#f44336</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-red text-center is-theme" data-skin="skin-dark-red">
+                  Dark Red
+                </div>
+                <div class="caption text-center">
+                  <samp>#ae131f</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-thunderbird text-center is-theme" data-skin="skin-thunderbird">
+                  Thunderbird
+                </div>
+                <div class="caption text-center">
+                  <samp>#d9230f</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-maroon text-center is-theme" data-skin="skin-maroon">
+                  Maroon
+                </div>
+                <div class="caption text-center">
+                  <samp>#800040</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-blush text-center is-theme" data-skin="skin-blush">
+                  Blush
+                </div>
+                <div class="caption text-center is-theme" data-skin="skin-">
+                  <samp>#b94b6f</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-cranberry text-center is-theme" data-skin="skin-cranberry">
+                  Cranberry
+                </div>
+                <div class="caption text-center">
+                  <samp>#d55472</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-pink text-center is-theme" data-skin="skin-dark-pink">
+                  Dark Pink
+                </div>
+                <div class="caption text-center">
+                  <samp>#975a7b</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-janium text-center is-theme" data-skin="skin-janium">
+                  Janium
+                </div>
+                <div class="caption text-center">
+                  <samp>#666699</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-purple text-center is-theme" data-skin="skin-purple">
+                  Purple
+                </div>
+                <div class="caption text-center">
+                  <samp>#86618f</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-dark-magenta text-center is-theme" data-skin="skin-dark-magenta">
+                  Dark Magenta
+                </div>
+                <div class="caption text-center">
+                  <samp>#9c27b0</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-deep-purple text-center is-theme" data-skin="skin-deep-purple">
+                  Deep Purple
+                </div>
+                <div class="caption text-center">
+                  <samp>#673ab7</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-fuchsia text-center is-theme" data-skin="skin-fuchsia">
+                  Fuchsia
+                </div>
+                <div class="caption text-center">
+                  <samp>#fe206a</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-grey text-center is-theme" data-skin="skin-grey">
+                  Grey
+                </div>
+                <div class="caption text-center">
+                  <samp>#9e9e9e</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-brown text-center is-theme" data-skin="skin-brown">
+                  Brown
+                </div>
+                <div class="caption text-center">
+                  <samp>#795548</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-black text-center is-theme" data-skin="skin-black">
+                  Black
+                </div>
+                <div class="caption text-center">
+                  <samp>#222222</samp>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="page-header">Colores Temas Claros</h2>
+          <div class="row">
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-soft-blue text-center is-theme" data-skin="skin-soft-blue">
+                  Soft Blue
+                </div>
+                <div class="caption text-center">
+                  <samp>#7dc7ee</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-light-cyan text-center is-theme" data-skin="skin-light-cyan">
+                  Ligth Cyan
+                </div>
+                <div class="caption text-center">
+                  <samp>#84cbc5</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-lime text-center is-theme" data-skin="skin-lime">
+                  Lime
+                </div>
+                <div class="caption text-center">
+                  <samp>#cddc39</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-light-grey text-center is-theme" data-skin="skin-light-grey">
+                  Light Grey
+                </div>
+                <div class="caption text-center">
+                  <samp>#e6e7e8</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element bg-pure-yellow text-center is-theme" data-skin="skin-pure-yellow">
+                  Pure Yellow
+                </div>
+                <div class="caption text-center">
+                  <samp>#ffeb3b</samp>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="page-header">Colores de Elementos</h2>
+          <div class="row">
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element my-bg-pagina text-center">
+                  Fondo Página
+                </div>
+                <div class="caption text-center">
+                  <samp>#f9f9f9</samp>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-gallery">
+              <div class="thumbnail">
+                <div class="gallery-element my-bg-texto text-center">
+                  Color Texto
+                </div>
+                <div class="caption text-center">
+                  <samp>#333333</samp>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /.content -->
+
+      </div> <!-- ./content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="container">
+          <div class="pull-right hidden-xs">
+            <b>Versión</b> 1.2.0
+          </div>
+          <strong>Copyright © 2016-2020 <a href="http://janium.com">Janium</a></strong>
+        </div>
+      </footer>
+
+    </div> <!-- ./wrapper -->
+
+    <script src="../../htdocs/js/jquery/jquery.min.js"></script>
+    <script src="../../htdocs/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../htdocs/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../htdocs/js/adminlte/app.min.js"></script>
+    <script src="../assets/js/test_site.js"></script>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

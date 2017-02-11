@@ -1,5 +1,5 @@
 /*!
- *   AdminLTE v2.3.8
+ *   AdminLTE v2.3.11
  *   Author: Almsaeed Studio
  *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
  *   License: Open source - MIT
@@ -9,6 +9,7 @@
 //google fonts
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
 
+//Path to source files
 @bootstrap:    "../bower_components/bootstrap/less";
 @adminlte:     "../bower_components/AdminLTE/build/less";
 @janium-path:  "../janium_components/less";
@@ -24,7 +25,6 @@
 //----
 @import "@{adminlte}/core.less";
 @import "@{adminlte}/variables.less";
-@import "@{janium-path}/variables.less";
 @import "@{adminlte}/mixins.less";
 
 //COMPONENTS
@@ -64,9 +64,7 @@
 
 //Plugins
 //--------
-@import "@{adminlte}/bootstrap-social.less";
-@import "@{adminlte}/fullcalendar.less";
-@import "@{adminlte}/select2.less";
+@import "@{adminlte}/plugins.less";
 
 //Miscellaneous
 //-------------
@@ -74,4 +72,5 @@
 @import "@{adminlte}/print.less";
 
 // Janium components style
+@import "@{janium-path}/variables.less";
 @import "@{janium-path}/janium.less";

@@ -1,0 +1,60 @@
+/*
+ * Skin: Deep Orange
+ * ---------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-deep-orange {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@deep-orange; @jnm-navbar-light-color; @jnm-navbar-light-color; darken(@deep-orange, 5%));
+      .sidebar-toggle {
+        color: @jnm-navbar-light-color;
+        &:hover {
+          background-color: darken(@deep-orange, 5%);
+        }
+      }
+      @media(max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255,255,255,0.1);
+            }
+            a {
+              color: @jnm-navbar-light-color;
+              &:hover {
+                background: darken(@deep-orange, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(darken(@deep-orange, 5%); @jnm-navbar-light-color);
+    }
+
+    li.user-header {
+      background-color: @deep-orange;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-dark-sidebar(@deep-orange);
+}

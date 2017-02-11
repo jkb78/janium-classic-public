@@ -1,7 +1,7 @@
 {
-  "name": "Janium-Public",
-  "version": "0.1.0",
-  "description": "Create public folder structure of Janium products",
+  "name": "Janium Theme Builder",
+  "version": "1.2.0",
+  "description": "Generación de archivos estáticos (Temas) para productos Janium",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,16 +12,16 @@
   },
   "keywords": [
     "Janium",
-    "less",
-    "css",
+    "LESS",
+    "CSS",
     "FontAwesome",
     "jQuery",
-    "plugins",
+    "Plugins",
     "Bootstrap",
     "HTML",
     "Javascript"
   ],
-  "author": "Desarrollo Janium",
+  "author": "Janium Development Team",
   "license": "https://github.com/jkb78/janium-classic-public/blob/master/LICENSE",
   "bugs": {
     "url": "https://github.com/jkb78/janium-classic-public/issues"

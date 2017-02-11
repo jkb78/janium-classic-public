@@ -1,0 +1,55 @@
+/*
+ * Skin: Soft Blue
+ * ---------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-soft-blue {
+  //Navbar & Logo
+  .main-header {
+    //.box-shadow(0px 1px 1px rgba(0, 0, 0, 0.05));
+    .navbar-toggle {
+      color: @jnm-navbar-dark-color;
+    }
+    .navbar-brand {
+      color: @jnm-navbar-dark-color;
+    }
+    .navbar {
+      .navbar-variant(@soft-blue; @jnm-navbar-dark-color; @jnm-navbar-dark-color; darken(@soft-blue, 6.55%));
+      > .sidebar-toggle {
+        color: @jnm-navbar-dark-color;
+        &:hover {
+          background-color: darken(@soft-blue, 6.55%);
+        }
+      }
+    }
+    > .logo {
+      .logo-variant(darken(@soft-blue, 6.55%); @jnm-navbar-dark-color);
+      @media (max-width: @screen-header-collapse) {
+        .logo-variant(darken(@soft-blue, 6.55%); @jnm-navbar-dark-color);
+        border-right: none;
+      }
+    }
+
+    li.user-header {
+      background-color: darken(@soft-blue, 6.55%);
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-dark-sidebar(@soft-blue);
+}

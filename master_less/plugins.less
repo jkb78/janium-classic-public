@@ -1,0 +1,22 @@
+// Add third-party CSS plugins
+
+//Path to source files
+@bootstrap:    "../bower_components/bootstrap/less";
+@janium-path:  "../janium_components/less";
+@timepicker:   "../bower_components/bootstrap-timepicker/css";
+@colorpicker:  "../bower_components/mjolnic-bootstrap-colorpicker/src/less";
+
+// Import variables and mixins as a reference
+@import (reference) "@{bootstrap}/mixins.less";
+@import (reference) "@{bootstrap}/variables.less";
+
+//Plugins
+@import "@{timepicker}/timepicker.less";
+@import "@{colorpicker}/colorpicker.less";
+@import "@{janium-path}/typeahead-js/typeaheadjs.less";
+@import "@{janium-path}/bootstrap-tokenfield/bootstrap-tokenfield.less";
+@import "@{janium-path}/bootstrap-tokenfield/tokenfield-typeahead.less";
+@import "@{janium-path}/jquery-file-upload/jquery-file-upload.less";
+
+// Janium components style
+@import "@{janium-path}/variables.less";

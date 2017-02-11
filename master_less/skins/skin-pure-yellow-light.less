@@ -1,0 +1,55 @@
+/*
+ * Skin: Pure Yellow
+ * ---------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-pure-yellow-light {
+  //Navbar & Logo
+  .main-header {
+    .navbar-toggle {
+      color: @jnm-navbar-dark-color;
+    }
+    .navbar-brand {
+      color: @jnm-navbar-dark-color;
+    }
+    .navbar {
+      .navbar-variant(@pure-yellow; @jnm-navbar-dark-color; @jnm-navbar-dark-color; darken(@pure-yellow, 6.55%));
+      > .sidebar-toggle {
+        color: @jnm-navbar-dark-color;
+        &:hover {
+          background-color: darken(@pure-yellow, 6.55%);
+        }
+      }
+    }
+    > .logo {
+      .logo-variant(@pure-yellow; @jnm-navbar-dark-color);
+      @media (max-width: @screen-header-collapse) {
+        .logo-variant(@pure-yellow; @jnm-navbar-dark-color);
+        border-right: none;
+      }
+    }
+
+    li.user-header {
+      background-color: darken(@pure-yellow, 6.55%);
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  //Create the sidebar skin
+  .skin-light-sidebar(@pure-yellow);
+}

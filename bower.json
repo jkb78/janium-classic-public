@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "AdminLTE": "adminlte#~2.3.0",
-    "blueimp-file-upload": "~9.14.0",
+    "blueimp-file-upload": "~9.15.0",
     "bootbox.js": "bootbox#~4.4.0",
     "bootstrap": "~3.3.6",
     "bootstrap-datepicker": "~1.6.1",
@@ -47,7 +47,7 @@
     "jquery-placeholder": "~2.3.0",
     "jquery-qrcode": "jquery.qrcode#~0.14.0",
     "jquery-validation": "~1.15.0",
-    "mjolnic-bootstrap-colorpicker": "~2.4.0",
+    "mjolnic-bootstrap-colorpicker": "~2.5.0",
     "moment": "~2.17.1",
     "paging": "~1.2.0",
     "print-area": "~2.4.1",

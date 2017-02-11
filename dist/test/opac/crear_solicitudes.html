@@ -112,7 +112,83 @@
           <!-- Content Header (Page header) -->
           <!-- Main content -->
           <section class="content">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="box box-primary box-solid">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Envío de Solicitudes</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <!-- form start -->
+                  <form class="form-create-request form-horizontal" name="form-create-request" action="" method="post" role="form">
+                    <div class="box-body">
 
+                      <div class="form-group">
+                        <label for="Nocuenta" class="col-sm-3 control-label">Número de cuenta</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="Nocuenta" name="Nocuenta" placeholder="Número de cuenta" autofocus="">
+                          <span class="help-block"><b>Información:</b> Los usuarios externos no necesitan ingresar algún número de cuenta para poder enviar solicitudes</span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Email" class="col-sm-3 control-label text-danger">Dirección de correo <i class="fa fa-asterisk"></i> </label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="Email" name="Email" placeholder="Dirección de correo" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Biblioteca" class="col-sm-3 control-label text-danger">
+                          Biblioteca <i class="fa fa-asterisk"></i>
+                        </label>
+                        <div class="col-sm-9">
+                          <select class="form-control" name="Biblioteca" id="Biblioteca" required>
+                            <option value="">Selecciona una biblioteca</option>
+                            <option value="1">Biblioteca de Literatura</option>
+                            <option value="2">Biblioteca de Ciencias</option>
+                            <option value="3">Biblioteca de Derecho</option>
+                            <option value="4">Biblioteca de Artes</option>
+                            <option value="5">Biblioteca APR</option>
+                            <option value="6">PB - BELEN</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Asunto" class="col-sm-3 control-label text-danger">
+                          Asunto <i class="fa fa-asterisk"></i>
+                        </label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="Asunto" name="Asunto" placeholder="Asunto" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Solicitud" class="col-sm-3 control-label text-danger">
+                          Mensaje <i class="fa fa-asterisk"></i>
+                        </label>
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="5" id="Solicitud" name="Solicitud" placeholder="Mensaje" required></textarea>
+                        </div>
+                      </div>
+
+                    </div><!-- /.box-body -->
+
+                    <div class="box-footer">
+                      <label class="pull-left small text-danger">
+                        <i class="fa fa-asterisk text-danger"></i>
+                      </label>
+                      <label class="pull-left small">
+                        : Este campo es requerido
+                      </label>
+
+                      <button id="enviar" class="btn btn-info pull-right">Enviar</button>
+                    </div><!-- /.box-footer -->
+                  </form>
+                </div><!-- /.box -->
+              </div><!-- /.col-md-8 col-md-offset-2 -->
+            </div>
           </section><!-- /.content -->
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->

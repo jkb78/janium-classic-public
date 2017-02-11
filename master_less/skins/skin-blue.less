@@ -17,9 +17,9 @@
   //Navbar
   .main-header {
     .navbar {
-      .navbar-variant(@light-blue; #fff);
+      .navbar-variant(@light-blue; @jnm-navbar-light-color; @jnm-navbar-light-color; darken(@light-blue, 5%));
       .sidebar-toggle {
-        color: #fff;
+        color: @jnm-navbar-light-color;
         &:hover {
           background-color: darken(@light-blue, 5%);
         }
@@ -31,7 +31,7 @@
               background-color: rgba(255, 255, 255, 0.1);
             }
             a {
-              color: #fff;
+              color: @jnm-navbar-light-color;
               &:hover {
                 background: darken(@light-blue, 5%);
               }
@@ -42,7 +42,7 @@
     }
     //Logo
     .logo {
-      .logo-variant(darken(@light-blue, 5%));
+      .logo-variant(darken(@light-blue, 5%); @jnm-navbar-light-color);
     }
 
     li.user-header {
@@ -60,5 +60,5 @@
 }
 
 .skin-blue.layout-top-nav .main-header > .logo {
-  .logo-variant(@light-blue);
+  .logo-variant(@light-blue; @jnm-navbar-light-color);
 }

@@ -53,10 +53,10 @@ var pathTo = {
   bootstrap_assets:     path.join(__dirname, 'vendor_components', 'bootstrap'),
   datatables:           path.join(__dirname, 'vendor_components', 'datatables'),
   flaticon:             path.join(__dirname, 'vendor_components', 'flaticon'),
+  jquery_file_upload:   path.join(__dirname, 'vendor_components', 'jquery-file-upload'),
   json_forms:           path.join(__dirname, 'vendor_components', 'json-forms'),
   markdown:             path.join(__dirname, 'vendor_components', 'markdown'),
   modernizr:            path.join(__dirname, 'vendor_components', 'modernizr'),
-  jquery_file_upload:   path.join(__dirname, 'vendor_components', 'jquery-file-upload'),
   //JQPrintPath: path.join(__dirname, 'bower_components', 'print-area'),
   //JQZtreePath: path.join(__dirname, 'bower_components', 'ztree_v3'),
   htdocs_folder:        path.join(__dirname, 'dist', 'htdocs')
@@ -164,12 +164,12 @@ gulp.task('copy-plugins-css', function() {
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium')));
 });
 
-gulp.task('copy-plugins-css-custom', function() {
-  return gulp.src([
-    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map'
-  ])
-    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium', 'custom')));
-});
+//gulp.task('copy-plugins-css-custom', function() {
+//  return gulp.src([
+//    pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css.map'
+//  ])
+//    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'css', 'janium', 'custom')));
+//});
 
 
 // ** Copy jQuery, Bootstrap y Plugins Javascript ** //
@@ -476,6 +476,15 @@ gulp.task('build-janium-skins', function() {
         .pipe(csscomb())
     ;
 
+    var JLESSPlugins = gulp.src(pathTo.master_less + '/plugins.less')
+        // Compile LESS files
+        .pipe(less().on('error', console.log))
+
+        // CSS Linter
+        .pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
+        //.pipe(csslint.reporter())
+    ;
+
     var JFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
         // Compile LESS files
         .pipe(less().on('error', console.log))
@@ -503,7 +512,7 @@ gulp.task('build-janium-skins', function() {
         //.pipe(csslint.reporter())
     ;
 
-    var JPlugins = gulp.src([
+    var JCSSPlugins = gulp.src([
         pathTo.json_forms           + '/brutusin-json-forms.min.css',
         pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
         pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
@@ -512,7 +521,7 @@ gulp.task('build-janium-skins', function() {
         pathTo.jqtree               + '/jqtree.css'
     ]);
 
-    var mergedStream = ee.concatenate([JBootstrap, JFontAwesome, JPlugins, JAdminLTE, JSkins])
+    var mergedStream = ee.concatenate([JBootstrap, JLESSPlugins, JFontAwesome, JCSSPlugins, JAdminLTE, JSkins])
         .pipe(concat('janium_skins.min.css'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
@@ -565,16 +574,6 @@ gulp.task('generate-custom-skins', function() {
     ;
     console.log('Bootstrap procesado...');
 
-    //var CFontAwesome = gulp.src(pathTo.master_less + '/font-awesome.less')
-        // Compile LESS files
-        //.pipe(less().on('error', console.log))
-
-        // CSS Linter
-        //.pipe(csslint('./janium_components/less/janium-theme/.csslintrc.json'))
-        //.pipe(csslint.reporter())
-    //;
-    //console.log('FontAwesome procesado...');
-
     var CAdminLTE = gulp.src(pathTo.master_less + '/adminlte.less')
         // Compile LESS files
         .pipe(less(custom_variables).on('error', console.log))
@@ -595,17 +594,7 @@ gulp.task('generate-custom-skins', function() {
     ;
     console.log('Skins procesados...');
 
-    var CPlugins = gulp.src([
-        pathTo.json_forms           + '/brutusin-json-forms.min.css',
-        pathTo.bootstrap_datepicker + '/dist/css/bootstrap-datepicker3.min.css',
-        pathTo.bootstrap_select     + '/dist/css/bootstrap-select.min.css',
-        pathTo.datatables           + '/datatables.min.css',
-        pathTo.select2              + '/dist/css/select2.min.css',
-        pathTo.jqtree               + '/jqtree.css'
-    ]);
-    console.log('Plugins procesados...');
-
-    var mergedStream = ee.concatenate([CBootstrap, CPlugins, CAdminLTE, CSkins])
+    var mergedStream = ee.concatenate([CBootstrap, CAdminLTE, CSkins])
         .pipe(concat('janium_skins.min.css'))
         .pipe(cleanCSS({
           compatibility: 'ie8',
@@ -648,4 +637,4 @@ gulp.task('default', function(callback) {
     });
 });
 
-gulp.task('build-custom-skins', ['generate-custom-skins', 'copy-plugins-css-custom']);
+gulp.task('build-custom-skins', ['generate-custom-skins']);

@@ -1,11 +1,11 @@
 /*!
- * This combined file was created by the Janium ThemeBuilder.
+ * This combined file was created by the Janium Theme Builder.
  *
  *
  * Included libraries:
- * Bootstrap v3.3.7, Font Awesome 4.7.0, Bootstrap-select v1.12.1, DataTables 1.10.8, JSON-forms v1.4.0,
+ * Bootstrap v3.3.7, Font Awesome 4.7.0, Bootstrap-select v1.12.2, DataTables 1.10.8, JSON-forms v1.4.0,
  * Datepicker for Bootstrap v1.6.4, Bootstrap Colorpicker 2.4.0, typeahead.js v0.11.1, Bootstrap Tokenfield v0.12.1
- * JqTree 1.3.5, Select2 v4.0.3, AdminLTE v2.3.8
+ * JqTree 1.3.7, Select2 v4.0.3, AdminLTE v2.3.11
  */
 
 /*!
@@ -21,10 +21,11 @@
 @bootstrap:    "../bower_components/bootstrap/less";
 @janium-path:  "../janium_components/less";
 @timepicker:   "../bower_components/bootstrap-timepicker/css";
+@colorpicker:  "../bower_components/mjolnic-bootstrap-colorpicker/src/less";
+@tokenfield:   "../bower_components/bootstrap-tokenfield/less";
 
 // Core variables and mixins
 @import "@{bootstrap}/variables.less";
-@import "@{janium-path}/variables.less";
 @import "@{bootstrap}/mixins.less";
 
 // Reset and dependencies
@@ -75,12 +76,15 @@
 @import "@{bootstrap}/responsive-utilities.less";
 
 //Plugins
-@import "@{timepicker}/timepicker.less";
-@import "@{janium-path}/bootstrap-colorpicker/bootstrap-colorpicker.less";
-@import "@{janium-path}/typeahead-js/typeaheadjs.less";
-@import "@{janium-path}/bootstrap-tokenfield/bootstrap-tokenfield.less";
-@import "@{janium-path}/bootstrap-tokenfield/tokenfield-typeahead.less";
-@import "@{janium-path}/jquery-file-upload/jquery-file-upload.less";
+// @import "@{timepicker}/timepicker.less";
+// @import "@{colorpicker}/colorpicker.less";
+// @import "@{janium-path}/typeahead-js/typeaheadjs.less";
+// @import "@{tokenfield}/bootstrap-tokenfield/bootstrap-tokenfield.less";
+// @import "@{janium-path}/bootstrap-tokenfield/tokenfield-typeahead.less";
+// @import "@{janium-path}/jquery-file-upload/jquery-file-upload.less";
+
+// Janium components style
+@import "@{janium-path}/variables.less";
 
 // JQuery plugins - Bootstrap-switch, zTree
 //@import "../../../bower_components/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less";

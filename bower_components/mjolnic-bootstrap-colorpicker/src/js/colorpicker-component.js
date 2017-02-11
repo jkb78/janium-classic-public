@@ -69,7 +69,8 @@ var Colorpicker = function(element, options) {
           .css('background-color', color)
           .data('class', name).data('alias', name);
 
-        $btn.on('click.colorpicker touchend.colorpicker', function() {
+        $btn.on('mousedown.colorpicker touchstart.colorpicker', function(event) {
+          event.preventDefault();
           colorpicker.setValue(
             colorpicker.format === 'alias' ? $(this).data('alias') : $(this).css('background-color')
           );
@@ -227,6 +228,7 @@ Colorpicker.prototype = {
     val = val || this.color.toString(this.format, false);
     if (this.input !== false) {
       this.input.prop('value', val);
+      this.input.trigger('change');
     }
     return val;
   },
@@ -254,10 +256,10 @@ Colorpicker.prototype = {
     });
 
     this.picker.find('.colorpicker-saturation')
-      .css('backgroundColor', this.color.toHex(this.color.value.h, 1, 1, 1));
+      .css('backgroundColor', (this.options.hexNumberSignPrefix ? '' : '#') + this.color.toHex(this.color.value.h, 1, 1, 1));
 
     this.picker.find('.colorpicker-alpha')
-      .css('backgroundColor', this.color.toHex());
+      .css('backgroundColor', (this.options.hexNumberSignPrefix ? '' : '#') + this.color.toHex());
 
     this.picker.find('.colorpicker-color, .colorpicker-color div')
       .css('backgroundColor', this.color.toString(this.format, true));
@@ -320,7 +322,8 @@ Colorpicker.prototype = {
       val ? val : null,
       this.options.colorSelectors,
       this.options.fallbackColor ? this.options.fallbackColor : this.color,
-      this.options.fallbackFormat
+      this.options.fallbackFormat,
+      this.options.hexNumberSignPrefix
     );
   },
   getValue: function(defaultValue) {

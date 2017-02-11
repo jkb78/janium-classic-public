@@ -11,6 +11,31 @@
     <script src="../../htdocs/js/modernizr/modernizr-respond.min.js"></script>
     <title>Servicios de alerta - Test Page</title>
     <style type="text/css">
+      /* css/janium/alert_services.css */
+      .service-list-panel {
+          margin-bottom: 0;
+          border: 0;
+      }
+      .service-list-panel .list-group-item:first-child {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+      }
+      .service-list-panel .list-group-item:last-child {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+      }
+      .list-group-item-header {
+          background-color: #f5f5f5;
+          margin-bottom: 0;
+      }
+      #taglist { text-align: center; }
+      #taglist > span { margin-left: 5px; }
+
+      /* css/janium/custom/alert_services.css */
+      #taglist {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
     </style>
   </head>
   <body class="hold-transition layout-top-nav skin-janium">
@@ -109,6 +134,1811 @@
           <!-- Content Header (Page header) -->
           <!-- Main content -->
           <section class="content">
+
+            <div class="row">
+
+              <div class="col-md-7">
+                <div class="box box-solid box-primary">
+                  <div class="box-header">
+                    Servicios de Alerta
+                  </div><!-- /.box-header -->
+                  <div class="box-body">
+                    <div id="service-list-container">
+                      <div class="list-group panel service-list-panel">
+                        <a href="#list-header-100" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A100">
+                          <span class="header-title h4">Biblioteca Pública Piloto y Filiales</span>
+                        </a>
+                        <div class="collapse in" id="list-header-100">
+                          <a href="#submenu-300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-300" id="A300">
+                            <span class="submenu--title jpink">Sede Central - Carlos E. Restrepo <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-300">
+                            <a href="#('NUEVOS[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A1100">
+                              Religión
+                            </a>
+                            <a href="#('300[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A1300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A1500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A1700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A1900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A2100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A2300">
+                              Literatura
+                            </a>
+                            <a href="#('900[BPP]');" class="lista_alerta list-group-item" data-parent="#submenu-300" id="A2500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-300 -->
+                          <a href="#submenu-2900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-2900" id="A2900">
+                            <span class="submenu--title jpink">Filial Carlos Castro Saavedra - Tren de Papel - Florencia <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-2900">
+                            <a href="#('NUEVOS[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A3100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A3300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A3500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A3700">
+                              Religión
+                            </a>
+                            <a href="#('300[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A3900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A4100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A4300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A4500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A4700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A4900">
+                              Literatura
+                            </a>
+                            <a href="#('900[CCS]');" class="lista_alerta list-group-item" data-parent="#submenu-2900" id="A5100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-2900 -->
+                          <a href="#submenu-5500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-5500" id="A5500">
+                            <span class="submenu--title jpink">Filial Juan Zuleta Ferrer - Campo Valdés <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-5500">
+                            <a href="#('NUEVOS[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A5700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A5900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A6100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A6300">
+                              Religión
+                            </a>
+                            <a href="#('300[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A6500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A6700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A6900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A7100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A7300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A7500">
+                              Literatura
+                            </a>
+                            <a href="#('900[JZF]');" class="lista_alerta list-group-item" data-parent="#submenu-5500" id="A7700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-5500 -->
+                          <a href="#submenu-8100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-8100" id="A8100">
+                            <span class="submenu--title jpink">Filial San Antonio de Prado - San Antonio de Prado <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-8100">
+                            <a href="#('NUEVOS[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A8300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A8500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A8700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A8900">
+                              Religión
+                            </a>
+                            <a href="#('300[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A9100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A9300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A9500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A9700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A9900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A10100">
+                              Literatura
+                            </a>
+                            <a href="#('900[FSAP]');" class="lista_alerta list-group-item" data-parent="#submenu-8100" id="A10300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-8100 -->
+                          <a href="#submenu-10700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-10700" id="A10700">
+                            <span class="submenu--title jpink">Filial San Javier La Loma - San Javier La Loma <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-10700">
+                            <a href="#('NUEVOS[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A10900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A11100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A11300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A11500">
+                              Religión
+                            </a>
+                            <a href="#('300[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A11700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A11900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A12100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A12300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A12500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A12700">
+                              Literatura
+                            </a>
+                            <a href="#('900[SJL]');" class="lista_alerta list-group-item" data-parent="#submenu-10700" id="A12900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-10700 -->
+                        </div> <!-- /#list-header-100 -->
+                        <a href="#list-header-13300" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A13300">
+                          <span class="header-title h4">Ratón de Biblioteca</span>
+                        </a>
+                        <div class="collapse in" id="list-header-13300">
+                          <a href="#submenu-13500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-13500" id="A13500">
+                            <span class="submenu--title jpink">El Raizal <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-13500">
+                            <a href="#('NUEVOS[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A13700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A13900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A14100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A14300">
+                              Religión
+                            </a>
+                            <a href="#('300[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A14500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A14700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A14900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A15100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A15300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A15500">
+                              Literatura
+                            </a>
+                            <a href="#('900[RAIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-13500" id="A15700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-13500 -->
+                          <a href="#submenu-16100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-16100" id="A16100">
+                            <span class="submenu--title jpink">La Esperanza <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-16100">
+                            <a href="#('NUEVOS[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A16300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A16500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A16700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A16900">
+                              Religión
+                            </a>
+                            <a href="#('300[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A17100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A17300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A17500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A17700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A17900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A18100">
+                              Literatura
+                            </a>
+                            <a href="#('900[ESPERANZA]');" class="lista_alerta list-group-item" data-parent="#submenu-16100" id="A18300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-16100 -->
+                          <a href="#submenu-18700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-18700" id="A18700">
+                            <span class="submenu--title jpink">Villa Guadalupe <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-18700">
+                            <a href="#('NUEVOS[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A18900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A19100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A19300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A19500">
+                              Religión
+                            </a>
+                            <a href="#('300[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A19700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A19900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A20100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A20300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A20500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A20700">
+                              Literatura
+                            </a>
+                            <a href="#('900[GUADALUPE]');" class="lista_alerta list-group-item" data-parent="#submenu-18700" id="A20900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-18700 -->
+                          <a href="#submenu-21300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-21300" id="A21300">
+                            <span class="submenu--title jpink">Villatina <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-21300">
+                            <a href="#('NUEVOS[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A21500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A21700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A21900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A22100">
+                              Religión
+                            </a>
+                            <a href="#('300[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A22300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A22500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A22700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A22900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A23100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A23300">
+                              Literatura
+                            </a>
+                            <a href="#('900[VILLATINA]');" class="lista_alerta list-group-item" data-parent="#submenu-21300" id="A23500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-21300 -->
+                        </div> <!-- /#list-header-13300 -->
+                        <a href="#list-header-23900" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A23900">
+                          <span class="header-title h4">RBMAM - Area Metropolitana</span>
+                        </a>
+                        <div class="collapse in" id="list-header-23900">
+                          <a href="#submenu-24100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-24100" id="A24100">
+                            <span class="submenu--title jpink">Barbosa - Biblioteca Isolda Echavarría <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-24100">
+                            <a href="#('NUEVOS[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A24300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A24500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A24700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A24900">
+                              Religión
+                            </a>
+                            <a href="#('300[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A25100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A25300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A25500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A25700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A25900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A26100">
+                              Literatura
+                            </a>
+                            <a href="#('900[BARBOSA]');" class="lista_alerta list-group-item" data-parent="#submenu-24100" id="A26300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-24100 -->
+                          <a href="#submenu-26700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-26700" id="A26700">
+                            <span class="submenu--title jpink">Bello - Biblioteca Marco Fidel Suárez <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-26700">
+                            <a href="#('NUEVOS[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A26900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A27100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A27300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A27500">
+                              Religión
+                            </a>
+                            <a href="#('300[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A27700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A27900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A28100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A28300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A28500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A28700">
+                              Literatura
+                            </a>
+                            <a href="#('900[BELLO]');" class="lista_alerta list-group-item" data-parent="#submenu-26700" id="A28900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-26700 -->
+                          <a href="#submenu-29300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-29300" id="A29300">
+                            <span class="submenu--title jpink">Caldas - Biblioteca Francisco José de Caldas <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-29300">
+                            <a href="#('NUEVOS[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A29500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A29700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A29900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A30100">
+                              Religión
+                            </a>
+                            <a href="#('300[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A30300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A30500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A30700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A30900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A31100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A31300">
+                              Literatura
+                            </a>
+                            <a href="#('900[CALDAS]');" class="lista_alerta list-group-item" data-parent="#submenu-29300" id="A31500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-29300 -->
+                          <a href="#submenu-31900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-31900" id="A31900">
+                            <span class="submenu--title jpink">Concejo Municipal de Itagüí <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-31900">
+                            <a href="#('NUEVOS[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A32100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A32300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A32500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A32700">
+                              Religión
+                            </a>
+                            <a href="#('300[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A32900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A33100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A33300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A33500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A33700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A33900">
+                              Literatura
+                            </a>
+                            <a href="#('900[ITAGUI]');" class="lista_alerta list-group-item" data-parent="#submenu-31900" id="A34100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-31900 -->
+                          <a href="#submenu-34500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-34500" id="A34500">
+                            <span class="submenu--title jpink">Contraloría General de Medellín <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-34500">
+                            <a href="#('NUEVOS[CONTRALORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-34500" id="A34700">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-34500 -->
+                          <a href="#submenu-35100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-35100" id="A35100">
+                            <span class="submenu--title jpink">Copacabana <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-35100">
+                            <a href="#('NUEVOS[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A35300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A35500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A35700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A35900">
+                              Religión
+                            </a>
+                            <a href="#('300[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A36100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A36300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A36500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A36700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A36900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A37100">
+                              Literatura
+                            </a>
+                            <a href="#('900[COPACABANA]');" class="lista_alerta list-group-item" data-parent="#submenu-35100" id="A37300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-35100 -->
+                          <a href="#submenu-37700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-37700" id="A37700">
+                            <span class="submenu--title jpink">Girardota - Biblioteca Jacinto Benavente <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-37700">
+                            <a href="#('NUEVOS[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A37900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A38100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A38300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A38500">
+                              Religión
+                            </a>
+                            <a href="#('300[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A38700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A38900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A39100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A39300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A39500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A39700">
+                              Literatura
+                            </a>
+                            <a href="#('900[GIRARDOTA]');" class="lista_alerta list-group-item" data-parent="#submenu-37700" id="A39900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-37700 -->
+                          <a href="#submenu-40300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-40300" id="A40300">
+                            <span class="submenu--title jpink">La Estrella - Biblioteca Bernardo Arango Macías <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-40300">
+                            <a href="#('NUEVOS[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A40500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A40700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A40900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A41100">
+                              Religión
+                            </a>
+                            <a href="#('300[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A41300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A41500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A41700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A41900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A42100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A42300">
+                              Literatura
+                            </a>
+                            <a href="#('900[ESTRELLA]');" class="lista_alerta list-group-item" data-parent="#submenu-40300" id="A42500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-40300 -->
+                          <a href="#submenu-42900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-42900" id="A42900">
+                            <span class="submenu--title jpink">Sabaneta - Biblioteca Juan Carlos Montoya Montoya <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-42900">
+                            <a href="#('NUEVOS[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A43100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A43300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A43500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A43700">
+                              Religión
+                            </a>
+                            <a href="#('300[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A43900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A44100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A44300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A44500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A44700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A44900">
+                              Literatura
+                            </a>
+                            <a href="#('900[SABANETA]');" class="lista_alerta list-group-item" data-parent="#submenu-42900" id="A45100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-42900 -->
+                        </div> <!-- /#list-header-23900 -->
+                        <a href="#list-header-45500" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A45500" aria-expanded="true">
+                          <span class="header-title h4">SBPM - Bibliotecas de Proximidad</span>
+                        </a>
+                        <div class="collapse in" id="list-header-45500" aria-expanded="true">
+                          <a href="#submenu-45700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-45700" id="A45700">
+                            <span class="submenu--title jpink">Altavista -Belén Altavista <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-45700">
+                            <a href="#('NUEVOS[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A45900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A46100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A46300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A46500">
+                              Religión
+                            </a>
+                            <a href="#('300[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A46700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A46900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A47100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A47300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A47500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A47700">
+                              Literatura
+                            </a>
+                            <a href="#('900[ALTAVISTA]');" class="lista_alerta list-group-item" data-parent="#submenu-45700" id="A47900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-45700 -->
+                          <a href="#submenu-48300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-48300" id="A48300">
+                            <span class="submenu--title jpink">Avila <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-48300">
+                            <a href="#('NUEVOS[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A48500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A48700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A48900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A49100">
+                              Religión
+                            </a>
+                            <a href="#('300[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A49300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A49500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A49700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A49900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A50100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A50300">
+                              Literatura
+                            </a>
+                            <a href="#('900[AVILA]');" class="lista_alerta list-group-item" data-parent="#submenu-48300" id="A50500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-48300 -->
+                          <a href="#submenu-50900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-50900" id="A50900">
+                            <span class="submenu--title jpink">Fernando Gómez Martínez - Robledo <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-50900">
+                            <a href="#('NUEVOS[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A51100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A51300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A51500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A51700">
+                              Religión
+                            </a>
+                            <a href="#('300[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A51900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A52100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A52300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A52500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A52700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A52900">
+                              Literatura
+                            </a>
+                            <a href="#('900[ROBLEDO]');" class="lista_alerta list-group-item" data-parent="#submenu-50900" id="A53100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-50900 -->
+                          <a href="#submenu-53500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-53500" id="A53500">
+                            <span class="submenu--title jpink">Granizal - CREM Granizal <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-53500">
+                            <a href="#('NUEVOS[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A53700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A53900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A54100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A54300">
+                              Religión
+                            </a>
+                            <a href="#('300[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A54500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A54700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A54900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A55100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A55300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A55500">
+                              Literatura
+                            </a>
+                            <a href="#('900[GRANIZAL]');" class="lista_alerta list-group-item" data-parent="#submenu-53500" id="A55700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-53500 -->
+                          <a href="#submenu-56100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-56100" id="A56100">
+                            <span class="submenu--title jpink">La Floresta <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-56100">
+                            <a href="#('NUEVOS[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A56300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A56500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A56700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A56900">
+                              Religión
+                            </a>
+                            <a href="#('300[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A57100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A57300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A57500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A57700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A57900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A58100">
+                              Literatura
+                            </a>
+                            <a href="#('900[FLORESTA]');" class="lista_alerta list-group-item" data-parent="#submenu-56100" id="A58300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-56100 -->
+                          <a href="#submenu-58700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-58700" id="A58700">
+                            <span class="submenu--title jpink">Limonar <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-58700">
+                            <a href="#('NUEVOS[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A58900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A59100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A59300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A59500">
+                              Religión
+                            </a>
+                            <a href="#('300[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A59700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A59900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A60100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A60300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A60500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A60700">
+                              Literatura
+                            </a>
+                            <a href="#('900[LIMONAR]');" class="lista_alerta list-group-item" data-parent="#submenu-58700" id="A60900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-58700 -->
+                          <a href="#submenu-61300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-61300" id="A61300">
+                            <span class="submenu--title jpink">Lusitania <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-61300">
+                            <a href="#('NUEVOS[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A61500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A61700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A61900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A62100">
+                              Religión
+                            </a>
+                            <a href="#('300[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A62300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A62500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A62700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A62900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A63100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A63300">
+                              Literatura
+                            </a>
+                            <a href="#('900[LUSITANIA]');" class="lista_alerta list-group-item" data-parent="#submenu-61300" id="A63500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-61300 -->
+                          <a href="#submenu-63900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-63900" id="A63900">
+                            <span class="submenu--title jpink">Palmitas <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-63900">
+                            <a href="#('NUEVOS[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A64100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A64300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A64500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A64700">
+                              Religión
+                            </a>
+                            <a href="#('300[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A64900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A65100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A65300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A65500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A65700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A65900">
+                              Literatura
+                            </a>
+                            <a href="#('900[PALMITAS]');" class="lista_alerta list-group-item" data-parent="#submenu-63900" id="A66100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-63900 -->
+                          <a href="#submenu-66500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-66500" id="A66500">
+                            <span class="submenu--title jpink">Poblado <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-66500">
+                            <a href="#('NUEVOS[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A66700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A66900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A67100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A67300">
+                              Religión
+                            </a>
+                            <a href="#('300[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A67500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A67700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A67900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A68100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A68300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A68500">
+                              Literatura
+                            </a>
+                            <a href="#('900[POBLADO]');" class="lista_alerta list-group-item" data-parent="#submenu-66500" id="A68700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-66500 -->
+                          <a href="#submenu-69100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-69100" id="A69100">
+                            <span class="submenu--title jpink">Popular <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-69100">
+                            <a href="#('NUEVOS[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A69300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A69500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A69700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A69900">
+                              Religión
+                            </a>
+                            <a href="#('300[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A70100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A70300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A70500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A70700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A70900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A71100">
+                              Literatura
+                            </a>
+                            <a href="#('900[POPULAR]');" class="lista_alerta list-group-item" data-parent="#submenu-69100" id="A71300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-69100 -->
+                          <a href="#submenu-71700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-71700" id="A71700">
+                            <span class="submenu--title jpink">Santa Cruz <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-71700">
+                            <a href="#('NUEVOS[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A71900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A72100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A72300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A72500">
+                              Religión
+                            </a>
+                            <a href="#('300[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A72700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A72900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A73100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A73300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A73500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A73700">
+                              Literatura
+                            </a>
+                            <a href="#('900[CRUZ]');" class="lista_alerta list-group-item" data-parent="#submenu-71700" id="A73900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-71700 -->
+                          <a href="#submenu-74300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-74300" id="A74300">
+                            <span class="submenu--title jpink">Santa Elena <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-74300">
+                            <a href="#('NUEVOS[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A74500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A74700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A74900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A75100">
+                              Religión
+                            </a>
+                            <a href="#('300[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A75300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A75500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A75700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A75900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A76100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A76300">
+                              Literatura
+                            </a>
+                            <a href="#('900[ELENA]');" class="lista_alerta list-group-item" data-parent="#submenu-74300" id="A76500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-74300 -->
+                        </div> <!-- /#list-header-45500 -->
+                        <a href="#list-header-76900" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A76900">
+                          <span class="header-title h4">SBPM - Centros de Documentación / Museos / Repositorios</span>
+                        </a>
+                        <div class="collapse in" id="list-header-76900">
+                          <a href="#submenu-77100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-77100" id="A77100">
+                            <span class="submenu--title jpink">Centro de Documentación Ambiental <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-77100">
+                            <a href="#('NUEVOS[AMBIENTAL]');" class="lista_alerta list-group-item" data-parent="#submenu-77100" id="A77300">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-77100 -->
+                          <a href="#submenu-77700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-77700" id="A77700">
+                            <span class="submenu--title jpink">Centro de Documentación Área Metropolitana <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-77700">
+                            <a href="#('NUEVOS[METROPOLITANA]');" class="lista_alerta list-group-item" data-parent="#submenu-77700" id="A77900">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-77700 -->
+                          <a href="#submenu-78300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-78300" id="A78300">
+                            <span class="submenu--title jpink">Centro de Documentación Buen Comienzo <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-78300">
+                            <a href="#('NUEVOS[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A78500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A78700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A78900">
+                              Filosofia - Psicologia
+                            </a>
+                            <a href="#('200[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A79100">
+                              Religion
+                            </a>
+                            <a href="#('300[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A79300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A79500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A79700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A79900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A80100">
+                              Artes y Recreacion
+                            </a>
+                            <a href="#('800[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A80300">
+                              Literatura
+                            </a>
+                            <a href="#('900[COMIENZO]');" class="lista_alerta list-group-item" data-parent="#submenu-78300" id="A80500">
+                              Historia y Geografia
+                            </a>
+                          </div> <!-- /#submenu-78300 -->
+                          <a href="#submenu-80900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-80900" id="A80900">
+                            <span class="submenu--title jpink">Centro de Documentación INDER <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-80900">
+                            <a href="#('NUEVOS[INDER]');" class="lista_alerta list-group-item" data-parent="#submenu-80900" id="A81100">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-80900 -->
+                          <a href="#submenu-81500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-81500" id="A81500">
+                            <span class="submenu--title jpink">Museo Casa de la Memoria <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-81500">
+                            <a href="#('NUEVOS[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A81700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('CONFLICTO[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A81900">
+                              Conflicto Armado
+                            </a>
+                            <a href="#('VIOLENCIA[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A82100">
+                              Violencia
+                            </a>
+                            <a href="#('PAZ[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A82300">
+                              Paz
+                            </a>
+                            <a href="#('DERECHOS[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A82500">
+                              Derechos Humanos
+                            </a>
+                            <a href="#('SEGURIDAD[MEMORIA]');" class="lista_alerta list-group-item" data-parent="#submenu-81500" id="A82700">
+                              Seguridad y Convivencia
+                            </a>
+                          </div> <!-- /#submenu-81500 -->
+                          <a href="#submenu-83100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-83100" id="A83100">
+                            <span class="submenu--title jpink">Planeación Municipal - CAM <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-83100">
+                            <a href="#('NUEVOS[PLANEACION]');" class="lista_alerta list-group-item" data-parent="#submenu-83100" id="A83300">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-83100 -->
+                          <a href="#submenu-83700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-83700" id="A83700">
+                            <span class="submenu--title jpink">Repositorio Secretaría de Salud <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-83700">
+                            <a href="#('NUEVOS[SALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-83700" id="A83900">
+                              Nuevas Adquisiciones
+                            </a>
+                          </div> <!-- /#submenu-83700 -->
+                          <a href="#submenu-84100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-84100" id="A84100">
+                            <span class="submenu--title jpink">Académicos y Científicos <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-84100">
+                            <a href="#('ARTICULO[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A84300">
+                              Artículos = Analítica
+                            </a>
+                            <a href="#('BOLETIN[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A84400">
+                              Boletín
+                            </a>
+                            <a href="#('CAPITULO[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A84500">
+                              Capítulo de libro = Analítica de monografía
+                            </a>
+                            <a href="#('CARTILLA[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A84700">
+                              Cartilla
+                            </a>
+                            <a href="#('GUIA[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A84900">
+                              Guía
+                            </a>
+                            <a href="#('INFOTECNICO[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A85100">
+                              Informe técnico
+                            </a>
+                            <a href="#('INVESTIGACION[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A85300">
+                              Investigación
+                            </a>
+                            <a href="#('LIBRO[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A85500">
+                              Libro
+                            </a>
+                            <a href="#('MEVENTO[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A85700">
+                              Memoria de evento
+                            </a>
+                            <a href="#('REVISTA[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A85900">
+                              Revista
+                            </a>
+                            <a href="#('TELEVISION[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A86100">
+                              Programa de Televisión
+                            </a>
+                            <a href="#('TESIS[ACSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-84100" id="A86300">
+                              Tesis
+                            </a>
+                          </div> <!-- /#submenu-84100 -->
+                          <a href="#submenu-86500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-86500" id="A86500">
+                            <span class="submenu--title jpink">Gestión Institucional <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-86500">
+                            <a href="#('BALANCE[GISALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-86500" id="A86700">
+                              Balance
+                            </a>
+                            <a href="#('INFOGESTION[GISALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-86500" id="A86900">
+                              Informe de Gestión
+                            </a>
+                            <a href="#('NORMATIVIDAD[GISALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-86500" id="A87100">
+                              Normatividad
+                            </a>
+                            <a href="#('PLAN[GISALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-86500" id="A87300">
+                              Plan
+                            </a>
+                          </div> <!-- /#submenu-86500 -->
+                          <a href="#submenu-87500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-87500" id="A87500">
+                            <span class="submenu--title jpink">Campañas Publicitarias <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-87500">
+                            <a href="#('AFICHE[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A87700">
+                              Afiche
+                            </a>
+                            <a href="#('AUDIO[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A87900">
+                              Audios
+                            </a>
+                            <a href="#('BRIEF[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A88100">
+                              Breif
+                            </a>
+                            <a href="#('GRANFORMATO[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A88300">
+                              Gran Formato
+                            </a>
+                            <a href="#('ILUSTRACION[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A88500">
+                              Ilustración
+                            </a>
+                            <a href="#('PLEGABLE[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A88700">
+                              Plegable
+                            </a>
+                            <a href="#('ROLLUP[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A88900">
+                              Roll-up
+                            </a>
+                            <a href="#('SOUVENIR[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A89100">
+                              Souvenir
+                            </a>
+                            <a href="#('VOLANTE[CPSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-87500" id="A89300">
+                              Volante
+                            </a>
+                          </div> <!-- /#submenu-87500 -->
+                          <a href="#submenu-89500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-89500" id="A89500">
+                            <span class="submenu--title jpink">Aprendizaje y Formativo <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-89500">
+                            <a href="#('AUDIO[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A89700">
+                              Audios
+                            </a>
+                            <a href="#('CARTILLA[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A89900">
+                              Cartilla
+                            </a>
+                            <a href="#('GUIA[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A90100">
+                              Guía
+                            </a>
+                            <a href="#('HISTORIETA[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A90300">
+                              Historieta
+                            </a>
+                            <a href="#('INFOGRAFIA[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A90500">
+                              Infografía
+                            </a>
+                            <a href="#('JUEGO[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A90700">
+                              Juego
+                            </a>
+                            <a href="#('MANUAL[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A90900">
+                              Manual
+                            </a>
+                            <a href="#('ROTAFOLIO[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A91100">
+                              Rotafolio
+                            </a>
+                            <a href="#('TELEVISION[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A91300">
+                              Programa de Televisión
+                            </a>
+                            <a href="#('VIDEO[AFSALUD]');" class="lista_alerta list-group-item" data-parent="#submenu-89500" id="A91500">
+                              Vídeo
+                            </a>
+                          </div> <!-- /#submenu-89500 -->
+                        </div> <!-- /#list-header-76900 -->
+                        <a href="#list-header-91900" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A91900">
+                          <span class="header-title h4">SBPM - Parques Biblioteca</span>
+                        </a>
+                        <div class="collapse in" id="list-header-91900">
+                          <a href="#submenu-92100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-92100" id="A92100">
+                            <span class="submenu--title jpink">Belén <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-92100">
+                            <a href="#('NUEVOS[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A92300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A92500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A92700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A92900">
+                              Religión
+                            </a>
+                            <a href="#('300[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A93100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A93300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A93500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A93700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A93900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A94100">
+                              Literatura
+                            </a>
+                            <a href="#('900[BELEN]');" class="lista_alerta list-group-item" data-parent="#submenu-92100" id="A94300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-92100 -->
+                          <a href="#submenu-94700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-94700" id="A94700">
+                            <span class="submenu--title jpink">Doce de Octubre <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-94700">
+                            <a href="#('NUEVOS[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A94900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A95100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A95300">
+                              Filosofia - Psicologia
+                            </a>
+                            <a href="#('200[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A95500">
+                              Religion
+                            </a>
+                            <a href="#('300[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A95700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A95900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A96100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A96300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A96500">
+                              Artes y Recreacion
+                            </a>
+                            <a href="#('800[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A96700">
+                              Literatura
+                            </a>
+                            <a href="#('900[DOCE]');" class="lista_alerta list-group-item" data-parent="#submenu-94700" id="A96900">
+                              Historia y Geografia
+                            </a>
+                          </div> <!-- /#submenu-94700 -->
+                          <a href="#submenu-97300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-97300" id="A97300">
+                            <span class="submenu--title jpink">España - Santo Domingo <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-97300">
+                            <a href="#('NUEVOS[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A97500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A97700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A97900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A98100">
+                              Religión
+                            </a>
+                            <a href="#('300[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A98300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A98500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A98700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A98900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A99100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A99300">
+                              Literatura
+                            </a>
+                            <a href="#('900[ESPANA]');" class="lista_alerta list-group-item" data-parent="#submenu-97300" id="A99500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-97300 -->
+                          <a href="#submenu-99900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-99900" id="A99900">
+                            <span class="submenu--title jpink">Fernando Botero - San Cristóbal <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-99900">
+                            <a href="#('NUEVOS[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A100100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A100300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A100500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A100700">
+                              Religión
+                            </a>
+                            <a href="#('300[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A100900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A101100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A101300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A101500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A101700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A101900">
+                              Literatura
+                            </a>
+                            <a href="#('900[CRISTOBAL]');" class="lista_alerta list-group-item" data-parent="#submenu-99900" id="A102100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-99900 -->
+                          <a href="#submenu-102500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-102500" id="A102500">
+                            <span class="submenu--title jpink">José Horacio Betancur - San Antonio de Prado <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-102500">
+                            <a href="#('NUEVOS[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A102700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A102900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A103100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A103300">
+                              Religión
+                            </a>
+                            <a href="#('300[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A103500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A103700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A103900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A104100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A104300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A104500">
+                              Literatura
+                            </a>
+                            <a href="#('900[PRADO]');" class="lista_alerta list-group-item" data-parent="#submenu-102500" id="A104700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-102500 -->
+                          <a href="#submenu-105100" class="list-group-item" data-toggle="collapse" data-parent="#submenu-105100" id="A105100">
+                            <span class="submenu--title jpink">Las Estancias <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-105100">
+                            <a href="#('NUEVOS[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A105300">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A105500">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A105700">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A105900">
+                              Religión
+                            </a>
+                            <a href="#('300[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A106100">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A106300">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A106500">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A106700">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A106900">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A107100">
+                              Literatura
+                            </a>
+                            <a href="#('900[ESTANCIAS]');" class="lista_alerta list-group-item" data-parent="#submenu-105100" id="A107300">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-105100 -->
+                          <a href="#submenu-107700" class="list-group-item" data-toggle="collapse" data-parent="#submenu-107700" id="A107700">
+                            <span class="submenu--title jpink">León de Greiff - La Ladera <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-107700">
+                            <a href="#('NUEVOS[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A107900">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A108100">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A108300">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A108500">
+                              Religión
+                            </a>
+                            <a href="#('300[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A108700">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A108900">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A109100">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A109300">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A109500">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A109700">
+                              Literatura
+                            </a>
+                            <a href="#('900[LADERA]');" class="lista_alerta list-group-item" data-parent="#submenu-107700" id="A109900">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-107700 -->
+                          <a href="#submenu-110300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-110300" id="A110300">
+                            <span class="submenu--title jpink">Manuel Mejía Vallejo - Guayabal <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-110300">
+                            <a href="#('NUEVOS[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A110500">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A110700">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A110900">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A111100">
+                              Religión
+                            </a>
+                            <a href="#('300[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A111300">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A111500">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A111700">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A111900">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A112100">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A112300">
+                              Literatura
+                            </a>
+                            <a href="#('900[GUAYABAL]');" class="lista_alerta list-group-item" data-parent="#submenu-110300" id="A112500">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-110300 -->
+                          <a href="#submenu-112900" class="list-group-item" data-toggle="collapse" data-parent="#submenu-112900" id="A112900">
+                            <span class="submenu--title jpink">Presbítero José Luis Arroyave - San Javier <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-112900">
+                            <a href="#('NUEVOS[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A113100">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A113300">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A113500">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A113700">
+                              Religión
+                            </a>
+                            <a href="#('300[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A113900">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A114100">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A114300">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A114500">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A114700">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A114900">
+                              Literatura
+                            </a>
+                            <a href="#('900[JAVIER]');" class="lista_alerta list-group-item" data-parent="#submenu-112900" id="A115100">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-112900 -->
+                          <a href="#submenu-115500" class="list-group-item" data-toggle="collapse" data-parent="#submenu-115500" id="A115500">
+                            <span class="submenu--title jpink">Tomás Carrasquilla - La Quintana <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-115500">
+                            <a href="#('NUEVOS[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A115700">
+                              Nuevas Adquisiciones
+                            </a>
+                            <a href="#('000[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A115900">
+                              Obras Generales
+                            </a>
+                            <a href="#('100[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A116100">
+                              Filosofía - Psicología
+                            </a>
+                            <a href="#('200[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A116300">
+                              Religión
+                            </a>
+                            <a href="#('300[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A116500">
+                              Ciencias Sociales
+                            </a>
+                            <a href="#('400[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A116700">
+                              Lenguaje
+                            </a>
+                            <a href="#('500[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A116900">
+                              Ciencias Puras
+                            </a>
+                            <a href="#('600[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A117100">
+                              Ciencias Aplicadas
+                            </a>
+                            <a href="#('700[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A117300">
+                              Artes y Recreación
+                            </a>
+                            <a href="#('800[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A117500">
+                              Literatura
+                            </a>
+                            <a href="#('900[QUINTANA]');" class="lista_alerta list-group-item" data-parent="#submenu-115500" id="A117700">
+                              Historia y Geografía
+                            </a>
+                          </div> <!-- /#submenu-115500 -->
+                        </div> <!-- /#list-header-91900 -->
+                        <a href="#list-header-118100" class="head list-group-item list-group-item-header" data-toggle="collapse" id="A118100">
+                          <span class="header-title h4">Varios - Colecciones Espacializadas</span>
+                        </a>
+                        <div class="collapse in" id="list-header-118100">
+                          <a href="#submenu-118300" class="list-group-item" data-toggle="collapse" data-parent="#submenu-118300" id="A118300">
+                            <span class="submenu--title jpink">Colección de información local <i class="fa fa-caret-down"></i></span>
+                          </a>
+                          <div class="collapse list-group-submenu-" id="submenu-118300">
+                            <a href="#('FOTOGRAFIA[LOCAL]');" class="lista_alerta list-group-item" data-parent="#submenu-118300" id="A118500">
+                              Colección de información local
+                            </a>
+
+                          </div> <!-- /#submenu-118300 -->
+                        </div> <!-- /#list-header-118100 -->
+                      </div><!-- service-list-panel -->
+                    </div> <!-- service-list-container -->
+                  </div><!-- /.box-body -->
+                </div><!-- /.box -->
+              </div><!-- /.col -->
+
+              <div class="col-md-5">
+                <div class="box box-solid box-success">
+                  <div class="box-header">
+                    Tagcloud
+                  </div>
+                  <div class="box-body" id="taglist">
+                    <span class="tag" data-freq="25" data-weight="0.033921302578019" title="25 ocurrencias" style="font-size: 0.567843em; color: rgb(35, 28, 124); cursor: pointer;">Big_Data</span>
+                    <span class="tag" data-freq="106" data-weight="0.143826322930801" title="106 ocurrencias" style="font-size: 0.787653em; color: rgb(147, 117, 113); cursor: pointer;">Calendarios_turísticos</span>
+                    <span class="tag" data-freq="440" data-weight="0.597014925373134" title="440 ocurrencias" style="font-size: 1.69403em; color: rgb(255, 118, 40); cursor: pointer;">Campañas_de_promoción</span>
+                    <span class="tag" data-freq="81" data-weight="0.109905020352782" title="81 ocurrencias" style="font-size: 0.71981em; color: rgb(112, 90, 117); cursor: pointer;">Carteles_Patronato_Nacional_Turismo</span>
+                    <span class="tag" data-freq="80" data-weight="0.108548168249661" title="80 ocurrencias" style="font-size: 0.717096em; color: rgb(111, 89, 117); cursor: pointer;">Cervantes</span>
+                    <span class="tag" data-freq="209" data-weight="0.283582089552239" title="209 ocurrencias" style="font-size: 1.06716em; color: rgb(255, 194, 88); cursor: pointer;">Cine_turismo</span>
+                    <span class="tag" data-freq="737" data-weight="1" title="737 ocurrencias" style="font-size: 2.5em; color: rgb(255, 0, 0); cursor: pointer;">Fiestas_interés_turístico_legislación</span>
+                    <span class="tag" data-freq="41" data-weight="0.0556309362279511" title="41 ocurrencias" style="font-size: 0.611262em; color: rgb(57, 45, 122); cursor: pointer;">Flamenco</span>
+                    <span class="tag" data-freq="506" data-weight="0.686567164179104" title="506 ocurrencias" style="font-size: 1.87313em; color: rgb(255, 109, 76); cursor: pointer;">Folclore</span>
+                    <span class="tag" data-freq="613" data-weight="0.831750339213026" title="613 ocurrencias" style="font-size: 2.1635em; color: rgb(255, 69, 69); cursor: pointer;">Marketing_y_promoción</span>
+                    <span class="tag" data-freq="18" data-weight="0.0244233378561737" title="18 ocurrencias" style="font-size: 0.548847em; color: rgb(25, 20, 125); cursor: pointer;">Patrimonio_cultural_inmaterial</span>
+                    <span class="tag" data-freq="411" data-weight="0.557666214382632" title="411 ocurrencias" style="font-size: 1.61533em; color: rgb(255, 122, 24); cursor: pointer;">Patronato_Nacional_Turismo</span>
+                    <span class="tag" data-freq="249" data-weight="0.337856173677069" title="249 ocurrencias" style="font-size: 1.17571em; color: rgb(255, 177, 66); cursor: pointer;">Semana_Santa</span>
+                    <span class="tag" data-freq="117" data-weight="0.158751696065129" title="117 ocurrencias" style="font-size: 0.817503em; color: rgb(162, 130, 111); cursor: pointer;">Tablas_input_output</span>
+                    <span class="tag" data-freq="404" data-weight="0.548168249660787" title="404 ocurrencias" style="font-size: 1.59634em; color: rgb(255, 123, 20); cursor: pointer;">Turismo_Museos</span>
+                    <span class="tag" data-freq="36" data-weight="0.0488466757123474" title="36 ocurrencias" style="font-size: 0.597693em; color: rgb(50, 40, 123); cursor: pointer;">Turismo_Otoño</span>
+                    <span class="tag" data-freq="397" data-weight="0.538670284938942" title="397 ocurrencias" style="font-size: 1.57734em; color: rgb(255, 124, 16); cursor: pointer;">Turismo_enológico</span>
+                  </div><!-- /.box-body -->
+                </div>
+              </div><!-- /.col -->
+
+            </div>
 
           </section><!-- /.content -->
         </div><!-- /.container -->

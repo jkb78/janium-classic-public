@@ -1,0 +1,60 @@
+/*
+ * Skin: Brown
+ * ---------
+ */
+
+@bootstrap:    "../../bower_components/bootstrap/less";
+@adminlte:     "../../bower_components/AdminLTE/build/less";
+@janium-path:  "../../janium_components/less";
+
+@import "@{bootstrap}/mixins.less";
+@import "@{bootstrap}/variables.less";
+@import "@{adminlte}/variables.less";
+@import "@{janium-path}/variables.less";
+@import "@{adminlte}/mixins.less";
+
+.skin-brown-light {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@brown; @jnm-navbar-light-color; @jnm-navbar-light-color; darken(@brown, 5%));
+      .sidebar-toggle {
+        color: @jnm-navbar-light-color;
+        &:hover {
+          background-color: darken(@brown, 5%);
+        }
+      }
+      @media(max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255,255,255,0.1);
+            }
+            a {
+              color: @jnm-navbar-light-color;
+              &:hover {
+                background: darken(@brown, 5%);
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(@brown; @jnm-navbar-light-color);
+    }
+
+    li.user-header {
+      background-color: @brown;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-light-sidebar(@brown);
+}

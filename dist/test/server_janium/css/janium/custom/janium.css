@@ -3,3 +3,32 @@
  * Ingrese código CSS que será agregado a archivo custom janium.css
  * No debe olvidar copiar el código ingresado excluyendo estos comentarios
  */
+
+
+/***
+ Barra de navegación: reset
+***/
+.main-header {
+  max-height: none;
+}
+
+/***
+ Selector de idioma
+***/
+select#select_idiomas {
+  margin-left: 3px;
+  padding: 0;
+  background: #e6e6ef;
+  color: #444;
+  width: 8%;
+  font-size: 8pt;
+  border: solid 1px #669;
+}
+
+/***
+ Campos requeridos en las formas validadas
+***/
+label.text-danger > i.fa-asterisk {
+    font-size: 40%;
+    vertical-align: super;
+}
