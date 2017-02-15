@@ -1,5 +1,5 @@
 {
-  "name": "Janium Theme Builder",
+  "name": "JaniumThemeBuilder",
   "version": "1.2.0",
   "description": "Generación de archivos estáticos (Temas) para productos Janium",
   "main": "gulpfile.js",
