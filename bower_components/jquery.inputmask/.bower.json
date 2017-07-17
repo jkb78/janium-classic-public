@@ -1,15 +1,24 @@
 {
-  "name": "jquery.inputmask",
-  "version": "3.3.4",
+  "name": "inputmask",
+  "version": "3.3.7",
   "main": [
-    "./dist/inputmask/inputmask.dependencyLib",
-    "./dist/inputmask/inputmask",
-    "./dist/inputmask/inputmask.extensions",
-    "./dist/inputmask/inputmask.date.extensions",
-    "./dist/inputmask/inputmask.numeric.extensions",
-    "./dist/inputmask/inputmask.phone.extensions",
-    "./dist/inputmask/inputmask.regex.extensions",
-    "./dist/inputmask/jquery.inputmask"
+    "./dist/inputmask/inputmask.js",
+    "./dist/inputmask/inputmask.extensions.js",
+    "./dist/inputmask/inputmask.date.extensions.js",
+    "./dist/inputmask/inputmask.numeric.extensions.js",
+    "./dist/inputmask/inputmask.phone.extensions.js",
+    "./dist/inputmask/jquery.inputmask.js",
+    "./dist/inputmask/global/document.js",
+    "./dist/inputmask/global/window.js",
+    "./dist/inputmask/phone-codes/phone.js",
+    "./dist/inputmask/phone-codes/phone-be.js",
+    "./dist/inputmask/phone-codes/phone-nl.js",
+    "./dist/inputmask/phone-codes/phone-ru.js",
+    "./dist/inputmask/phone-codes/phone-uk.js",
+    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js",
+    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js",
+    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.js",
+    "./dist/inputmask/bindings/inputmask.binding.js"
   ],
   "keywords": [
     "jquery",
@@ -19,17 +28,14 @@
     "inputmask",
     "mask"
   ],
-  "description": "jquery.inputmask is a jquery plugin which create an input mask.",
+  "description": "Inputmask is a javascript library which creates an input mask.  Inputmask can run against vanilla javascript, jQuery and jqlite.",
   "license": "http://opensource.org/licenses/mit-license.php",
   "ignore": [
     "**/*",
     "!dist/*",
     "!dist/inputmask/*",
     "!dist/min/*",
-    "!dist/min/inputmask/*",
-    "!extra/bindings/*",
-    "!extra/dependencyLibs/*",
-    "!extra/phone-codes/*"
+    "!dist/min/inputmask/*"
   ],
   "dependencies": {
     "jquery": ">=1.7"
@@ -39,12 +45,12 @@
       "name": "Robin Herbots"
     }
   ],
-  "homepage": "http://robinherbots.github.io/jquery.inputmask",
-  "_release": "3.3.4",
+  "homepage": "http://robinherbots.github.io/Inputmask",
+  "_release": "3.3.7",
   "_resolution": {
     "type": "version",
-    "tag": "3.3.4",
-    "commit": "a55007d1e535d3a734972dbfc1969d98f8449e94"
+    "tag": "3.3.7",
+    "commit": "fc80ffa954a99ad9f9e23bd933821cce63e67d31"
   },
   "_source": "https://github.com/RobinHerbots/jquery.inputmask.git",
   "_target": "~3.3.0",

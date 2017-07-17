@@ -3,6 +3,32 @@ title: Changelog
 name: changelog
 ---
 
+##### 1.4.2 (july 15 2017)
+
+* Issue #489: make it possible to use nested element for icon (thanks to terryoy)
+* Issue #492: handle empty string for icon options
+* Issue #493: add tabIndex option (thanks to Aimeos)
+* Issue #494: remove tabindex if a node is deselected (thanks to Aimeos)
+
+##### 1.4.1 (june 5 2017)
+
+* Issue #487: setState must clear the selection (thanks to terryoy)
+* Issue #488: add is_selected parameter to onCreateLi
+
+##### 1.4.0 (may 12 2017)
+
+* Issue #481: fixed error that occured when opening an invalid node (thanks to Luciano Deriu)
+* Issue #482: changed keyboard logic (thanks to bnsblue)
+    * Set focus to the selected node.
+    * The keyboard is active if a tree node has the focus.
+
+##### 1.3.8 (april 12 2017)
+
+* Issue #471: use webpack instead of browserify
+* Issue #472: use 'jquery.on' instead of deprecated 'bind'
+* Issue #478: use typescript instead of coffeescript
+* Issue #480: support jquery 3.2.x
+
 ##### 1.3.7 (january 11 2017)
 
 * Issue 462: add on_finished parameter to openNode function
