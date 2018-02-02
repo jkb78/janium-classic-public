@@ -31,7 +31,6 @@
     "commit": "cf2c2072bd0e97d562a4fd8ba5ebc8341d608acc"
   },
   "_source": "https://github.com/infusion/jQuery-Paging.git",
-  "_target": "~1.2.0",
-  "_originalSource": "paging",
-  "_direct": true
+  "_target": "^1.2.0",
+  "_originalSource": "paging"
 }
