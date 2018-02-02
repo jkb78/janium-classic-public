@@ -40,6 +40,6 @@
     "commit": "5ac75ccbe2f53a7357fd97ca9afdebe014b4c027"
   },
   "_source": "https://github.com/jdewit/bootstrap-timepicker.git",
-  "_target": "~0.5.1",
+  "_target": "^0.5.2",
   "_originalSource": "bootstrap-timepicker"
 }
