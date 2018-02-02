@@ -38,6 +38,6 @@
     "commit": "a87fcd26096440e5efdd2ec2b45c97b59cb409e4"
   },
   "_source": "https://github.com/millermedeiros/Hasher.git",
-  "_target": "~1.2.0",
+  "_target": "^1.2.0",
   "_originalSource": "hasher"
 }
