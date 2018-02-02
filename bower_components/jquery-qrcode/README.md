@@ -1,40 +1,41 @@
-# jQuery.qrcode
+# jquery.qrcode.js
 
-[![license][license-img]][github] [![web][web-img]][web] [![github][github-img]][github] [![bower][bower-img]][github]
+<a href='http://jeromeetienne.github.com/jquery-qrcode'>jquery.qrcode.js</a>
+is *jquery plugin for a pure browser qrcode generation*.
+It allow you to easily add qrcode to your webpages.
+It is standalone, less than 4k after minify+gzip, no image download.
+It doesnt rely on external services which go on and off, or add latency while loading.
+It is based on a <a href='http://www.d-project.com/qrcode/index.html'>library</a>
+which build qrcode in various language. <a href='http://jeromeetienne.github.com/jquery-qrcode'>jquery.qrcode.js</a> wraps
+it to make it easy to include in your own code.
 
-jQuery plugin to dynamically generate QR codes. Uses [QR Code Generator][qrcode] (MIT).
+Show, dont tell, here is a <a href='https://github.com/jeromeetienne/jquery-qrcode/blob/master/examples/basic.html'>example</a>
+
+## How to Use It
+
+Let me walk you thru it. First include it in your webpage with the usual script tag
+    
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+
+Then create a DOM element which gonna contains the generated qrcode image. Lets say
+a div
+
+    <div id="qrcode"></div>
+
+Then you add the *qrcode* in this container by
+
+    jquery('#qrcode').qrcode("this plugin is great");
+
+This is it. see it <a href='examples/basic.html'>live</a>.
+
+You can set the height and width of the generated qrcode:
+
+    jquery('#qrcode').qrcode({width: 64,height: 64,text: "size doesn't matter"});
 
 
-## License
-The MIT License (MIT)
-
-Copyright (c) 2016 Lars Jung (https://larsjung.de)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-[web]: https://larsjung.de/qrcode/
-[github]: https://github.com/lrsjng/jquery-qrcode
-
-[license-img]: https://img.shields.io/badge/license-MIT-a0a060.svg?style=flat-square
-[web-img]: https://img.shields.io/badge/web-larsjung.de/qrcode-a0a060.svg?style=flat-square
-[github-img]: https://img.shields.io/badge/github-lrsjng/jquery--qrcode-a0a060.svg?style=flat-square
-[bower-img]: https://img.shields.io/badge/bower-lrsjng/jquery--qrcode-a0a060.svg?style=flat-square
-
-[qrcode]: https://github.com/kazuhikoarase/qrcode-generator
+## Conclusion
+<a href='http://jeromeetienne.github.com/jquery-qrcode'>jquery.qrcode.js</a> is available on github
+<a href='https://github.com/jeromeetienne/jquery-qrcode'>here</a>
+under <a href='https://github.com/jeromeetienne/jquery-qrcode/blob/master/MIT-LICENSE.txt'>MIT license</a>.
+If you hit bugs, fill issues on github.
+Feel free to fork, modify and have fun with it :)

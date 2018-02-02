@@ -30,6 +30,6 @@
     "commit": "bd18712c2f6cc6be2dfd7310a89044b09610057e"
   },
   "_source": "https://github.com/mathiasbynens/jquery-placeholder.git",
-  "_target": "~2.3.0",
+  "_target": "^2.3.1",
   "_originalSource": "jquery-placeholder"
 }
