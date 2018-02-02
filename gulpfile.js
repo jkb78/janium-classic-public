@@ -29,6 +29,7 @@ var pathTo = {
   bootstrap_datepicker: path.join(__dirname, 'bower_components', 'bootstrap-datepicker'),
   bootstrap_notify:     path.join(__dirname, 'bower_components', 'remarkable-bootstrap-notify'),
   bootstrap_select:     path.join(__dirname, 'bower_components', 'bootstrap-select'),
+  clipboard:            path.join(__dirname, 'bower_components', 'clipboard'),
   colorpicker:          path.join(__dirname, 'bower_components', 'mjolnic-bootstrap-colorpicker'),
   font_awesome:         path.join(__dirname, 'bower_components', 'font-awesome'),
   hasher:               path.join(__dirname, 'bower_components', 'hasher'),
@@ -39,6 +40,7 @@ var pathTo = {
   jquery_jsonp:         path.join(__dirname, 'bower_components', 'jquery-jsonp'),
   jquery_paging:        path.join(__dirname, 'bower_components', 'paging'),
   js_signals:           path.join(__dirname, 'bower_components', 'js-signals'),
+  markjs:               path.join(__dirname, 'bower_components', 'mark.js'),
   moment:               path.join(__dirname, 'bower_components', 'moment'),
   placeholder:          path.join(__dirname, 'bower_components', 'jquery-placeholder'),
   qrcode:               path.join(__dirname, 'bower_components', 'jquery-qrcode'),
@@ -150,7 +152,8 @@ gulp.task('copy-icon-fonts', function() {
 gulp.task('copy-plugins-images', function() {
   return gulp.src([
     pathTo.colorpicker        + '/dist/img/**/*',
-    pathTo.jquery_file_upload + '/img/**/*'
+    pathTo.jquery_file_upload + '/img/**/*',
+    pathTo.jnm_components     + '/img/**/*'
   ])
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'img')));
 });
@@ -200,6 +203,11 @@ gulp.task('copy-moment-js', function() {
     .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'moment')));
 });
 
+gulp.task('copy-clipboard-js', function() {
+  return gulp.src(pathTo.clipboard + '/dist/clipboard.min.js')
+    .pipe(gulp.dest(path.join(pathTo.htdocs_folder, 'js', 'clipboard')));
+});
+
 gulp.task('copy-plugins-js', function() {
   return gulp.src([
     pathTo.bootstrap_datepicker  + '/dist/js/bootstrap-datepicker.min.js',
@@ -213,6 +221,7 @@ gulp.task('copy-plugins-js', function() {
     pathTo.inputmask             + '/dist/min/jquery.inputmask.bundle.min.js',
     pathTo.jquery_paging         + '/jquery.paging.min.js',
     pathTo.json_forms            + '/brutusin-json-forms-lan-es_ES.min.js',
+    pathTo.markjs                + '/dist/jquery.mark.min.js',
     pathTo.placeholder           + '/jquery.placeholder.js',
     pathTo.placeholder           + '/jquery.placeholder.min.js',
     pathTo.placeholder           + '/jquery.placeholder.min.js.map',
@@ -623,7 +632,7 @@ gulp.task('default', function(callback) {
     'copy-icon-fonts',
     'copy-plugins-images',
     'copy-plugins-css',
-    ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js', 'copy-markdown-js', 'copy-moment-js'],
+    ['copy-jquery', 'copy-bootstrap-js', 'copy-plugins-js', 'copy-markdown-js', 'copy-moment-js', 'copy-clipboard-js'],
     ['join-modernizr-response', 'join-signals-hasher'],
     'build-janium-skins',
     ['compile-admin-lte-js', 'compile-timepicker-js', 'compile-plugins-js'],
